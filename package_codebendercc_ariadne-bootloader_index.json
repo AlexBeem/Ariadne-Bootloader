@@ -1,0 +1,47 @@
+{
+  "packages": [
+    {
+      "name": "Ariadne-Bootloader",
+      "maintainer": "codebender.cc",
+      "websiteURL": "https://github.com/codebendercc/Ariadne-Bootloader",
+      "email": "",
+      "help": {
+        "online": ""
+      },
+      "platforms": [
+        {
+          "name": "Ariadne Bootloader",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Ariadne Bootloader",
+          "help": {
+            "online": ""
+          },
+          "url": "https://github.com/per1234/ariadne-bootloader/releases/download/v1.0.0/ariadne.zip",
+          "archiveFileName": "ariadne.zip",
+          "checksum": "SHA-256:825ff6fb5a0d256bb559b4576419ee2c09a5a79362750dd129e02ed938d29828",
+          "size": "70022",
+          "boards": [
+            {"name": "Ariadne Bootloader"},
+            {"name": "Arduino Duemilanove w/ ATmega328"},
+            {"name": "Arduino Uno"},
+            {"name": "Arduino Ethernet"},
+            {"name": "Arduino Mega 2560"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
