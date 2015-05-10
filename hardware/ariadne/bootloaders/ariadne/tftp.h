@@ -36,8 +36,8 @@
 
 #if defined(__AVR_ATmega328P__)
 	#define MAX_ADDR	0x7000	/// For 328p with 2Kword bootloader
-#elif defined(__AVR_ATmega1280__)
-	#define MAX_ADDR	0x1F000	/// For 1280 with 2Kword bootloader
+#elif defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1284P__)
+	#define MAX_ADDR	0x1F000	/// For 1280/1284P with 2Kword bootloader
 #elif defined(__AVR_ATmega2560__)
 	#define MAX_ADDR	0x3F000	/// For 2560 with 2Kword bootloader
 #endif

@@ -45,9 +45,7 @@ should consult the above link for further instructions on how to build and use.
 [5]: http://arduino.cc/en/Tutorial/ArduinoISP
 
 After you have connected the Arduino board and the programmer to your computer launch the Arduino IDE.
-Navigate to the __Tools__ > __Board__ menu and select `Arduino Duemilanove/Uno(ATmega328) w/ Ariadne Bootloader`
-if you have an Arduino Duemilanove or Uno with an Ethernet Shield or `Arduino Ethernet w/ Ariadne Bootloader`
-for Arduino Ethernet. Then go to __Tools__ > __Programmer__ and select the programmer you are using.
+Navigate to the __Tools__ > __Board__ menu and select the Ariadne version of your board. Then go to __Tools__ > __Programmer__ and select the programmer you are using.
 In case you are using _ArduinoISP_, make sure that the selected port in the __Tools__ > __Serial Port__
 menu refers to the _ArduinoISP_ and not the board that you want to burn the bootloader on. Now, just
 launch the __Tools__ > __Burn Bootloader__ command and wait for about 15 seconds for the operation
@@ -359,6 +357,7 @@ of these so a big ___thank you___ goes to the people that took their time to tes
 
 * [ITead Studio IBoard][21]
 * [Sparkfun Ethernet Pro][22]
+* ATmega1284P
 [21]: http://imall.iteadstudio.com/im120410001.html
 [22]: https://www.sparkfun.com/products/10536
 
@@ -375,9 +374,11 @@ __Ariadne__ bootloader is built upon some great open source projects.
 * [TFTP-Bootloader][23] (The base of this project)
 * [Optiboot][24] (Serial flashing for __ATmega328__)
 * [Arduino-stk500v2-bootloader][25] (Serial flashing for __ATmega2560__)
+* [Mighty 1284P][26] (ATmega1284P variants)
 [23]: https://github.com/arduino/TFTP-Bootloader
 [24]: https://code.google.com/p/optiboot/
 [25]: https://github.com/msproul/Arduino-stk500v2-bootloader
+[26]: https://github.com/JChristensen/mighty-1284p
 
 Credit should also go to [mharizanov](https://github.com/mharizanov) for commenting some of the initial
 *Arduino* code, making it easy for me to start and [follower](https://github.com/follower) who's sketches

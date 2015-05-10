@@ -1,3 +1,4 @@
+# For use with Arduino IDE 1.0.x
 ##############################################################
 
 ariadne328D.name=Arduino Duemilanove /w ATmega328 (Ariadne Bootloader)
@@ -144,3 +145,26 @@ ariadne2560M_debug.build.mcu=atmega2560
 ariadne2560M_debug.build.f_cpu=16000000L
 ariadne2560M_debug.build.core=arduino:arduino
 ariadne2560M_debug.build.variant=arduino:mega
+
+##############################################################
+# see hardware/ariadne/variants/mighty-1284p/pins_arduino.h for pinout
+# Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Full Swing
+# The Full Swing oscillator setting is more resistant to electrical interference than Low Power
+ariadne1284P.name=ATmega1284P 16Mhz (Ariadne Bootloader)
+
+ariadne1284P.upload.protocol=arduino
+ariadne1284P.upload.maximum_size=126976
+ariadne1284P.upload.speed=115200
+
+ariadne1284P.bootloader.low_fuses=0xF7
+ariadne1284P.bootloader.high_fuses=0xDA
+ariadne1284P.bootloader.extended_fuses=0xFD
+ariadne1284P.bootloader.path=ariadne
+ariadne1284P.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P.bootloader.unlock_bits=0x3F
+ariadne1284P.bootloader.lock_bits=0x0F
+
+ariadne1284P.build.mcu=atmega1284p
+ariadne1284P.build.f_cpu=16000000L
+ariadne1284P.build.core=arduino:arduino
+ariadne1284P.build.variant=mighty-1284p

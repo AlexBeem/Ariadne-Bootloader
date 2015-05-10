@@ -1,3 +1,5 @@
+# For use with Arduino IDE 1.5+
+
 menu.version=Version
 
 ##############################################################
@@ -122,3 +124,65 @@ ariadne2560M.menu.version.standard.bootloader.file=ariadne/ariadne_atmega2560.he
 ## ---------------------------------------------
 ariadne2560M.menu.version.debug=Debug
 ariadne2560M.menu.version.debug.bootloader.file=ariadne/ariadne_debug2560.hex
+
+##############################################################
+
+ariadne1284P.name=ATmega1284P
+
+ariadne1284P.upload.tool=arduino:avrdude
+ariadne1284P.upload.protocol=arduino
+ariadne1284P.upload.maximum_data_size=16384
+ariadne1284P.upload.maximum_size=126976
+ariadne1284P.upload.speed=115200
+
+ariadne1284P.bootloader.tool=arduino:avrdude
+ariadne1284P.bootloader.high_fuses=0xDA
+ariadne1284P.bootloader.extended_fuses=0xFD
+ariadne1284P.bootloader.unlock_bits=0x3F
+ariadne1284P.bootloader.lock_bits=0x0F
+
+ariadne1284P.build.mcu=atmega1284p
+ariadne1284P.build.core=arduino:arduino
+
+
+## Pinout Menu
+## ---------------------------------------------
+menu.pinout=Pinout
+
+## Mighty 1284P/Mighty Mini 1284P/Goldilocks
+# see hardware/ariadne/variants/mighty-1284p/pins_arduino.h for pinout
+ariadne1284P.menu.pinout.Mighty-1284P=Mighty 1284P/Mighty Mini 1284P/Goldilocks
+ariadne1284P.menu.pinout.Mighty-1284P.build.variant=mighty-1284p
+
+## Bobuino/Skinny Bob
+# see hardware/ariadne/variants/bobuino/pins_arduino.h for pinout
+ariadne1284P.menu.pinout.bobuino=Bobuino/Skinny Bob
+ariadne1284P.menu.pinout.bobuino.build.variant=bobuino
+
+## avr-developers.com
+# see hardware/ariadne/variants/avr_developers/pins_arduino.h for pinout
+ariadne1284P.menu.pinout.avr_developers=avr-developers.com
+ariadne1284P.menu.pinout.avr_developers.build.variant=avr_developers
+
+
+## Clock Menu
+## ---------------------------------------------
+menu.clock=Clock
+
+## 16Mhz Full Swing - more resistant to electrical interference than Low Power
+ariadne1284P.menu.clock.full_swing=16Mhz Full Swing
+ariadne1284P.menu.clock.full_swing.bootloader.low_fuses=0xF7
+ariadne1284P.menu.clock.full_swing.build.f_cpu=16000000L
+ariadne1284P.menu.clock.full_swing.bootloader.file=ariadne/ariadne_atmega1284p_16mhz.hex
+
+## 16Mhz Low Power
+ariadne1284P.menu.clock.low_power=16Mhz Low Power
+ariadne1284P.menu.clock.low_power.bootloader.low_fuses=0xFF
+ariadne1284P.menu.clock.low_power.build.f_cpu=16000000L
+ariadne1284P.menu.clock.low_power.bootloader.file=ariadne/ariadne_atmega1284p_16mhz.hex
+
+## 8Mhz Internal
+ariadne1284P.menu.clock.8Mhz=8Mhz Internal
+ariadne1284P.menu.clock.8Mhz.bootloader.low_fuses=0xE2
+ariadne1284P.menu.clock.8Mhz.build.f_cpu=8000000L
+ariadne1284P.menu.clock.8Mhz.bootloader.file=ariadne/ariadne_atmega1284p_8mhz.hex

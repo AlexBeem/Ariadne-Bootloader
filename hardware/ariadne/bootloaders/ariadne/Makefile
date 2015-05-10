@@ -55,7 +55,10 @@ ifeq ($(ENV), arduino)
 # For Arduino, we assume that we're connected to the optiboot directory
 # included with the arduino distribution, which means that the full set
 # of avr-tools are "right up there" in standard places.
-TOOLROOT = ../../../tools
+# For Arduino 1.5+:
+TOOLROOT = ../../../../tools
+# For Arduino 1.0.x:
+# TOOLROOT = ../../../tools
 GCCROOT = $(TOOLROOT)/avr/bin/
 AVRDUDE_CONF = -C$(TOOLROOT)/avr/etc/avrdude.conf
 
@@ -151,6 +154,28 @@ debug328_isp: HFUSE = D0
 # 2.7V brownout
 debug328_isp: EFUSE = 05
 debug328_isp: isp
+
+
+# Debug build for ATmega1284P 16Mhz - untested
+# debug1284p: TARGET = debug1284p
+# debug1284p: MCU_TARGET = atmega1284p
+# debug1284p: CFLAGS += '-DDEBUG_MAIN=1' '-DDEBUG_NET=1' '-DDEBUG_TFTP=1' '-DBAUD_RATE=115200'
+# debug1284p: AVR_FREQ = 16000000L
+#(from http://forum.arduino.cc/index.php?topic=37165.0) 4096 word boot reset address=$F000 x 2bytes/word = 1E000
+# atmega1284p: LDSECTIONS  = -Wl,--section-start=.text=0x1E000
+# debug1284p: $(PROGRAM)_debug1284p.hex
+# debug1284p: $(PROGRAM)_debug1284p.lst
+# debug1284p_isp: debug1284p
+# debug1284p_isp: TARGET = debug1284p
+# debug1284p_isp: MCU_TARGET = atmega1284p
+# Full Swing Oscillator (16MHz) 16K CK + 65ms
+# debug1284p_isp: LFUSE = F7
+# 4096 word boot
+# debug1284p_isp: HFUSE = D8
+# 2.7V brownout
+# debug1284p_isp: EFUSE = FD
+# debug1284p_isp: isp
+
 
 # Debug build for Arduino Mega2560
 debug2560: TARGET = debug2560
@@ -316,6 +341,46 @@ atmega328_ethernet_isp: isp
 # sanguino_isp: isp
 #
 #
+# ATmega1284P 16Mhz
+atmega1284p_16mhz: TARGET = atmega1284p_16mhz
+atmega1284p_16mhz: MCU_TARGET = atmega1284p
+atmega1284p_16mhz: CFLAGS += '-DBAUD_RATE=115200'
+atmega1284p_16mhz: AVR_FREQ = 16000000L
+atmega1284p_16mhz: LDSECTIONS  = -Wl,--section-start=.text=0x1F000
+atmega1284p_16mhz: $(PROGRAM)_atmega1284p_16mhz.hex
+atmega1284p_16mhz: $(PROGRAM)_atmega1284p_16mhz.lst
+atmega1284p_16mhz_isp: atmega1284p
+atmega1284p_16mhz_isp: TARGET = atmega1284p_16mhz
+atmega1284p_16mhz_isp: MCU_TARGET = atmega1284p
+# Full Swing Oscillator (16MHz) 16K CK + 65ms
+atmega1284p_16mhz_isp: LFUSE = F7
+# 2048 word boot
+atmega1284p_16mhz_isp: HFUSE = DA
+# 2.7V brownout
+atmega1284p_16mhz_isp: EFUSE = FD
+atmega1284p_16mhz_isp: isp
+
+
+# ATmega1284P 8Mhz
+atmega1284p_8mhz: TARGET = atmega1284p_8mhz
+atmega1284p_8mhz: MCU_TARGET = atmega1284p
+atmega1284p_8mhz: CFLAGS += '-DBAUD_RATE=115200'
+atmega1284p_8mhz: AVR_FREQ = 8000000L
+atmega1284p_8mhz: LDSECTIONS  = -Wl,--section-start=.text=0x1F000
+atmega1284p_8mhz: $(PROGRAM)_atmega1284p_8mhz.hex
+atmega1284p_8mhz: $(PROGRAM)_atmega1284p_8mhz.lst
+atmega1284p_8mhz_isp: atmega1284p
+atmega1284p_8mhz8_isp: TARGET = atmega1284p_8mhz
+atmega1284p_8mhz_isp: MCU_TARGET = atmega1284p
+# Full Swing Oscillator (16MHz) 16K CK + 65ms
+atmega1284p_8mhz_isp: LFUSE = E2
+# 2048 word boot
+atmega1284p_8mhz_isp: HFUSE = DA
+# 2.7V brownout
+atmega1284p_8mhz_isp: EFUSE = FD
+atmega1284p_8mhz_isp: isp
+
+
 # Mega has a minimum boot size of 1024 bytes
 # mega1280: TARGET = atmega1280
 # mega1280: MCU_TARGET = atmega1280

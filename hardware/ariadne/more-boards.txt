@@ -1,0 +1,171 @@
+# For use with Arduino IDE 1.0.x
+# If you want to add any of these boards to the Arduino IDE
+# copy the entry into hardware/ariadne/boards.txt and restart
+# the Arduino IDE if it is open.
+##############################################################
+
+ariadne1284P_mighty_lp.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Low Power (Ariadne Bootloader)
+
+ariadne1284P_mighty_lp.upload.protocol=arduino
+ariadne1284P_mighty_lp.upload.maximum_size=126976
+ariadne1284P_mighty_lp.upload.speed=115200
+
+ariadne1284P_mighty_lp.bootloader.low_fuses=0xFF
+ariadne1284P_mighty_lp.bootloader.high_fuses=0xDA
+ariadne1284P_mighty_lp.bootloader.extended_fuses=0xFD
+ariadne1284P_mighty_lp.bootloader.path=ariadne
+ariadne1284P_mighty_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P_mighty_lp.bootloader.unlock_bits=0x3F
+ariadne1284P_mighty_lp.bootloader.lock_bits=0x0F
+
+ariadne1284P_mighty_lp.build.mcu=atmega1284p
+ariadne1284P_mighty_lp.build.f_cpu=16000000L
+ariadne1284P_mighty_lp.build.core=arduino:arduino
+ariadne1284P_mighty_lp.build.variant=mighty-1284p
+
+##############################################################
+# Internal oscillator
+ariadne1284P_mighty_8.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 8Mhz (Ariadne Bootloader)
+
+ariadne1284P_mighty_8.upload.protocol=arduino
+ariadne1284P_mighty_8.upload.maximum_size=126976
+ariadne1284P_mighty_8.upload.speed=115200
+
+ariadne1284P_mighty_8.bootloader.low_fuses=0xE2
+ariadne1284P_mighty_8.bootloader.high_fuses=0xDA
+ariadne1284P_mighty_8.bootloader.extended_fuses=0xFD
+ariadne1284P_mighty_8.bootloader.path=ariadne
+ariadne1284P_mighty_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
+ariadne1284P_mighty_8.bootloader.unlock_bits=0x3F
+ariadne1284P_mighty_8.bootloader.lock_bits=0x0F
+
+ariadne1284P_mighty_8.build.mcu=atmega1284p
+ariadne1284P_mighty_8.build.f_cpu=8000000L
+ariadne1284P_mighty_8.build.core=arduino:arduino
+ariadne1284P_mighty_8.build.variant=mighty-1284p
+
+##############################################################
+# The Full Swing oscillator setting is more resistant to electrical interference than Low Power
+ariadne1284P_bobuino_fs.name=Bobuino/Skinny Bob 16Mhz Full Swing (Ariadne Bootloader)
+
+ariadne1284P_bobuino_fs.upload.protocol=arduino
+ariadne1284P_bobuino_fs.upload.maximum_size=126976
+ariadne1284P_bobuino_fs.upload.speed=115200
+
+ariadne1284P_bobuino_fs.bootloader.low_fuses=0xF7
+ariadne1284P_bobuino_fs.bootloader.high_fuses=0xDA
+ariadne1284P_bobuino_fs.bootloader.extended_fuses=0xFD
+ariadne1284P_bobuino_fs.bootloader.path=ariadne
+ariadne1284P_bobuino_fs.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P_bobuino_fs.bootloader.unlock_bits=0x3F
+ariadne1284P_bobuino_fs.bootloader.lock_bits=0x0F
+
+ariadne1284P_bobuino_fs.build.mcu=atmega1284p
+ariadne1284P_bobuino_fs.build.f_cpu=16000000L
+ariadne1284P_bobuino_fs.build.core=arduino:arduino
+ariadne1284P_bobuino_fs.build.variant=bobuino
+
+##############################################################
+
+ariadne1284P_bobuino_lp.name=Bobuino/Skinny Bob 16Mhz Low Power (Ariadne Bootloader)
+
+ariadne1284P_bobuino_lp.upload.protocol=arduino
+ariadne1284P_bobuino_lp.upload.maximum_size=126976
+ariadne1284P_bobuino_lp.upload.speed=115200
+
+ariadne1284P_bobuino_lp.bootloader.low_fuses=0xFF
+ariadne1284P_bobuino_lp.bootloader.high_fuses=0xDA
+ariadne1284P_bobuino_lp.bootloader.extended_fuses=0xFD
+ariadne1284P_bobuino_lp.bootloader.path=ariadne
+ariadne1284P_bobuino_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P_bobuino_lp.bootloader.unlock_bits=0x3F
+ariadne1284P_bobuino_lp.bootloader.lock_bits=0x0F
+
+ariadne1284P_bobuino_lp.build.mcu=atmega1284p
+ariadne1284P_bobuino_lp.build.f_cpu=16000000L
+ariadne1284P_bobuino_lp.build.core=arduino:arduino
+ariadne1284P_bobuino_lp.build.variant=bobuino
+
+##############################################################
+# Internal oscillator
+ariadne1284P_bobuino_8.name=Bobuino/Skinny Bob 8Mhz (Ariadne Bootloader)
+
+ariadne1284P_bobuino_8.upload.protocol=arduino
+ariadne1284P_bobuino_8.upload.maximum_size=126976
+ariadne1284P_bobuino_8.upload.speed=115200
+
+ariadne1284P_bobuino_8.bootloader.low_fuses=0xE2
+ariadne1284P_bobuino_8.bootloader.high_fuses=0xDA
+ariadne1284P_bobuino_8.bootloader.extended_fuses=0xFD
+ariadne1284P_bobuino_8.bootloader.path=ariadne
+ariadne1284P_bobuino_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
+ariadne1284P_bobuino_8.bootloader.unlock_bits=0x3F
+ariadne1284P_bobuino_8.bootloader.lock_bits=0x0F
+
+ariadne1284P_bobuino_8.build.mcu=atmega1284p
+ariadne1284P_bobuino_8.build.f_cpu=8000000L
+ariadne1284P_bobuino_8.build.core=arduino:arduino
+ariadne1284P_bobuino_8.build.variant=bobuino
+
+##############################################################
+# The Full Swing oscillator setting is more resistant to electrical interference than Low Power
+ariadne1284P_avr-developers_fs.name=avr-developers.com pinout Bob 16Mhz Full Swing (Ariadne Bootloader)
+
+ariadne1284P_avr-developers_fs.upload.protocol=arduino
+ariadne1284P_avr-developers_fs.upload.maximum_size=126976
+ariadne1284P_avr-developers_fs.upload.speed=115200
+
+ariadne1284P_avr-developers_fs.bootloader.low_fuses=0xF7
+ariadne1284P_avr-developers_fs.bootloader.high_fuses=0xDA
+ariadne1284P_avr-developers_fs.bootloader.extended_fuses=0xFD
+ariadne1284P_avr-developers_fs.bootloader.path=ariadne
+ariadne1284P_avr-developers_fs.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P_avr-developers_fs.bootloader.unlock_bits=0x3F
+ariadne1284P_avr-developers_fs.bootloader.lock_bits=0x0F
+
+ariadne1284P_avr-developers_fs.build.mcu=atmega1284p
+ariadne1284P_avr-developers_fs.build.f_cpu=16000000L
+ariadne1284P_avr-developers_fs.build.core=arduino:arduino
+ariadne1284P_avr-developers_fs.build.variant=avr_developers
+
+##############################################################
+
+ariadne1284P_avr-developers_lp.name=avr-developers.com pinout 16Mhz Low Power (Ariadne Bootloader)
+
+ariadne1284P_avr-developers_lp.upload.protocol=arduino
+ariadne1284P_avr-developers_lp.upload.maximum_size=126976
+ariadne1284P_avr-developers_lp.upload.speed=115200
+
+ariadne1284P_avr-developers_lp.bootloader.low_fuses=0xFF
+ariadne1284P_avr-developers_lp.bootloader.high_fuses=0xDA
+ariadne1284P_avr-developers_lp.bootloader.extended_fuses=0xFD
+ariadne1284P_avr-developers_lp.bootloader.path=ariadne
+ariadne1284P_avr-developers_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
+ariadne1284P_avr-developers_lp.bootloader.unlock_bits=0x3F
+ariadne1284P_avr-developers_lp.bootloader.lock_bits=0x0F
+
+ariadne1284P_avr-developers_lp.build.mcu=atmega1284p
+ariadne1284P_avr-developers_lp.build.f_cpu=16000000L
+ariadne1284P_avr-developers_lp.build.core=arduino:arduino
+ariadne1284P_avr-developers_lp.build.variant=avr_developers
+
+##############################################################
+# Internal oscillator
+ariadne1284P_avr-developers_8.name=avr-developers.com pinout 8Mhz (Ariadne Bootloader)
+
+ariadne1284P_avr-developers_8.upload.protocol=arduino
+ariadne1284P_avr-developers_8.upload.maximum_size=126976
+ariadne1284P_avr-developers_8.upload.speed=115200
+
+ariadne1284P_avr-developers_8.bootloader.low_fuses=0xE2
+ariadne1284P_avr-developers_8.bootloader.high_fuses=0xDA
+ariadne1284P_avr-developers_8.bootloader.extended_fuses=0xFD
+ariadne1284P_avr-developers_8.bootloader.path=ariadne
+ariadne1284P_avr-developers_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
+ariadne1284P_avr-developers_8.bootloader.unlock_bits=0x3F
+ariadne1284P_avr-developers_8.bootloader.lock_bits=0x0F
+
+ariadne1284P_avr-developers_8.build.mcu=atmega1284p
+ariadne1284P_avr-developers_8.build.f_cpu=8000000L
+ariadne1284P_avr-developers_8.build.core=arduino:arduino
+ariadne1284P_avr-developers_8.build.variant=avr_developers

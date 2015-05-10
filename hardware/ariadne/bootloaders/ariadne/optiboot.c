@@ -154,7 +154,10 @@ uint8_t processOptiboot(void)
 
 		verifySpace();
 
-#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560)
+//#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560)  //Original line, I'm pretty sure the __AVR_ATmega2560 is a typo but in the most recent version of optiboot I see that the line is just #if defined(__AVR_ATmega1280__) so it may actually break ATmega2560 support to fix the typo
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1284P__)
+ 		//      do putch(pgm_read_byte_near(address++));
+
 		//      do putch(pgm_read_byte_near(address++));
 		//      while (--length);
 		do {
