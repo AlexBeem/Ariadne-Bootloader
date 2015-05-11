@@ -104,7 +104,6 @@ ariadne2560M.upload.speed=115200
 
 ariadne2560M.bootloader.tool=arduino:avrdude
 ariadne2560M.bootloader.low_fuses=0xFF
-ariadne2560M.bootloader.high_fuses=0xD8
 ariadne2560M.bootloader.extended_fuses=0xFD
 ariadne2560M.bootloader.unlock_bits=0x3F
 ariadne2560M.bootloader.lock_bits=0x0F
@@ -118,11 +117,13 @@ ariadne2560M.build.board=AVR_MEGA2560
 ## standard bootloader
 ## ---------------------------------------------
 ariadne2560M.menu.version.standard=Standard
+ariadne2560M.menu.version.standard.bootloader.high_fuses=0xDA
 ariadne2560M.menu.version.standard.bootloader.file=ariadne/ariadne_atmega2560.hex
 
 ## debug bootloader
 ## ---------------------------------------------
 ariadne2560M.menu.version.debug=Debug
+ariadne2560M.menu.version.debug.bootloader.high_fuses=0xD8
 ariadne2560M.menu.version.debug.bootloader.file=ariadne/ariadne_debug2560.hex
 
 ##############################################################

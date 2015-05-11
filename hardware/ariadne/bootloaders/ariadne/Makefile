@@ -161,7 +161,6 @@ debug328_isp: isp
 # debug1284p: MCU_TARGET = atmega1284p
 # debug1284p: CFLAGS += '-DDEBUG_MAIN=1' '-DDEBUG_NET=1' '-DDEBUG_TFTP=1' '-DBAUD_RATE=115200'
 # debug1284p: AVR_FREQ = 16000000L
-#(from http://forum.arduino.cc/index.php?topic=37165.0) 4096 word boot reset address=$F000 x 2bytes/word = 1E000
 # atmega1284p: LDSECTIONS  = -Wl,--section-start=.text=0x1E000
 # debug1284p: $(PROGRAM)_debug1284p.hex
 # debug1284p: $(PROGRAM)_debug1284p.lst
@@ -170,7 +169,7 @@ debug328_isp: isp
 # debug1284p_isp: MCU_TARGET = atmega1284p
 # Full Swing Oscillator (16MHz) 16K CK + 65ms
 # debug1284p_isp: LFUSE = F7
-# 4096 word boot
+# 8192 byte boot
 # debug1284p_isp: HFUSE = D8
 # 2.7V brownout
 # debug1284p_isp: EFUSE = FD
@@ -190,7 +189,7 @@ debug2560_isp: TARGET = debug2560
 debug2560_isp: MCU_TARGET = atmega2560
 # Low power xtal (16MHz) 16KCK/14CK+65ms
 debug2560_isp: LFUSE = FF
-# 4069 byte boot
+# 8192 byte boot
 debug2560_isp: HFUSE = D0
 # 2.7V brownout
 debug2560_isp: EFUSE = FD
@@ -354,7 +353,7 @@ atmega1284p_16mhz_isp: TARGET = atmega1284p_16mhz
 atmega1284p_16mhz_isp: MCU_TARGET = atmega1284p
 # Full Swing Oscillator (16MHz) 16K CK + 65ms
 atmega1284p_16mhz_isp: LFUSE = F7
-# 2048 word boot
+# 4096 byte boot
 atmega1284p_16mhz_isp: HFUSE = DA
 # 2.7V brownout
 atmega1284p_16mhz_isp: EFUSE = FD
@@ -374,7 +373,7 @@ atmega1284p_8mhz8_isp: TARGET = atmega1284p_8mhz
 atmega1284p_8mhz_isp: MCU_TARGET = atmega1284p
 # Full Swing Oscillator (16MHz) 16K CK + 65ms
 atmega1284p_8mhz_isp: LFUSE = E2
-# 2048 word boot
+# 4096 byte boot
 atmega1284p_8mhz_isp: HFUSE = DA
 # 2.7V brownout
 atmega1284p_8mhz_isp: EFUSE = FD
@@ -394,7 +393,7 @@ atmega1284p_8mhz_isp: isp
 # mega1280_isp: MCU_TARGET = atmega1280
 # # Low power xtal (16MHz) 16KCK/14CK+65ms
 # mega1280_isp: LFUSE = FF
-# # 4069 byte boot
+# # 4096 byte boot
 # mega1280_isp: HFUSE = DA
 # # 2.7V brownout
 # mega1280_isp: EFUSE = F5
@@ -406,7 +405,7 @@ atmega2560: TARGET = atmega2560
 atmega2560: MCU_TARGET = atmega2560
 atmega2560: CFLAGS += '-DBAUD_RATE=115200'
 atmega2560: AVR_FREQ = 16000000L
-atmega2560: LDSECTIONS  = -Wl,--section-start=.text=0x3e000
+atmega2560: LDSECTIONS  = -Wl,--section-start=.text=0x3F000
 atmega2560: $(PROGRAM)_atmega2560.hex
 atmega2560: $(PROGRAM)_atmega2560.lst
 atmega2560_isp: atmega2560
@@ -414,8 +413,8 @@ atmega2560_isp: TARGET = atmega2560
 atmega2560_isp: MCU_TARGET = atmega2560
 # Low power xtal (16MHz) 16KCK/14CK+65ms
 atmega2560_isp: LFUSE = FF
-# 4069 byte boot
-atmega2560_isp: HFUSE = D8
+# 4096 byte boot
+atmega2560_isp: HFUSE = DA
 # 2.7V brownout
 atmega2560_isp: EFUSE = FD
 atmega2560_isp: isp

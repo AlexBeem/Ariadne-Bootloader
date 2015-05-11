@@ -92,7 +92,7 @@ ariadne2560M.upload.maximum_size=258048
 ariadne2560M.upload.speed=115200
 
 ariadne2560M.bootloader.low_fuses=0xFF
-ariadne2560M.bootloader.high_fuses=0xD8
+ariadne2560M.bootloader.high_fuses=0xDA
 ariadne2560M.bootloader.extended_fuses=0xFD
 ariadne2560M.bootloader.path=ariadne
 ariadne2560M.bootloader.file=ariadne_atmega2560.hex
