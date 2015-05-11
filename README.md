@@ -20,6 +20,10 @@ simply copy the folders in your sketchbook and be ready
 
 
 ## Downloading and Installing Files
+There are two ways to install Ariadne:
+
+#### Manual Installation
+
 First of all, you need to clone or download the repository. To clone the repository you need to have
 git installed, then you can run `git clone https://github.com/codebendercc/Ariadne-Bootloader.git` in a
 directory. This way you can later update your local repository by running `git pull` inside the
@@ -32,8 +36,27 @@ After that you have to copy the __hardware__ and __libraries__ folders inside yo
 Take extra care during coping not to overwrite any other files. Restart the Arduino IDE to load the new
 boards and libraries.
 
+#### Boards Manager Installation
 
-## Installing the Bootloader
+This installation method requires Arduino IDE version 1.6.4 or greater.
+
+- Open the Arduino IDE.
+
+- Open the __File > Preferences__ menu item.
+
+- Enter the following URL in __Additional Boards Manager URLs__:  https://raw.githubusercontent.com/per1234/Ariadne-Bootloader/BM/package_codebendercc_ariadne-bootloader_index.json
+
+- Open the __Tools > Board > Boards Manager...__ menu item.
+
+- Wait for the platform indexes to finish downloading.
+
+- Scroll down until you see the __Ariadne Bootloader__ entry and click on it.
+
+- Click Install.
+
+- After installation is complete close the Boards Manager window.
+
+## Burning the Bootloader
 To burn the bootloader, you will need an ISP(in-system programmer) like [AVR-ISP][2], [USBtinyISP][3]
 or you can build a [ParallelProgrammer][4] or an [ArduinoISP][5]. The first three programmers should
 be connected to the ICSP pins (the 2 by 3 pin header) and make sure you plug it in the right way. The
