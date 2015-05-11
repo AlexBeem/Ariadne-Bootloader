@@ -17,10 +17,10 @@
           "help": {
             "online": ""
           },
-          "url": "https://github.com/per1234/ariadne-bootloader/releases/download/v1.0.0/ariadne.zip",
-          "archiveFileName": "ariadne.zip",
-          "checksum": "SHA-256:825ff6fb5a0d256bb559b4576419ee2c09a5a79362750dd129e02ed938d29828",
-          "size": "70022",
+          "url": "https://github.com/per1234/Ariadne-Bootloader/releases/download/v1.0.0/Ariadne-Bootloader_1.0.0.zip",
+          "archiveFileName": "Ariadne-Bootloader_1.0.0.zip",
+          "checksum": "SHA-256:f5bed2f81fbc649f2c9ed30f2a71b858359e20571a241dd9d31e06d49e4bcd7e",
+          "size": "242696",
           "boards": [
             {"name": "Ariadne Bootloader"},
             {"name": "Arduino Duemilanove w/ ATmega328"},
@@ -40,7 +40,41 @@
               "version": "6.0.1-arduino5"
             }
           ]
+        },
+        {
+          "name": "Ariadne Bootloader",
+          "architecture": "avr",
+          "version": "1.0.1",
+          "category": "Ariadne Bootloader",
+          "help": {
+            "online": ""
+          },
+          "url": "https://github.com/per1234/Ariadne-Bootloader/releases/download/v1.0.1/Ariadne-Bootloader_1.0.1.zip",
+          "archiveFileName": "Ariadne-Bootloader_1.0.1.zip",
+          "checksum": "SHA-256:74125d1d125b763f09ee7afca0f5253aeca9a865e1fc1ba0c81af27d3a2c41c3",
+          "size": "320528",
+          "boards": [
+            {"name": "Ariadne Bootloader"},
+            {"name": "Arduino Duemilanove w/ ATmega328"},
+            {"name": "Arduino Uno"},
+            {"name": "Arduino Ethernet"},
+            {"name": "Arduino Mega 2560"},
+            {"name": "ATmega1284P"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
         }
+
       ]
     }
   ]
