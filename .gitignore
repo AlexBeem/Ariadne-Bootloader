@@ -1,8 +1,0 @@
-*~
-*.o
-*.class
-*.elf
-*.kdev*
-*.geany
-*.pdf
-Doxyfile
