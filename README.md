@@ -1,258 +1,160 @@
-# [Ariadne Bootloader for Arduino][1]
-[1]: http://codebendercc.github.com/Ariadne-Bootloader/
+Ariadne Bootloader for Arduino
+==========
+Make a donation to the original Ariadne developer: [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Make a on-time donation to the original Ariadne bootloader developer using Paypal")
 
-[![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Donate once-off to Ariadne bootloader developer using Paypal")
-
-## Bootloader for Arduino with Ethernet
-This is a beta stage bootloader for Arduino Ethernet board and the regular Arduino with Ethernet Shield.
-It is based on previous unfinished work by the Arduino developers. The bootloader implements a TFTP
-server on the Arduino board and flashing works using any regular TFTP client.
-
-
-## The Files and Folders in this Repository
-The structure of this repository is made to follow the standarts of the Arduino IDE. This way you can
-simply copy the folders in your sketchbook and be ready
-
-* hardware: This is where the bootloader resides.
-* java-client: Demo client for the bootloader. Inherited by the initial project. Untested and probably non-functional
-* libraries: Helper libraries to support functions of the bootloader
-* utilities: Various stuff used for development and debugging
+This is a beta stage bootloader for Arduino Ethernet, Ethernet Shield, or any other W5100 Ethernet controller. The bootloader implements a TFTP server on the Arduino board to allow uploading sketches to the Arduino using any TFTP client. This bootloader also supports the standard serial upload method.
 
 
 ## Downloading and Installing Files
 There are two ways to install Ariadne:
 
-####Manual Installation####
+#### Manual Installation
+- Download the Ariadne files here: https://github.com/per1234/Ariadne-Bootloader/archive/ariadne.zip
+- Extract the .zip file
+- Copy the **hardware** and **libraries** folders inside your sketchbook folder. Take care during copying not to overwrite any other files.
+- If the Arduino IDE is running then restart it.
 
-First of all, you need to clone or download the repository. To clone the repository you need to have
-git installed, then you can run `git clone https://github.com/codebendercc/Ariadne-Bootloader.git` in a
-directory. This way you can later update your local repository by running `git pull` inside the
-__Ariadne-Bootloader__ directory.
-
-In case you want to avoid this hassle, you can use the __ZIP__ button at the top of the page to download
-the latest snapshot of the repository in a zip archive and extract it.
-
-After that you have to copy the __hardware__ and __libraries__ folders inside your sketchbook folder.
-Take extra care during coping not to overwrite any other files. Restart the Arduino IDE to load the new
-boards and libraries.
-
-####Boards Manager Installation####
-
+#### Boards Manager Installation
 This installation method requires Arduino IDE version 1.6.4 or greater.
+- Open the Arduino IDE.
+- Open the **File > Preferences** menu item.
+- Enter the following URL in **Additional Boards Manager URLs**: https://per1234.github.io/Ariadne-Bootloader/package_codebendercc_ariadne-bootloader_index.json
+- Open the **Tools > Board > Boards Manager...** menu item.
+- Wait for the platform indexes to finish downloading.
+- Scroll down until you see the **Ariadne Bootloader** entry and click on it.
+- Click Install.
+- After installation is complete close the Boards Manager window.
 
-Open the Arduino IDE.
+## Additional Boards
+The file **more-boards.txt** contains alternate boards.txt entries for different configurations. To add any of these entries to your **Board** menu copy the entry to **boards.txt** and restart the Arduino IDE if it is running.
 
-Open the __File > Preferences__ menu item.
+### 8MHz
+Use these entries for boards without an external 16MHz crystal or to reduce power consumption.
 
-Enter the following URL in __Additional Boards Manager URLs__:
+### Other ATmega1284P pinouts
+The default ATmega1284P Board uses the avr-developers.com pinout(ariadne/variants/avr_developers/pins_arduino.h) but there are entries for other ATmega1284P based boards including:
+- [Mighty 1284P](https://maniacbug.wordpress.com/2011/11/27/arduino-on-atmega1284p-4)
+- [Mighty Mini 1284P](https://github.com/JChristensen/mini1284)
+- [Bobuino](http://crossroadsfencing.com/BobuinoRev17/index.html)
+- [Skinny Bob](http://embeddedcoolness.com/shop/rfx-1284p-devdep-board-w-prototyping-area-nrf24l01-headers-kit)
+- [Sleeping Beauty](http://www.firebirduino.com/sleeping_beauty)
+- [Goldilocks](www.freetronics.com.au/products/goldilocks-arduino-compatible-with-atmega1284p-mcu)
 
-`https://raw.githubusercontent.com/per1234/Ariadne-Bootloader/BM/package_codebendercc_ariadne-bootloader_index.json`
+These entries require the installation of the [Mighty 1284P core](https://github.com/JChristensen/mighty-1284p).
 
-Open the __Tools > Board > Boards Manager...__ menu item.
 
-Wait for the platform indexes to finish downloading.
+### Debug
+The debug entries print bootloader information to the serial monitor at 115200 baud.
 
-Scroll down until you see the __Ariadne Bootloader__ entry and click on it.
 
-Click Install.
+## Using the Board Menu Entries
+After installing Ariadne several new boards are added to the **Ariadne** section of the **Tools** > **Board** menu. Using Arduino IDE v1.5+ when any of these boards are selected additional menus will appear under the **Tools** menu which may include:
 
-After installation is complete close the Boards Manager window.
+### Model Menu
+Displays a list of board models for your **Board** menu selection.
 
-## Installing the Bootloader
-To burn the bootloader, you will need an ISP(in-system programmer) like [AVR-ISP][2], [USBtinyISP][3]
-or you can build a [ParallelProgrammer][4] or an [ArduinoISP][5]. The first three programmers should
-be connected to the ICSP pins (the 2 by 3 pin header) and make sure you plug it in the right way. The
-board must be powered by an external power supply or the USB port. In the case of _ArduinoISP_ you
-should consult the above link for further instructions on how to build and use.
-[2]: http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2726
-[3]: http://www.ladyada.net/make/usbtinyisp/
-[4]: http://arduino.cc/en/Hacking/ParallelProgrammer
-[5]: http://arduino.cc/en/Tutorial/ArduinoISP
 
-After you have connected the Arduino board and the programmer to your computer launch the Arduino IDE.
-Navigate to the __Tools__ > __Board__ menu and select `Arduino Duemilanove/Uno(ATmega328) w/ Ariadne Bootloader`
-if you have an Arduino Duemilanove or Uno with an Ethernet Shield or `Arduino Ethernet w/ Ariadne Bootloader`
-for Arduino Ethernet. Then go to __Tools__ > __Programmer__ and select the programmer you are using.
-In case you are using _ArduinoISP_, make sure that the selected port in the __Tools__ > __Serial Port__
-menu refers to the _ArduinoISP_ and not the board that you want to burn the bootloader on. Now, just
-launch the __Tools__ > __Burn Bootloader__ command and wait for about 15 seconds for the operation
-to complete.
+### Clock Menu
+- **Low Power** - This is usually the best setting to use for commercially produced boards that run at 16MHz.
+- **Full Swing** - This setting can be used for breadboard or homemade 16MHz boards where the low power setting is unreliable due to electrical interference.
 
-In the case of _Arduino Mega_ the previous ISPs do not reliably work because of design differences. To
-install the bootloader in these boards you will need one of the more expensive models,
-like [Atmel's AVRISP mkII][6], [Olimex's AVR-ISP-MK2][7] or another similar programmer. If you don't
-have any compatible programmer but more than one Arduinos available, you can use Nick Gammon's
-excellent [guide][8] on how to use one to program the other. This method has been reported to work
-for flashing __Ariadne__ on _Arduino Mega_.
-[6]: http://www.atmel.com/tools/AVRISPMKII.aspx
-[7]: https://www.olimex.com/Products/AVR/Programmers/AVR-ISP-MK2/
-[8]: http://www.gammon.com.au/forum/?id=11635
+### Board Configuration Menu
+- **Ethernet Shield** - If an Ethernet Shield is connected to your board Ariadne sets Arduino pin 4 HIGH to disable the SD card reader. If your board doesn't have SD card hardware installed then chose a **No Ethernet Shield** option.
+- **Blink** - Blink the LED connected to Arduino pin 13(pin 9 on Arduino Ethernet) to indicate bootloader operation. Select a **No Blink** option if there is something else connected to the LED pin and you don't want Ariadne to change the pin state.
+
+
+## Hardware
+Once the Ariadne bootloader is burned to your Arduino the W5100 Ethernet controller must be attached for your Arduino to work, even when using serial upload.
+Ariadne assumes:
+- W5100 SS pin is connected to Arduino pin 10
+- **Ethernet Shield** type **Board Configuration** menu entries: SD card SS is connected to pin 4
+- **Blink** type **Board Configuration** menu entries: LED connected on pin 13(pin 9 on Arduino Ethernet).
+
+
+## Burning the Bootloader
+To burn the bootloader, you will need an ISP(in-system programmer) such as:
+- [USBasp](http://www.ebay.com/sch/i.html?_nkw=usbasp&_sop=15)
+- [USBtinyISP](https://learn.adafruit.com/usbtinyisp)
+- [Arduino as ISP](http://arduino.cc/en/Tutorial/ArduinoISP)
+- [Atmega_Board_Programmer](http://www.gammon.com.au/forum/?id=11635)
+
+After you have connected the Arduino board and the programmer to your computer launch the Arduino IDE. Navigate to the **Tools** > **Board** menu and select the Ariadne version of your board. Then go to **Tools** > **Programmer** and select the programmer you are using. In case you are using **Arduino as ISP**, make sure that the selected port in the **Tools** > **Serial Port** menu refers to the **Arduino as ISP** and not the board that you want to burn the bootloader on. Now, just launch the **Tools** > **Burn Bootloader** command and wait for about 15 seconds for the operation to complete.
+
+In the case of **Arduino Mega** not all ISPs will work. To install the bootloader in these boards you will need a compatible ISP such as the [USBasp](http://www.ebay.com/sch/i.html?_nkw=usbasp&_sop=15)(has a "verification error" in Arduino IDE 1.0.x but still works), [Olimex AVR-ISP-MK2](https://www.olimex.com/Products/AVR/Programmers/AVR-ISP-MK2), or [Atmel AVRISP mkII](http://www.digikey.com/product-detail/en/ATAVRISP2/ATAVRISP2-ND)(Mega compatible but [may not work with recent versions of the Arduino IDE](https://github.com/arduino/Arduino/issues/2986) but there is a [fix](https://github.com/per1234/Arduino-AVRISPmkII-fix)). Nick Gammon's excellent [Atmega_Board_Programmer](http://www.gammon.com.au/forum/?id=11635) has been reported to work for flashing **Ariadne** on **Arduino Mega**.
 
 
 ## Serial Flashing
-Ariadne bootloader supports flashing through serial like any other regular bootloader. This way of uploading
-is built upon the default bootloaders so it should be pretty straight forward to use. Just plug in the
-USB cable and select the serial port and the appropriate board from the __Tools__ > __Board__ menu. After
-that you must press the reset button and the indication LED on __pin 13__ or __pin 9__, in case of Arduino
-Ethernet, will start blinking rapidly. This means that the bootloader is running and the Arduino is ready
-to be programmed. If there is a __valid__ program already flashed on the Arduino, you have to reprogram
-the device in the next __5 seconds__. If you don't, the bootloader will initiate the program that is
-already in the Arduino. In case there is no program flashed or the program has been marked as __invalid__,
-the bootloader will never time out and you can reprogram it at any time.
+Ariadne bootloader supports flashing through serial like any other regular bootloader. Just plug in the USB cable and select the serial port and the appropriate board from the **Tools** > **Board** menu. Then click the upload button. If you are using an Ethernet Shield or module it must be connected to your Arduino to be able to upload a sketch even when using USB.
 
 After a succesful flashing,
 
-* _Arduino Duemilanove_ will automatically start the user's application.
-* _Arduino Uno_ will do a reset cycle and start the program after the bootloader times out.
-* _Arduino Mega_ will behave in a similar way as _Arduino Uno_
+* **Arduino Duemilanove** will automatically start the program.
+* **Arduino Uno** and **Mega** will do a reset cycle and start the program after the bootloader times out.
 
-This happens because _Uno_ has the autoreset feature that resets the board after a serial connection.
+This happens because **Uno** and **Mega** have an autoreset feature that resets the board after a serial connection.
 
-Due to the fact that "autoreset" for remote tftp programming is implemented using a watchdog timer timeout,
-the bootloader will do a full cycle after every reset, physical or software. For those who miss the _Adaboot
-No-Wait Mod_-like functionality, we have been testing some options on how to circumvent these limitations,
-but they still need refinement.
+Due to the fact that "autoreset" for remote tftp programming is implemented using a watchdog timer timeout, the bootloader will do a full cycle after every reset, physical or software.
 
 
 ## Default Network Settings
-The default built-in network settings of the bootloader are listed below.
-
-`
-* IP Address:  192.168.1.128
+The default network settings of the bootloader are listed below:
+* IP Address: 192.168.1.128
 * Subnet Mask: 255.255.255.0
-* Gateway:     192.168.1.1
+* Gateway: 192.168.1.1
 * MAC Address: 0xDE.0xAD.0xBE.0xEF.0xFE.0xED
-
 * TFTP Negotiation Port: 69
 * TFTP Data Port: 46969
-`
 
-___NOTE:___ The Arduino Ethernet that were sent as Indiegogo Perks were flashed with different network
-settings. Their bootloader still defaults to the previous settings __but__ the current values are on
-the accompaning leaflet.
+**NOTE:** The Arduino Ethernet that were sent as Indiegogo Perks were flashed with different network settings. Their bootloader still defaults to the previous settings **but** the current values are on the accompaning leaflet.
 
 
 ## Configuring Network Settings
-These can be changed using our __NetEEPROM__ library. The library is going to have it's own documentation
-on how it can be used but for the purpose of changing and reading the network settings you can use the
-included examples. To load them navigate to __File__ > __Examples__ > __NetEEPROM__ and select one of
-the examples. You can write the network settings using the __WriteNetworkSettings__ sketch or print them
-to the serial using the __ReadNetworkSettings__.
+These can be changed using our **NetEEPROM** library. Navigate to **File** > **Examples** > **NetEEPROM** and select one of the examples. You can write the network settings with the **WriteNetworkSettings** sketch or print them to the serial monitor with **ReadNetworkSettings**. Follow the instructions in the comments of the sketches.
 
-Note that the settings array in the __WriteNetworkSettings__ sketch hasn't got the settings in the usual
-order but rather in the order that __W5100__ reads them, so make sure you have put the correct values.
-If you set the network settings you also have to set the TFTP data transfer port. The default is good
-enough but you may need to change it for the reasons that are listed below in the
-[Configuring your Router for Remote Flashing][9] section. There is also documentation on how use
-these sketches in the form of comments so be sure to read them.
-[9]: https://github.com/codebendercc/Ariadne-Bootloader#configuring-your-router-for-remote-flashing
+The network settings are saved to EEPROM so you need to make sure that you don't overwrite them in your program. Ariadne uses EEPROM addresses 0-26 for network settings and 27-63 for the password used in the **EthernetReset** library, if you're not using **EthernetReset** then you can use EEPROM addresses 27-63 for other purposes. The **NewEEPROM** library can be used instead of the EEPROM library to automatically avoid overwriting the Ariadne EEPROM section.
+
 
 ## TFTP Flashing
-Now for the real reason we made this bootloader and why you should use it. First of all you can watch
-__Ariadne__ in action in this how-to video for remote flashing using TFTP [here][10]. In the video you
-may notice that the board is being reset by hand. In the next couple of weeks we are going to release
-the library that will allow remote resetting through a simple web server with some security measures.
-More on that as the library progresses.
-[10]: http://youtu.be/KCHqhV6xPMg
+Now for the real reason we made this bootloader and why you should use it. You can watch **Ariadne** in action in this how-to video for remote flashing using TFTP [here](http://youtu.be/KCHqhV6xPMg). In the video you may notice that the board is being reset by hand but the **EthernetReset** library included with Ariadne provides an example of how you can do the reset remotely through a simple web server with some security measures.
 
 ### Converting your sketch to the right format
-Unlike serial flashing that uses __HEX__ files to flash the Arduino, the TFTP server implemented in the
-bootloader works with binary files. This means that you have to manually convert your programs to the
-right format. To do that, first build your sketch inside _Arduino IDE_ using the __Verify__ button. After
-that, without exiting the _Arduino IDE_ you need to navigate to the temporary directory where your project
-was built. On all platforms, you can find out the temporary build folder by checking
-`Show verbose output during compilation` in _Arduino IDE_'s preferences dialog and the path for the
-compiled `.hex` file will be printed in the last line of the compilation output.
-
-#### Windows
-On Windows, the temporary directory can be
-
+Unlike serial flashing that uses HEX files to flash the Arduino, the TFTP server implemented in the bootloader works with binary files. This means that you have to manually convert your programs to the right format. To do that, first set **File** > **Preferences** > **Show verbose output during compilation**(check) in the Arduino IDE and then click the **Verify** button. This will convert your sketch into a .hex file located in a temporary folder. The location of the temporary folder is printed in the last line of the compilation output.
+For example:
 ```
-C:\Documents and Settings\Administrator\Local Settings\Temp\build5571819468326525374.tmp\Blink.cpp.hex
+C:\Program Files (x86)\Arduino\hardware\tools\avr/bin/avr-objcopy -O ihex -R .eeprom C:\Users\username\AppData\Local\Temp\build4255864821845399166.tmp/sketch/Blink.cpp.elf C:\Users\username\AppData\Local\Temp\build4255864821845399166.tmp/sketch/Blink.cpp.hex
 ```
-
+Enter the directory and make sure that there is a `.elf` or a `.hex` file with the same name as your sketch. That is the file you need to convert. To achieve that you have to run the following command in a terminal:
 ```
-"C:\Program Files\Arduino\hardware\tools\avr\bin\avr-objcopy.exe" -I ihex
-"C:\Documents and Settings\Administrator\Local Settings\Temp\build5571819468326525374.tmp\Blink.cpp.hex"
--O binary Blink.cpp.bin
+avr-objcopy -I ihex [sketch].hex -O binary [sketch].bin`
 ```
-#### Linux
+In Windows and MacOS you can find the `avr-objcopy` program in your Arduino IDE installation folder under `hardware/tools/avr/bin/`.
 
-#### OS X
-That is `C:\Users\owner\AppData\Local\Temp\` on *Windows*, `/tmp` on *Linux*. On *MacOS* you'll need
-to go to Arduino's preferences, and check the "Show verbose output during compilation" checkbox. After
-that, when you compile, you will see the path for the compiled .hex file in the last line of the compilation
-output.. There you will find a folder named something like `build2429295348207572157.tmp`. That is where
-the Arduino temporary build files reside. Enter the directory and make sure that there is a `.elf` or
-a `.hex` file with the same name as your sketch. That is the file you need to convert. To achieve that
-you have to run one of the following commands in a terminal.
+Another option if you have scons installed, is to use the modified `SConstruct` script you can find at https://github.com/suapapa/arscons. This being based on the *arscons* script, it can be used in two ways:
+- If you used the previous process to generate the HEX file you can just copy the `SConstruct` file inside the temporary *Arduino IDE* build directory (as mentioned above) and run `scons` in a terminal inside that directory.
+- The other way to use it is to copy the `SConstruct` script inside the sketch's directory and, as above, run `scons` in a terminal inside that directory. This way you will build your project outside *Arduino IDE* creating the `.bin` file in the process. Note that this way the sketch's folder will be polluted with Arduino's build files, much like the temporary directory *Arduino IDE* uses.
 
-* `avr-objcopy -I ihex [sketch].hex -O binary [sketch].bin`
-
-In Windows and MacOS you can find the `avr-objcopy` program in your Arduino IDE installation folder under
-`hardware/tools/avr/bin/`. Or,if you have scons installed, you can use the modified `SConstruct` script
-you can find in `Ariadne-Bootloader/utilities`. This being based on the *arscons* script, it can be used
-in two ways. If you used the previous process to generate the _HEX_ file you can just copy the `SConstruct`
-file inside the temporary *Arduino IDE* build directory (as mentioned above) and run `scons` in a terminal
-inside that directory.
-
-The other way to use it is to copy the `SConstruct` script inside the sketch's directory and, as above,
-run `scons` in a terminal inside that directory. This way you will build your project outside *Arduino
-IDE* creating the `.bin` file in the process. Note that this way the sketch's folder will be polluted
-with Arduino's build files, much like the temporary directory *Arduino IDE* uses.
-
-For testing purposes you can find a __blink__ sketch in binary form inside the
-`Ariadne-Bootloader/utilities/tests/blink` folder. The __fade__ sketch in the `tests/fade` folder
-will also give you a view of what a failed upload looks like. This sketch fails because it is written
-in plain __C__ and not in __Arduino__. That way it lacks some "signatures" the bootloader uses to
-validate _Arduino_ sketches. The third sketch in `tests/led_display` is an easter egg for which you
-need to find out how we had our led matrices connected on _Arduino Uno_. Or we might release the
-schematics at some point. Who knows.
+For testing purposes you can find a **blink** sketch in binary form inside the `Ariadne-Bootloader/utilities/tests/blink` folder. The **fail** sketch in the `tests/fail` folder will give you a view of what a failed upload looks like. This sketch fails because it is written in plain **C** and not in **Arduino**. That way it lacks some "signatures" the bootloader uses to validate Arduino sketches.
 
 ### Using a tftp client to upload the sketch
-Now that the binary is ready, you have to upload it. First you have to connect to your Arduino using
-any tftp client you may have on your computer. All three major operating systems have their own clients
-that you can use through the command line.
+Now that the binary is ready, you have to upload it. The upload procedure is as follows:
+- Reset the Arduino board. This will activate the bootloader. If a valid program is already uploaded to the Arduino then there is only a **5 second** window that the upload can begin(indicated by the rapidly blinking LED. If the upload has not began withing 5 seconds of reset the previously installed program will run. If no valid program has previously been uploaded to the board it will stay in bootloader mode indefinitely.
+- Start the upload using your TFTP client.
+- If the upload is successful then the newly uploaded program will run. If the TFTP client fails to connect then the previously uploaded program will run. If the upload started but was not successfully completed the board will stay in bootloader mode waiting for a new upload.
 
-#### Windows
-```
-Microsoft Windows XP [Version 5.1.2600]
-(C) Copyright 1985-2001 Microsoft Corp.
+#### TFTP client
 
-C:\Documents and Settings\Administrator>tftp
+All three major operating systems have their own clients that you can use through the command line.
 
-Transfers files to and from a remote computer running the TFTP service.
-
-TFTP [-i] host [GET | PUT] source [destination]
-
-  -i              Specifies binary image transfer mode (also called
-                  octet). In binary image mode the file is moved
-                  literally, byte by byte. Use this mode when
-                  transferring binary files.
-  host            Specifies the local or remote host.
-  GET             Transfers the file destination on the remote host to
-                  the file source on the local host.
-  PUT             Transfers the file source on the local host to
-                  the file destination on the remote host.
-  source          Specifies the file to transfer.
-  destination     Specifies where to transfer the file.
+##### Windows
+`C:\>tftp -i 192.168.1.128 PUT sketch.bin`
 
 
-C:\Documents and Settings\Administrator>tftp -i 192.168.1.128 PUT sketch.bin
-tftp: can't read from local file 'sketch.bin'
-
-C:\Documents and Settings\Administrator>tftp -i 192.168.1.128 PUT sketch.bin
-```
-
-#### Linux
-On some __Linux__ distributions, like __Fedora/RedHat__, before you use `tftp`, you should load the `ip_conntrack_tftp`
-module or the tftp client won't be able to acknowledge(__ACK__) the incoming packets. That is needed
-because TFTP is insecure and it is not enabled by default. Other distributions like __Arch__, don't need
-this step. To do that, open a terminal and run
+##### Linux
+On some **Linux** distributions, like **Fedora/RedHat**, before you use `tftp`, you should load the `ip_conntrack_tftp` module or the tftp client won't be able to acknowledge(**ACK**) the incoming packets. That is needed because TFTP is insecure and it is not enabled by default. Other distributions like **Arch**, don't need this step. To do that, open a terminal and run:
 ```
 modprobe ip_conntrack_tftp
 ```
-as __root__ using `su` or `sudo`.
+as **root** using `su` or `sudo`.
 
 After that open a terminal as a regular user and type
 ```
@@ -263,8 +165,7 @@ For the default bootloader settings that would be:
 ```
 tftp 192.168.1.128 69
 ```
-In this case it could just be `tftp 192.168.1.128` as __69__ is the default tftp port and the client
-would automatically connect to it. For any other port you have to explicitly set it.
+In this case it could just be `tftp 192.168.1.128` as **69** is the default tftp port and the client would automatically connect to it. For any other port you have to explicitly set it.
 
 Now you should have been greeted by the
 ```
@@ -276,25 +177,17 @@ First you have to enter this command:
 ```
 tftp> mode octet
 ```
-This way you tell the __TFTP__ client to send binary data. This is absolutely needed as if your client
-is in netascii mode, uploading will fail. After this, it is advised to use the two following commands
-to make the process more informative so you can have a better view of what is happening, but they are
-not needed.
+This way you tell the **TFTP** client to send binary data. This is absolutely needed as if your client is in netascii mode, uploading will fail. After this, it is advised to use the two following commands to make the process more informative so you can have a better view of what is happening, but they are not needed.
 ```
 tftp> trace
 tftp> verbose
 ```
-Now to actually upload the binary file all you have to do is __reset__ the board and in the next __5
-seconds__ run the following command.
+Now to actually upload the binary file all you have to do is **reset** the board and in the next **5
+seconds** run the following command.
 ```
 tftp> put [sketch].bin
 ```
-The __5 second__ time frame is in case you already have a valid program uploaded on the Arduino. In case
-you don't have a program loaded or it has been marked invalid, you don't have any time constraints.
-
-Now you should see your tftp client sending packets and the indication LED on __pin 13__ or __pin 9__
-blinking in a random way, almost like having a hiccup. A correct output sample of the TFTP client uploading
-the *blink* sketch is below:
+Now you should see your tftp client sending packets and the indication LED blinking. A correct output sample of the TFTP client uploading the *blink* sketch is below:
 ```
 tftp> mode octet
 tftp> trace
@@ -316,99 +209,66 @@ sent DATA <block: 5, size: 42>
 received ACK <block: 5>
 tftp>
 ```
-After a successful upload the bootloader will start the uploaded application instantly.
-
-In case that for some reason the upload fails, first of all stop your TFTP client from sending any more
-packets. After that you should wait for the upload process on the bootloader to timeout. That takes about
-__5 seconds__ too. For this period you should witness the indication led doing some random blinking.
-After the timeout and since there is no valid program in the memory, the TFTP server should restart itself
-and wait for a new upload.
+In case that for some reason the upload fails, first of all stop your TFTP client from sending any more packets. After that you should wait for the upload process on the bootloader to timeout. That takes about **5 seconds** too. For this period you should witness the indication led doing some random blinking. After the timeout and since there is no valid program in the memory, the TFTP server should restart itself and wait for a new upload.
 
 
 ## Configuring your Router for Remote Flashing
-If you are having trouble flashing your Arduino at home from the road, you probably need to enable [port
-forwarding][11]. You need to forward ports __69__ and __46969__ to your Arduino in your router's configuration.
-In case you have changed the incoming data port from __46969__ to another port i.e. __50232__, you have
-to forward __50232__ port instead of __46969__. This is particularly useful when you have more than one
-Arduinos, that you want to flash, behind your router. In addition to this you are going to have to translate
-an external port of your choice on the router to the internal port and ip of the Arduino in the local
-network.
-[11]: http://en.wikipedia.org/wiki/Port_forwarding
+If you are having trouble flashing your Arduino at home from the road, you probably need to enable [port forwarding](http://en.wikipedia.org/wiki/Port_forwarding). You need to forward ports **69** and **46969** to your Arduino in your router's configuration. In case you have changed the incoming data port from **46969** to another port i.e. **50232**, you have to forward **50232** port instead of **46969**. This is particularly useful when you have more than one Arduinos, that you want to flash, behind your router. In addition to this you are going to have to translate an external port of your choice on the router to the internal port and ip of the Arduino in the local network.
 
-An example is that you have 2 devices, one at *192.168.1.128* and one at *192.168.1.129*. They both listen
-to port __69__ for the initial connection. In this case you can translate external port __6969__(any
-random port will do) on your router to `192.168.1.128:`__69__ and external port __6970__ to
-`192.168.1.129:`__69__ and specify these in the tftp client you are using.
+An example is that you have 2 devices, one at `192.168.1.128` and one at `192.168.1.129`. They both listen to port **69** for the initial connection. In this case you can translate external port **6969**(any random port will do) on your router to `192.168.1.128:69` and external port **6970** to `192.168.1.129:69` and specify these in the tftp client you are using.
 
-Port Forward has [excellent guides][12] on how to enable port forwarding for a vast number of routers.
-[12]: http://portforward.com/english/routers/port_forwarding/
+Port Forward has [excellent guides](http://portforward.com/english/routers/port_forwarding) on how to enable port forwarding for a vast number of routers.
+
 
 ## Codebender
-One of the best and easiest ways to use this bootloader is along with [codebender.cc][13]. Just register,
-enter your Arduino's IP (external IP for those in corporate or home networks behind NAT) and flash.
-[13]: http://codebender.cc
+One of the best and easiest ways to use this bootloader is along with [codebender.cc](http://codebender.cc). Just register, enter your Arduino's IP(external IP for those in corporate or home networks behind NAT) and flash.
+
 
 ## Helper Libraries
-* [NewEEPROM][14] (Patched EEPROM library to protect the memory space used by the bootloader)
-* [NetEEPROM][15] (Library to manipulate the network settings of the bootloader)
-* [ResetServer][16] (Library used to create an HTTP server on the Arduino to enable remote resetting
-of the microcontroller)
-[14]: https://github.com/codebendercc/Ariadne-Bootloader/tree/master/libraries/NewEEPROM
-[15]: https://github.com/codebendercc/Ariadne-Bootloader/tree/master/libraries/NetEEPROM
-[16]: https://github.com/codebendercc/Ariadne-Bootloader/tree/master/libraries/EthernetReset
+* [NetEEPROM](https://github.com/per1234/Ariadne-Bootloader/tree/master/libraries/NetEEPROM) (Library to set or display the network settings of the bootloader)
+* [NewEEPROM](https://github.com/per1234/Ariadne-Bootloader/tree/master/libraries/NewEEPROM) (Patched EEPROM library to protect the memory space used by the bootloader)
+* [EthernetReset](https://github.com/per1234/Ariadne-Bootloader/tree/master/libraries/EthernetReset) (Library used to create an HTTP server on the Arduino to enable remote resetting of the microcontroller)
+
 
 ## Supported Boards
 Supported MCUs:
+* **ATmega328P**
+* **ATmega2560**
+* **ATmega1284P**
 
-* __ATmega328__
-* __ATmega2560__
-
-Supported ethernet controllers:
-
-* __WizNet W5100__
+Supported Ethernet controllers:
+* **WizNet W5100**
 
 Tested Arduino Boards:
+* [Arduino Ethernet](http://www.arduino.cc/en/Main/ArduinoBoardEthernet)
+* [Arduino Uno](http://www.arduino.cc/en/Main/ArduinoBoardUno)
+* [Arduino Duemilanove w/ ATmega328](http://www.arduino.cc/en/Main/ArduinoBoardDuemilanove)
+* [Arduino Mega 2560](http://arduino.cc/en/Main/arduinoBoardMega2560)
 
-* [Arduino Ethernet][17]
-* [Arduino Uno][18]
-* [Arduino Duemilanove w/ ATmega328][19]
-* [Arduino Mega 2560][20]
-[17]: www.arduino.cc/en/Main/ArduinoBoardEthernet
-[18]: http://www.arduino.cc/en/Main/ArduinoBoardUno
-[19]: http://www.arduino.cc/en/Main/ArduinoBoardDuemilanove
-[20]: http://arduino.cc/en/Main/arduinoBoardMega2560
 
 ## Other Tested Boards
-These boards have been also tested and found to be working with Ariadne Bootloader. I don't have any
-of these so a big ___thank you___ goes to the people that took their time to test them.
+These boards have been also tested and found to be working with Ariadne Bootloader. I don't have any of these so a big ***thank you*** goes to the people that took their time to test them. If you have successfully used Ariadne with a board not on the list please submit an issue or pull request and I'll add it.
+* [ITead Studio IBoard](http://imall.iteadstudio.com/im120410001.html)
+* [Sparkfun Ethernet Pro](https://www.sparkfun.com/products/10536)
 
-* [ITead Studio IBoard][21]
-* [Sparkfun Ethernet Pro][22]
-[21]: http://imall.iteadstudio.com/im120410001.html
-[22]: https://www.sparkfun.com/products/10536
 
-## Contributors
+## Donors [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Make a one-time donation to the original Ariadne bootloader developer using Paypal")
+**Hachi Manzur** (AVRISP mkII programmer, testing)
 
-## Donators [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Donate once-off to Ariadne bootloader developer using Paypal")
-[Hachi Manzur](hemanzur@gmail.com) (AVRISP mkII programmer, testing)
+If you feel that you should be in this list, please [contact me via email](https://github.com/codebendercc).
 
-If you feel that you should be in this list, please contact me via email.
 
-## Acknoledgements
-__Ariadne__ bootloader is built upon some great open source projects.
+## Acknowledgements
+**Ariadne** is built upon some great open source projects:
+* [TFTP-Bootloader](https://github.com/arduino/TFTP-Bootloader) (The base of this project) - Unfinished attempt by an Arduino developer.
+* [Optiboot](https://github.com/Optiboot/optiboot) (Serial flashing for **ATmega328**)
+* [Arduino-stk500v2-bootloader](https://github.com/msproul/Arduino-stk500v2-bootloader) (Serial flashing for **ATmega2560**)
+* [Mighty 1284P](https://github.com/JChristensen/mighty-1284p) (ATmega1284P pins_arduino.h written by [David A. Mellis](https://github.com/damellis))
+* [SEM-bootloader](https://github.com/arjenhiemstra/SEM-Bootloader) (ATmega1284P support)
 
-* [TFTP-Bootloader][23] (The base of this project)
-* [Optiboot][24] (Serial flashing for __ATmega328__)
-* [Arduino-stk500v2-bootloader][25] (Serial flashing for __ATmega2560__)
-[23]: https://github.com/arduino/TFTP-Bootloader
-[24]: https://code.google.com/p/optiboot/
-[25]: https://github.com/msproul/Arduino-stk500v2-bootloader
-
-Credit should also go to [mharizanov](https://github.com/mharizanov) for commenting some of the initial
-*Arduino* code, making it easy for me to start and [follower](https://github.com/follower) who's sketches
-served as a starting point for the included __NetEEPROM__ and __EthernetReset__ libraries.
+Credit should also go to [mharizanov](https://github.com/mharizanov) for commenting some of the initial *Arduino* code, making it easy for me to start and [follower](https://github.com/follower) whose sketches served as a starting point for the included **NetEEPROM** and **EthernetReset** libraries.
 
 
 ## License
-This is free software and it is released under the [GPLv2, GNU General Public License][99]
-[99]: https://www.gnu.org/licenses/gpl-2.0.html
+This is free software and it is released under the [GPLv2, GNU General Public License](https://www.gnu.org/licenses/gpl-2.0.html)
+

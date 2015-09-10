@@ -3,7 +3,7 @@
     {
       "name": "Ariadne-Bootloader",
       "maintainer": "codebender.cc",
-      "websiteURL": "https://github.com/codebendercc/Ariadne-Bootloader",
+      "websiteURL": "https://github.com/per1234/Ariadne-Bootloader",
       "email": "",
       "help": {
         "online": ""
@@ -15,7 +15,7 @@
           "version": "1.0.0",
           "category": "Ariadne Bootloader",
           "help": {
-            "online": ""
+            "online": "https://github.com/per1234/Ariadne-Bootloader/tree/master"
           },
           "url": "https://github.com/per1234/Ariadne-Bootloader/releases/download/v1.0.0/Ariadne-Bootloader_1.0.0.zip",
           "archiveFileName": "Ariadne-Bootloader_1.0.0.zip",
@@ -47,7 +47,7 @@
           "version": "1.0.1",
           "category": "Ariadne Bootloader",
           "help": {
-            "online": ""
+            "online": "https://github.com/per1234/Ariadne-Bootloader/tree/v1.0.1"
           },
           "url": "https://github.com/per1234/Ariadne-Bootloader/releases/download/v1.0.1/Ariadne-Bootloader_1.0.1.zip",
           "archiveFileName": "Ariadne-Bootloader_1.0.1.zip",
@@ -73,9 +73,42 @@
               "version": "6.0.1-arduino5"
             }
           ]
+        },
+        {
+          "name": "Ariadne Bootloader",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "Ariadne Bootloader",
+          "help": {
+            "online": "https://github.com/per1234/Ariadne-Bootloader"
+          },
+          "url": "https://github.com/per1234/Ariadne-Bootloader/releases/download/v1.0.2/Ariadne-Bootloader_1.0.2.zip",
+          "archiveFileName": "Ariadne-Bootloader_1.0.2.zip",
+          "checksum": "SHA-256:076af6127e0a2c80f583a4d214b941797dd68423afa1ea365afadfaafdbdd40b",
+          "size": "972972",
+          "boards": [
+            {"name": "Ariadne Bootloader"},
+            {"name": "Arduino Duemilanove w/ ATmega328"},
+            {"name": "Arduino Uno"},
+            {"name": "Arduino Ethernet"},
+            {"name": "Arduino Mega 2560"},
+            {"name": "ATmega1284P"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
         }
-
-      ]
+      ],
+      "tools": []
     }
   ]
 }
