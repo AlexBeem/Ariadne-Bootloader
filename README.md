@@ -44,7 +44,7 @@ This installation method requires Arduino IDE version 1.6.4 or greater.
 
 - Open the __File > Preferences__ menu item.
 
-- Enter the following URL in __Additional Boards Manager URLs__:  https://raw.githubusercontent.com/per1234/Ariadne-Bootloader/BM/package_codebendercc_ariadne-bootloader_index.json
+- Enter the following URL in __Additional Boards Manager URLs__:  https://per1234.github.io/Ariadne-Bootloader/package_codebendercc_ariadne-bootloader_index.json
 
 - Open the __Tools > Board > Boards Manager...__ menu item.
 
