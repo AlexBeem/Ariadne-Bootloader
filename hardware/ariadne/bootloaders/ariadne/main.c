@@ -131,7 +131,9 @@ int main(void)
 			}
 		}
 		/* Blink the notification led */
+#ifndef DISABLE_BLINK
 		updateLed();
+#endif  //DISABLE_BLINK
 	}
 
 	/* Exit to user application */

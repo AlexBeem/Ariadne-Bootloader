@@ -1,170 +1,108 @@
 # For use with Arduino IDE 1.0.x
+# These boards assume Ethernet Shield is being used and bootloader blink is enabled
+# You can change the value of bootloader.file for other configurations
 ##############################################################
 
-ariadne328D.name=Arduino Duemilanove /w ATmega328 (Ariadne Bootloader)
+ariadne328p_16mhz_blink_shield_standard.name=ATmega328P 16MHz, 6 Analog Inputs, Ariadne Bootloader
 
-ariadne328D.upload.protocol=arduino
-ariadne328D.upload.maximum_size=28672
-ariadne328D.upload.speed=115200
+ariadne328p_16mhz_blink_shield_standard.upload.protocol=arduino
+ariadne328p_16mhz_blink_shield_standard.upload.maximum_size=28672
+ariadne328p_16mhz_blink_shield_standard.upload.speed=115200
 
-ariadne328D.bootloader.low_fuses=0xFF
-ariadne328D.bootloader.high_fuses=0xD8
-ariadne328D.bootloader.extended_fuses=0x05
-ariadne328D.bootloader.path=ariadne
-ariadne328D.bootloader.file=ariadne_atmega328.hex
-ariadne328D.bootloader.unlock_bits=0x3F
-ariadne328D.bootloader.lock_bits=0x0F
+ariadne328p_16mhz_blink_shield_standard.bootloader.low_fuses=0xFF
+ariadne328p_16mhz_blink_shield_standard.bootloader.high_fuses=0xD8
+ariadne328p_16mhz_blink_shield_standard.bootloader.extended_fuses=0x05
+ariadne328p_16mhz_blink_shield_standard.bootloader.path=ariadne
+ariadne328p_16mhz_blink_shield_standard.bootloader.file=ariadne_atmega328_16mhz_blink_shield.hex
+ariadne328p_16mhz_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne328p_16mhz_blink_shield_standard.bootloader.lock_bits=0x0F
 
-ariadne328D.build.mcu=atmega328p
-ariadne328D.build.f_cpu=16000000L
-ariadne328D.build.core=arduino:arduino
-ariadne328D.build.variant=arduino:standard
-
-##############################################################
-
-ariadne328U.name=Arduino Uno (Ariadne Bootloader)
-
-ariadne328U.upload.protocol=arduino
-ariadne328U.upload.maximum_size=28672
-ariadne328U.upload.speed=115200
-
-ariadne328U.bootloader.low_fuses=0xFF
-ariadne328U.bootloader.high_fuses=0xD8
-ariadne328U.bootloader.extended_fuses=0x05
-ariadne328U.bootloader.path=ariadne
-ariadne328U.bootloader.file=ariadne_atmega328.hex
-ariadne328U.bootloader.unlock_bits=0x3F
-ariadne328U.bootloader.lock_bits=0x0F
-
-ariadne328U.build.mcu=atmega328p
-ariadne328U.build.f_cpu=16000000L
-ariadne328U.build.core=arduino:arduino
-ariadne328U.build.variant=arduino:standard
+ariadne328p_16mhz_blink_shield_standard.build.mcu=atmega328p
+ariadne328p_16mhz_blink_shield_standard.build.f_cpu=16000000L
+ariadne328p_16mhz_blink_shield_standard.build.core=arduino:arduino
+ariadne328p_16mhz_blink_shield_standard.build.variant=arduino:standard
 
 ##############################################################
 
-ariadne328E.name=Arduino Ethernet (Ariadne Bootloader)
+ariadne328p_16mhz_blink_shield_eightanaloginputs.name=ATmega328P 16MHz, 8 Analog Inputs, Ariadne Bootloader
 
-ariadne328E.upload.protocol=arduino
-ariadne328E.upload.maximum_size=28672
-ariadne328E.upload.speed=115200
+ariadne328p_16mhz_blink_shield_eightanaloginputs.upload.protocol=arduino
+ariadne328p_16mhz_blink_shield_eightanaloginputs.upload.maximum_size=28672
+ariadne328p_16mhz_blink_shield_eightanaloginputs.upload.speed=115200
 
-ariadne328E.bootloader.low_fuses=0xFF
-ariadne328E.bootloader.high_fuses=0xD8
-ariadne328E.bootloader.extended_fuses=0x05
-ariadne328E.bootloader.path=ariadne
-ariadne328E.bootloader.file=ariadne_atmega328_ethernet.hex
-ariadne328E.bootloader.unlock_bits=0x3F
-ariadne328E.bootloader.lock_bits=0x0F
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.low_fuses=0xFF
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.high_fuses=0xD8
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.extended_fuses=0x05
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.path=ariadne
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.file=ariadne_atmega328_16mhz_blink_shield.hex
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.unlock_bits=0x3F
+ariadne328p_16mhz_blink_shield_eightanaloginputs.bootloader.lock_bits=0x0F
 
-ariadne328E.build.mcu=atmega328p
-ariadne328E.build.f_cpu=16000000L
-ariadne328E.build.core=arduino:arduino
-ariadne328E.build.variant=arduino:standard
-
-##############################################################
-
-ariadne1280M.name=Arduino Mega 1280 (Ariadne Bootloader)
-
-ariadne1280M.upload.protocol=arduino
-ariadne1280M.upload.maximum_size=126976
-ariadne1280M.upload.speed=57600
-
-ariadne1280M.bootloader.low_fuses=0xFF
-ariadne1280M.bootloader.high_fuses=0xDA
-ariadne1280M.bootloader.extended_fuses=0xF5
-ariadne1280M.bootloader.path=ariadne
-ariadne1280M.bootloader.file=ariadne_atmega1280.hex
-ariadne1280M.bootloader.unlock_bits=0x3F
-ariadne1280M.bootloader.lock_bits=0x0F
-
-ariadne1280M.build.mcu=atmega1280
-ariadne1280M.build.f_cpu=16000000L
-ariadne1280M.build.core=arduino:arduino
-ariadne1280M.build.variant=arduino:mega
+ariadne328p_16mhz_blink_shield_eightanaloginputs.build.mcu=atmega328p
+ariadne328p_16mhz_blink_shield_eightanaloginputs.build.f_cpu=16000000L
+ariadne328p_16mhz_blink_shield_eightanaloginputs.build.core=arduino:arduino
+ariadne328p_16mhz_blink_shield_eightanaloginputs.build.variant=arduino:eightanaloginputs
 
 ##############################################################
 
-ariadne2560M.name=Arduino Mega 2560 (Ariadne Bootloader)
+ariadneethernet_blink.name=Arduino Ethernet, Ariadne Bootloader
 
-ariadne2560M.upload.protocol=stk500v2
-ariadne2560M.upload.maximum_size=258048
-ariadne2560M.upload.speed=115200
+ariadneethernet_blink.upload.protocol=arduino
+ariadneethernet_blink.upload.maximum_size=28672
+ariadneethernet_blink.upload.speed=115200
 
-ariadne2560M.bootloader.low_fuses=0xFF
-ariadne2560M.bootloader.high_fuses=0xDA
-ariadne2560M.bootloader.extended_fuses=0xFD
-ariadne2560M.bootloader.path=ariadne
-ariadne2560M.bootloader.file=ariadne_atmega2560.hex
-ariadne2560M.bootloader.unlock_bits=0x3F
-ariadne2560M.bootloader.lock_bits=0x0F
+ariadneethernet_blink.bootloader.low_fuses=0xFF
+ariadneethernet_blink.bootloader.high_fuses=0xD8
+ariadneethernet_blink.bootloader.extended_fuses=0x05
+ariadneethernet_blink.bootloader.path=ariadne
+ariadneethernet_blink.bootloader.file=ariadne_atmega328_16mhz_blink_arduinoethernet.hex
+ariadneethernet_blink.bootloader.unlock_bits=0x3F
+ariadneethernet_blink.bootloader.lock_bits=0x0F
 
-ariadne2560M.build.mcu=atmega2560
-ariadne2560M.build.f_cpu=16000000L
-ariadne2560M.build.core=arduino:arduino
-ariadne2560M.build.variant=arduino:mega
-
-##############################################################
-
-ariadne328U_debug.name=Arduino Uno (Ariadne Bootloader Debug)
-
-ariadne328U_debug.upload.protocol=arduino
-ariadne328U_debug.upload.maximum_size=28672
-ariadne328U_debug.upload.speed=115200
-
-ariadne328U_debug.bootloader.low_fuses=0xFF
-ariadne328U_debug.bootloader.high_fuses=0xD8
-ariadne328U_debug.bootloader.extended_fuses=0x05
-ariadne328U_debug.bootloader.path=ariadne
-ariadne328U_debug.bootloader.file=ariadne_debug328.hex
-ariadne328U_debug.bootloader.unlock_bits=0x3F
-ariadne328U_debug.bootloader.lock_bits=0x0F
-
-ariadne328U_debug.build.mcu=atmega328p
-ariadne328U_debug.build.f_cpu=16000000L
-ariadne328U_debug.build.core=arduino:arduino
-ariadne328U_debug.build.variant=arduino:standard
+ariadneethernet_blink.build.mcu=atmega328p
+ariadneethernet_blink.build.f_cpu=16000000L
+ariadneethernet_blink.build.core=arduino:arduino
+ariadneethernet_blink.build.variant=arduino:standard
 
 ##############################################################
 
-ariadne2560M_debug.name=Arduino Mega 2560 (Ariadne Bootloader Debug)
+ariadne2560_blink_shield.name=Arduino Mega 2560, Ariadne Bootloader
 
-ariadne2560M_debug.upload.protocol=stk500v2
-ariadne2560M_debug.upload.maximum_size=258048
-ariadne2560M_debug.upload.speed=115200
+ariadne2560_blink_shield.upload.protocol=stk500v2
+ariadne2560_blink_shield.upload.maximum_size=258048
+ariadne2560_blink_shield.upload.speed=115200
 
-ariadne2560M_debug.bootloader.low_fuses=0xFF
-ariadne2560M_debug.bootloader.high_fuses=0xD8
-ariadne2560M_debug.bootloader.extended_fuses=0xFD
-ariadne2560M_debug.bootloader.path=ariadne
-ariadne2560M_debug.bootloader.file=ariadne_debug2560.hex
-ariadne2560M_debug.bootloader.unlock_bits=0x3F
-ariadne2560M_debug.bootloader.lock_bits=0x0F
+ariadne2560_blink_shield.bootloader.low_fuses=0xFF
+ariadne2560_blink_shield.bootloader.high_fuses=0xDA
+ariadne2560_blink_shield.bootloader.extended_fuses=0xFD
+ariadne2560_blink_shield.bootloader.path=ariadne
+ariadne2560_blink_shield.bootloader.file=ariadne_atmega2560_16mhz_blink_shield.hex
+ariadne2560_blink_shield.bootloader.unlock_bits=0x3F
+ariadne2560_blink_shield.bootloader.lock_bits=0x0F
 
-ariadne2560M_debug.build.mcu=atmega2560
-ariadne2560M_debug.build.f_cpu=16000000L
-ariadne2560M_debug.build.core=arduino:arduino
-ariadne2560M_debug.build.variant=arduino:mega
+ariadne2560_blink_shield.build.mcu=atmega2560
+ariadne2560_blink_shield.build.f_cpu=16000000L
+ariadne2560_blink_shield.build.core=arduino:arduino
+ariadne2560_blink_shield.build.variant=arduino:mega
 
 ##############################################################
-# see hardware/ariadne/variants/mighty-1284p/pins_arduino.h for pinout
-# Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Full Swing
+
 # The Full Swing oscillator setting is more resistant to electrical interference than Low Power
-ariadne1284P.name=ATmega1284P 16Mhz (Ariadne Bootloader)
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.name=ATmega1284P 16MHz avr-developers.com pinout, Ariadne Bootloader
 
-ariadne1284P.upload.protocol=arduino
-ariadne1284P.upload.maximum_size=126976
-ariadne1284P.upload.speed=115200
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.upload.protocol=arduino
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.upload.maximum_size=126976
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.upload.speed=115200
 
-ariadne1284P.bootloader.low_fuses=0xF7
-ariadne1284P.bootloader.high_fuses=0xDA
-ariadne1284P.bootloader.extended_fuses=0xFD
-ariadne1284P.bootloader.path=ariadne
-ariadne1284P.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P.bootloader.unlock_bits=0x3F
-ariadne1284P.bootloader.lock_bits=0x0F
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.low_fuses=0xF7
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.high_fuses=0xDA
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.extended_fuses=0xFD
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.path=ariadne
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.unlock_bits=0x3F
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.lock_bits=0x0F
 
-ariadne1284P.build.mcu=atmega1284p
-ariadne1284P.build.f_cpu=16000000L
-ariadne1284P.build.core=arduino:arduino
-ariadne1284P.build.variant=mighty-1284p
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.build.mcu=atmega1284p
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.build.f_cpu=16000000L
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.build.core=arduino:arduino
+ariadne1284p_16mhz_fullswing_blink_shield_avrdevelopers.build.variant=avr_developers

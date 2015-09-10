@@ -2,170 +2,285 @@
 # If you want to add any of these boards to the Arduino IDE
 # copy the entry into hardware/ariadne/boards.txt and restart
 # the Arduino IDE if it is open.
+#
+# These boards assume Ethernet Shield is being used and bootloader blink is enabled
+# You can change the value of bootloader.file for other configurations
 ##############################################################
 
-ariadne1284P_mighty_lp.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Low Power (Ariadne Bootloader)
+ariadne328p_8mhz_blink_shield_standard.name=ATmega328P 8MHz, 6 Analog Inputs, Ariadne Bootloader
 
-ariadne1284P_mighty_lp.upload.protocol=arduino
-ariadne1284P_mighty_lp.upload.maximum_size=126976
-ariadne1284P_mighty_lp.upload.speed=115200
+ariadne328p_8mhz_blink_shield_standard.upload.protocol=arduino
+ariadne328p_8mhz_blink_shield_standard.upload.maximum_size=28672
+ariadne328p_8mhz_blink_shield_standard.upload.speed=57600
 
-ariadne1284P_mighty_lp.bootloader.low_fuses=0xFF
-ariadne1284P_mighty_lp.bootloader.high_fuses=0xDA
-ariadne1284P_mighty_lp.bootloader.extended_fuses=0xFD
-ariadne1284P_mighty_lp.bootloader.path=ariadne
-ariadne1284P_mighty_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P_mighty_lp.bootloader.unlock_bits=0x3F
-ariadne1284P_mighty_lp.bootloader.lock_bits=0x0F
+ariadne328p_8mhz_blink_shield_standard.bootloader.low_fuses=0xE2
+ariadne328p_8mhz_blink_shield_standard.bootloader.high_fuses=0xD8
+ariadne328p_8mhz_blink_shield_standard.bootloader.extended_fuses=0x05
+ariadne328p_8mhz_blink_shield_standard.bootloader.path=ariadne
+ariadne328p_8mhz_blink_shield_standard.bootloader.file=ariadne_atmega328_8mhz_blink_shield.hex
+ariadne328p_8mhz_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne328p_8mhz_blink_shield_standard.bootloader.lock_bits=0x0F
 
-ariadne1284P_mighty_lp.build.mcu=atmega1284p
-ariadne1284P_mighty_lp.build.f_cpu=16000000L
-ariadne1284P_mighty_lp.build.core=arduino:arduino
-ariadne1284P_mighty_lp.build.variant=mighty-1284p
+ariadne328p_8mhz_blink_shield_standard.build.mcu=atmega328p
+ariadne328p_8mhz_blink_shield_standard.build.f_cpu=8000000L
+ariadne328p_8mhz_blink_shield_standard.build.core=arduino:arduino
+ariadne328p_8mhz_blink_shield_standard.build.variant=arduino:standard
 
 ##############################################################
+
+ariadne328p_8mhz_blink_shield_eightanaloginputs.name=ATmega328P 8MHz, 8 Analog Inputs, Ariadne Bootloader
+
+ariadne328p_8mhz_blink_shield_standard.upload.protocol=arduino
+ariadne328p_8mhz_blink_shield_standard.upload.maximum_size=28672
+ariadne328p_8mhz_blink_shield_standard.upload.speed=57600
+
+ariadne328p_8mhz_blink_shield_standard.bootloader.low_fuses=0xE2
+ariadne328p_8mhz_blink_shield_standard.bootloader.high_fuses=0xD8
+ariadne328p_8mhz_blink_shield_standard.bootloader.extended_fuses=0x05
+ariadne328p_8mhz_blink_shield_standard.bootloader.path=ariadne
+ariadne328p_8mhz_blink_shield_standard.bootloader.file=ariadne_atmega328_8mhz_blink_shield.hex
+ariadne328p_8mhz_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne328p_8mhz_blink_shield_standard.bootloader.lock_bits=0x0F
+
+ariadne328p_8mhz_blink_shield_standard.build.mcu=atmega328p
+ariadne328p_8mhz_blink_shield_standard.build.f_cpu=8000000L
+ariadne328p_8mhz_blink_shield_standard.build.core=arduino:arduino
+ariadne328p_8mhz_blink_shield_standard.build.variant=arduino:eightanaloginputs
+
+##############################################################
+
+ariadne328p_debug_standard.name=ATmega328P 16MHz, 6 Analog Inputs, Ariadne Bootloader Debug
+
+ariadne328p_debug_standard.upload.protocol=arduino
+ariadne328p_debug_standard.upload.maximum_size=28672
+ariadne328p_debug_standard.upload.speed=115200
+
+ariadne328p_debug_standard.bootloader.low_fuses=0xFF
+ariadne328p_debug_standard.bootloader.high_fuses=0xD0
+ariadne328p_debug_standard.bootloader.extended_fuses=0x05
+ariadne328p_debug_standard.bootloader.path=ariadne
+ariadne328p_debug_standard.bootloader.file=ariadne_atmega328_debug_16mhz_blink_shield.hex
+ariadne328p_debug_standard.bootloader.unlock_bits=0x3F
+ariadne328p_debug_standard.bootloader.lock_bits=0x0F
+
+ariadne328p_debug_standard.build.mcu=atmega328p
+ariadne328p_debug_standard.build.f_cpu=16000000L
+ariadne328p_debug_standard.build.core=arduino:arduino
+ariadne328p_debug_standard.build.variant=arduino:standard
+
+##############################################################
+
+ariadne2560_debug.name=Arduino Mega 2560, Ariadne Bootloader Debug
+
+ariadne2560_debug.upload.protocol=stk500v2
+ariadne2560_debug.upload.maximum_size=253952
+ariadne2560_debug.upload.speed=115200
+
+ariadne2560_debug.bootloader.low_fuses=0xFF
+ariadne2560_debug.bootloader.high_fuses=0xD0
+ariadne2560_debug.bootloader.extended_fuses=0xFD
+ariadne2560_debug.bootloader.path=ariadne
+ariadne2560_debug.bootloader.file=ariadne_atmega2560_debug_16mhz_blink_shield.hex
+ariadne2560_debug.bootloader.unlock_bits=0x3F
+ariadne2560_debug.bootloader.lock_bits=0x0F
+
+ariadne2560_debug.build.mcu=atmega2560
+ariadne2560_debug.build.f_cpu=16000000L
+ariadne2560_debug.build.core=arduino:arduino
+ariadne2560_debug.build.variant=arduino:mega
+
+##############################################################
+
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.name=ATmega1284P 16MHz avr-developers.com pinout, Ariadne Bootloader Debug
+
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.upload.protocol=arduino
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.upload.maximum_size=122880
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.upload.speed=115200
+
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.low_fuses=0xF7
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.high_fuses=0xD0
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.extended_fuses=0xFD
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.path=ariadne
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.file=ariadne_atmega1284p_debug_16mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.unlock_bits=0x3F
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.bootloader.lock_bits=0x0F
+
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.build.mcu=atmega1284p
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.build.f_cpu=16000000L
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.build.core=arduino:arduino
+ariadne1284p_debug_16mhz_fullswing_blink_shield_avrdevelopers.build.variant=avr_developers
+
+##############################################################
+
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.name=ATmega1284P 16Mhz Low Power avr-developers.com pinout, Ariadne Bootloader
+
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.upload.protocol=arduino
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.upload.maximum_size=126976
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.upload.speed=115200
+
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.low_fuses=0xFF
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.high_fuses=0xDA
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.extended_fuses=0xFD
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.path=ariadne
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.unlock_bits=0x3F
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.bootloader.lock_bits=0x0F
+
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.build.mcu=atmega1284p
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.build.f_cpu=16000000L
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.build.core=arduino:arduino
+ariadne1284P_16MHz_lowpower_blink_shield_avrdevelopers.build.variant=avr_developers
+
+##############################################################
+
 # Internal oscillator
-ariadne1284P_mighty_8.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 8Mhz (Ariadne Bootloader)
+ariadne1284P_8MHz_blink_shield_avrdevelopers.name=ATmega1284P 8Mhz Internal avr-developers.com pinout, Ariadne Bootloader
 
-ariadne1284P_mighty_8.upload.protocol=arduino
-ariadne1284P_mighty_8.upload.maximum_size=126976
-ariadne1284P_mighty_8.upload.speed=115200
+ariadne1284P_8MHz_blink_shield_avrdevelopers.upload.protocol=arduino
+ariadne1284P_8MHz_blink_shield_avrdevelopers.upload.maximum_size=126976
+ariadne1284P_8MHz_blink_shield_avrdevelopers.upload.speed=115200
 
-ariadne1284P_mighty_8.bootloader.low_fuses=0xE2
-ariadne1284P_mighty_8.bootloader.high_fuses=0xDA
-ariadne1284P_mighty_8.bootloader.extended_fuses=0xFD
-ariadne1284P_mighty_8.bootloader.path=ariadne
-ariadne1284P_mighty_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
-ariadne1284P_mighty_8.bootloader.unlock_bits=0x3F
-ariadne1284P_mighty_8.bootloader.lock_bits=0x0F
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.low_fuses=0xE2
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.high_fuses=0xDA
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.extended_fuses=0xFD
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.path=ariadne
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.file=ariadne_atmega1284p_8mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.unlock_bits=0x3F
+ariadne1284P_8MHz_blink_shield_avrdevelopers.bootloader.lock_bits=0x0F
 
-ariadne1284P_mighty_8.build.mcu=atmega1284p
-ariadne1284P_mighty_8.build.f_cpu=8000000L
-ariadne1284P_mighty_8.build.core=arduino:arduino
-ariadne1284P_mighty_8.build.variant=mighty-1284p
+ariadne1284P_8MHz_blink_shield_avrdevelopers.build.mcu=atmega1284p
+ariadne1284P_8MHz_blink_shield_avrdevelopers.build.f_cpu=8000000L
+ariadne1284P_8MHz_blink_shield_avrdevelopers.build.core=arduino:arduino
+ariadne1284P_8MHz_blink_shield_avrdevelopers.build.variant=avr_developers
 
 ##############################################################
+# The following boards require the installation of the Mighty 1284P core:
+# https://github.com/JChristensen/mighty-1284p/tree/v1.6.3
+##############################################################
+
+ariadne1284P_16MHz_fullswing_blink_shield_standard.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Full Swing, Ariadne Bootloader
+
+ariadne1284P_16MHz_fullswing_blink_shield_standard.upload.protocol=arduino
+ariadne1284P_16MHz_fullswing_blink_shield_standard.upload.maximum_size=126976
+ariadne1284P_16MHz_fullswing_blink_shield_standard.upload.speed=115200
+
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.low_fuses=0xF7
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.high_fuses=0xDA
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.extended_fuses=0xFD
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.path=ariadne
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne1284P_16MHz_fullswing_blink_shield_standard.bootloader.lock_bits=0x0F
+
+ariadne1284P_16MHz_fullswing_blink_shield_standard.build.mcu=atmega1284p
+ariadne1284P_16MHz_fullswing_blink_shield_standard.build.f_cpu=16000000L
+ariadne1284P_16MHz_fullswing_blink_shield_standard.build.core=arduino:arduino
+ariadne1284P_16MHz_fullswing_blink_shield_standard.build.variant=mighty-1284p:standard
+
+##############################################################
+
+ariadne1284P_16MHz_lowpower_blink_shield_standard.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 16Mhz Low Power, Ariadne Bootloader
+
+ariadne1284P_16MHz_lowpower_blink_shield_standard.upload.protocol=arduino
+ariadne1284P_16MHz_lowpower_blink_shield_standard.upload.maximum_size=126976
+ariadne1284P_16MHz_lowpower_blink_shield_standard.upload.speed=115200
+
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.low_fuses=0xFF
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.high_fuses=0xDA
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.extended_fuses=0xFD
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.path=ariadne
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne1284P_16MHz_lowpower_blink_shield_standard.bootloader.lock_bits=0x0F
+
+ariadne1284P_16MHz_lowpower_blink_shield_standard.build.mcu=atmega1284p
+ariadne1284P_16MHz_lowpower_blink_shield_standard.build.f_cpu=16000000L
+ariadne1284P_16MHz_lowpower_blink_shield_standard.build.core=arduino:arduino
+ariadne1284P_16MHz_lowpower_blink_shield_standard.build.variant=mighty-1284p:standard
+
+##############################################################
+
+# Internal oscillator
+ariadne1284P_8MHz_blink_shield_standard.name=Mighty 1284P/Mighty Mini 1284P/Goldilocks 8Mhz Internal, Ariadne Bootloader
+
+ariadne1284P_8MHz_blink_shield_standard.upload.protocol=arduino
+ariadne1284P_8MHz_blink_shield_standard.upload.maximum_size=126976
+ariadne1284P_8MHz_blink_shield_standard.upload.speed=115200
+
+ariadne1284P_8MHz_blink_shield_standard.bootloader.low_fuses=0xE2
+ariadne1284P_8MHz_blink_shield_standard.bootloader.high_fuses=0xDA
+ariadne1284P_8MHz_blink_shield_standard.bootloader.extended_fuses=0xFD
+ariadne1284P_8MHz_blink_shield_standard.bootloader.path=ariadne
+ariadne1284P_8MHz_blink_shield_standard.bootloader.file=ariadne_atmega1284p_8mhz_blink_shield_avrdevelopersstandard.hex
+ariadne1284P_8MHz_blink_shield_standard.bootloader.unlock_bits=0x3F
+ariadne1284P_8MHz_blink_shield_standard.bootloader.lock_bits=0x0F
+
+ariadne1284P_8MHz_blink_shield_standard.build.mcu=atmega1284p
+ariadne1284P_8MHz_blink_shield_standard.build.f_cpu=8000000L
+ariadne1284P_8MHz_blink_shield_standard.build.core=arduino:arduino
+ariadne1284P_8MHz_blink_shield_standard.build.variant=mighty-1284p:standard
+
+##############################################################
+
 # The Full Swing oscillator setting is more resistant to electrical interference than Low Power
-ariadne1284P_bobuino_fs.name=Bobuino/Skinny Bob 16Mhz Full Swing (Ariadne Bootloader)
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.name=Bobuino/Skinny Bob 16Mhz Full Swing, Ariadne Bootloader
 
-ariadne1284P_bobuino_fs.upload.protocol=arduino
-ariadne1284P_bobuino_fs.upload.maximum_size=126976
-ariadne1284P_bobuino_fs.upload.speed=115200
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.upload.protocol=arduino
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.upload.maximum_size=126976
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.upload.speed=115200
 
-ariadne1284P_bobuino_fs.bootloader.low_fuses=0xF7
-ariadne1284P_bobuino_fs.bootloader.high_fuses=0xDA
-ariadne1284P_bobuino_fs.bootloader.extended_fuses=0xFD
-ariadne1284P_bobuino_fs.bootloader.path=ariadne
-ariadne1284P_bobuino_fs.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P_bobuino_fs.bootloader.unlock_bits=0x3F
-ariadne1284P_bobuino_fs.bootloader.lock_bits=0x0F
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.low_fuses=0xF7
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.high_fuses=0xDA
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.extended_fuses=0xFD
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.path=ariadne
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_bobuinosleepingbeauty.hex
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.unlock_bits=0x3F
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.bootloader.lock_bits=0x0F
 
-ariadne1284P_bobuino_fs.build.mcu=atmega1284p
-ariadne1284P_bobuino_fs.build.f_cpu=16000000L
-ariadne1284P_bobuino_fs.build.core=arduino:arduino
-ariadne1284P_bobuino_fs.build.variant=bobuino
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.build.mcu=atmega1284p
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.build.f_cpu=16000000L
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.build.core=arduino:arduino
+ariadne1284P_16MHz_fullswing_blink_shield_bobuino.build.variant=mighty-1284p:bobuino
+
+##############################################################
+
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.name=Bobuino/Skinny Bob 16Mhz Low Power, Ariadne Bootloader
+
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.upload.protocol=arduino
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.upload.maximum_size=126976
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.upload.speed=115200
+
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.low_fuses=0xFF
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.high_fuses=0xDA
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.extended_fuses=0xFD
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.path=ariadne
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.file=ariadne_atmega1284p_16mhz_blink_shield_bobuinosleepingbeauty.hex
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.unlock_bits=0x3F
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.bootloader.lock_bits=0x0F
+
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.build.mcu=atmega1284p
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.build.f_cpu=16000000L
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.build.core=arduino:arduino
+ariadne1284P_16MHz_lowpower_blink_shield_bobuino.build.variant=mighty-1284p:bobuino
 
 ##############################################################
 
-ariadne1284P_bobuino_lp.name=Bobuino/Skinny Bob 16Mhz Low Power (Ariadne Bootloader)
-
-ariadne1284P_bobuino_lp.upload.protocol=arduino
-ariadne1284P_bobuino_lp.upload.maximum_size=126976
-ariadne1284P_bobuino_lp.upload.speed=115200
-
-ariadne1284P_bobuino_lp.bootloader.low_fuses=0xFF
-ariadne1284P_bobuino_lp.bootloader.high_fuses=0xDA
-ariadne1284P_bobuino_lp.bootloader.extended_fuses=0xFD
-ariadne1284P_bobuino_lp.bootloader.path=ariadne
-ariadne1284P_bobuino_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P_bobuino_lp.bootloader.unlock_bits=0x3F
-ariadne1284P_bobuino_lp.bootloader.lock_bits=0x0F
-
-ariadne1284P_bobuino_lp.build.mcu=atmega1284p
-ariadne1284P_bobuino_lp.build.f_cpu=16000000L
-ariadne1284P_bobuino_lp.build.core=arduino:arduino
-ariadne1284P_bobuino_lp.build.variant=bobuino
-
-##############################################################
 # Internal oscillator
-ariadne1284P_bobuino_8.name=Bobuino/Skinny Bob 8Mhz (Ariadne Bootloader)
+ariadne1284P_8MHz_blink_shield_bobuino.name=Bobuino/Skinny Bob 8Mhz Internal, Ariadne Bootloader
 
-ariadne1284P_bobuino_8.upload.protocol=arduino
-ariadne1284P_bobuino_8.upload.maximum_size=126976
-ariadne1284P_bobuino_8.upload.speed=115200
+ariadne1284P_8MHz_blink_shield_bobuino.upload.protocol=arduino
+ariadne1284P_8MHz_blink_shield_bobuino.upload.maximum_size=126976
+ariadne1284P_8MHz_blink_shield_bobuino.upload.speed=115200
 
-ariadne1284P_bobuino_8.bootloader.low_fuses=0xE2
-ariadne1284P_bobuino_8.bootloader.high_fuses=0xDA
-ariadne1284P_bobuino_8.bootloader.extended_fuses=0xFD
-ariadne1284P_bobuino_8.bootloader.path=ariadne
-ariadne1284P_bobuino_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
-ariadne1284P_bobuino_8.bootloader.unlock_bits=0x3F
-ariadne1284P_bobuino_8.bootloader.lock_bits=0x0F
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.low_fuses=0xE2
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.high_fuses=0xDA
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.extended_fuses=0xFD
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.path=ariadne
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.file=ariadne_atmega1284p_8mhz_blink_shield_bobuinosleepingbeauty.hex
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.unlock_bits=0x3F
+ariadne1284P_8MHz_blink_shield_bobuino.bootloader.lock_bits=0x0F
 
-ariadne1284P_bobuino_8.build.mcu=atmega1284p
-ariadne1284P_bobuino_8.build.f_cpu=8000000L
-ariadne1284P_bobuino_8.build.core=arduino:arduino
-ariadne1284P_bobuino_8.build.variant=bobuino
-
-##############################################################
-# The Full Swing oscillator setting is more resistant to electrical interference than Low Power
-ariadne1284P_avr-developers_fs.name=avr-developers.com pinout Bob 16Mhz Full Swing (Ariadne Bootloader)
-
-ariadne1284P_avr-developers_fs.upload.protocol=arduino
-ariadne1284P_avr-developers_fs.upload.maximum_size=126976
-ariadne1284P_avr-developers_fs.upload.speed=115200
-
-ariadne1284P_avr-developers_fs.bootloader.low_fuses=0xF7
-ariadne1284P_avr-developers_fs.bootloader.high_fuses=0xDA
-ariadne1284P_avr-developers_fs.bootloader.extended_fuses=0xFD
-ariadne1284P_avr-developers_fs.bootloader.path=ariadne
-ariadne1284P_avr-developers_fs.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P_avr-developers_fs.bootloader.unlock_bits=0x3F
-ariadne1284P_avr-developers_fs.bootloader.lock_bits=0x0F
-
-ariadne1284P_avr-developers_fs.build.mcu=atmega1284p
-ariadne1284P_avr-developers_fs.build.f_cpu=16000000L
-ariadne1284P_avr-developers_fs.build.core=arduino:arduino
-ariadne1284P_avr-developers_fs.build.variant=avr_developers
-
-##############################################################
-
-ariadne1284P_avr-developers_lp.name=avr-developers.com pinout 16Mhz Low Power (Ariadne Bootloader)
-
-ariadne1284P_avr-developers_lp.upload.protocol=arduino
-ariadne1284P_avr-developers_lp.upload.maximum_size=126976
-ariadne1284P_avr-developers_lp.upload.speed=115200
-
-ariadne1284P_avr-developers_lp.bootloader.low_fuses=0xFF
-ariadne1284P_avr-developers_lp.bootloader.high_fuses=0xDA
-ariadne1284P_avr-developers_lp.bootloader.extended_fuses=0xFD
-ariadne1284P_avr-developers_lp.bootloader.path=ariadne
-ariadne1284P_avr-developers_lp.bootloader.file=ariadne_atmega1284p_16mhz.hex
-ariadne1284P_avr-developers_lp.bootloader.unlock_bits=0x3F
-ariadne1284P_avr-developers_lp.bootloader.lock_bits=0x0F
-
-ariadne1284P_avr-developers_lp.build.mcu=atmega1284p
-ariadne1284P_avr-developers_lp.build.f_cpu=16000000L
-ariadne1284P_avr-developers_lp.build.core=arduino:arduino
-ariadne1284P_avr-developers_lp.build.variant=avr_developers
-
-##############################################################
-# Internal oscillator
-ariadne1284P_avr-developers_8.name=avr-developers.com pinout 8Mhz (Ariadne Bootloader)
-
-ariadne1284P_avr-developers_8.upload.protocol=arduino
-ariadne1284P_avr-developers_8.upload.maximum_size=126976
-ariadne1284P_avr-developers_8.upload.speed=115200
-
-ariadne1284P_avr-developers_8.bootloader.low_fuses=0xE2
-ariadne1284P_avr-developers_8.bootloader.high_fuses=0xDA
-ariadne1284P_avr-developers_8.bootloader.extended_fuses=0xFD
-ariadne1284P_avr-developers_8.bootloader.path=ariadne
-ariadne1284P_avr-developers_8.bootloader.file=ariadne_atmega1284p_8mhz.hex
-ariadne1284P_avr-developers_8.bootloader.unlock_bits=0x3F
-ariadne1284P_avr-developers_8.bootloader.lock_bits=0x0F
-
-ariadne1284P_avr-developers_8.build.mcu=atmega1284p
-ariadne1284P_avr-developers_8.build.f_cpu=8000000L
-ariadne1284P_avr-developers_8.build.core=arduino:arduino
-ariadne1284P_avr-developers_8.build.variant=avr_developers
+ariadne1284P_8MHz_blink_shield_bobuino.build.mcu=atmega1284p
+ariadne1284P_8MHz_blink_shield_bobuino.build.f_cpu=8000000L
+ariadne1284P_8MHz_blink_shield_bobuino.build.core=arduino:arduino
+ariadne1284P_8MHz_blink_shield_bobuino.build.variant=mighty-1284p:bobuino

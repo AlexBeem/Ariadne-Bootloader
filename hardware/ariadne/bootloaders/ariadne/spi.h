@@ -1,7 +1,7 @@
 #ifndef spi_h
 #define spi_h
 
-/** Pin definitions for SPI and leds */
+/** Pin definitions for SPI and leds(pin in comments refers to Arduino pin) */
 /** Uno and Deumilanove */
 #if defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__)
 	/** SPI port and pins */
@@ -40,7 +40,7 @@
 	#define SCK		PINB1  //Pin 52
 	#define MISO	PINB3  //Pin 50
 	#define MOSI	PINB2  //Pin 51
-	#define SS      PINB0  //Pin 53
+	#define SS    PINB0  //Pin 53
 
 	/** Ethernet Shield SS pin */
 	#define ETH_DDR		DDRB
@@ -65,22 +65,43 @@
 	#define SCK		PINB7  //Pin 8
 	#define MISO	PINB6  //Pin 7
 	#define MOSI	PINB5  //Pin 6
-	#define SS      PINB4  //Pin 5
+	#define SS    PINB4  //Pin 5
 
+#ifdef ATMEGA1284P_PINOUT_BOBUINO_SLEEPINGBEAUTY
+	/** Mighty 1284P bobuino or sleepingbeauty variant */
 	/** Ethernet Shield SS pin */
 	#define ETH_DDR		DDRB
 	#define ETH_PORT	PORTB
-	#define ETH_SS		PINB4  //Pin 5
+	#define ETH_SS		PINB4  //Pin 10
 
 	/** SD card SS pin */
-	#define SD_DDR	DDRC
-	#define SD_PORT	PORTC
-	#define SD_SS	PINC7  //Pin 04
+	#define SD_DDR	DDRB
+	#define SD_PORT	PORTB
+	#define SD_SS	PINB0  //Pin 4
 
-	/** Assumes LED is on Mighty 1284P standard variant pin 13 */
+	/** Assumes LED is on pin 13 */
+	/** Bootloader LED blink can be disabled by defining DISABLE_BLINK */
+	#define LED_DDR     DDRB
+	#define LED_PORT    PORTB
+	#define LED         PINB7
+#else  //ATMEGA1284P_PINOUT_BOBUINO_SLEEPINGBEAUTY
+	/** Mighty 1284P standard or avr_developers variant */
+	/** Ethernet Shield SS pin */
+	#define ETH_DDR		DDRD
+	#define ETH_PORT	PORTD
+	#define ETH_SS		PIND2  //Pin 10
+
+	/** SD card SS pin */
+	#define SD_DDR	DDRB
+	#define SD_PORT	PORTB
+	#define SD_SS	PINB4  //Pin 4
+
+	/** Assumes LED is on pin 13 */
+	/** Bootloader LED blink can be disabled by defining DISABLE_BLINK */
 	#define LED_DDR     DDRD
 	#define LED_PORT    PORTD
 	#define LED         PIND5
+#endif  //ATMEGA1284P_PINOUT_BOBUINO_SLEEPINGBEAUTY
 
 /** Leonardo */
 #elif defined(__AVR_ATmega32U4__)

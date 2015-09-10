@@ -112,17 +112,21 @@ void spiInit(void)
 
 	/** Disable SD card */
 	/** Set SD SS pin high */
+	#ifndef NOT_SHIELD  //don't do anything to the pin if the SD hardware is not installed
 	SD_PORT |= _BV(SD_SS);
 	/** Set SD SS pin as output */
 	SD_DDR |= _BV(SD_SS);
+	#endif  //NOT_SHIELD
 
+	#ifndef DISABLE_BLINK
 	#if (LED != SCK)
 	/** Set up pins to flash the onboard led */
 	/** Set led pin to high */
 	LED_PORT |= _BV(LED);
 	/** Set led pin as output */
 	LED_DDR |= _BV(LED);
-	#endif
+	#endif  //LED != SCK
+	#endif  //DISABLE_BLINK
 
 	/** Set up SPI
 	 ** Set the Double SPI Speed Bit */

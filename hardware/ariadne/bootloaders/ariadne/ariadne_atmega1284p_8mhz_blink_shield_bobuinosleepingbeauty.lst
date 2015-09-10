@@ -1,0 +1,2458 @@
+
+ariadne_atmega1284p_8mhz_blink_shield_bobuinosleepingbeauty.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001c  00800100  0001fb56  00000bea  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000b56  0001f000  0001f000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000f  0080011c  0080011c  00000c06  2**0
+                  ALLOC
+  3 .comment      00000011  00000000  00000000  00000c06  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000170  00000000  00000000  00000c17  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001bef  00000000  00000000  00000d87  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000c2c  00000000  00000000  00002976  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000016a9  00000000  00000000  000035a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000003fc  00000000  00000000  00004c4c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000062a  00000000  00000000  00005048  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000166a  00000000  00000000  00005672  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000088  00000000  00000000  00006cdc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+0001f000 <__vectors>:
+   1f000:	62 c0       	rjmp	.+196    	; 0x1f0c6 <__ctors_end>
+   1f002:	00 00       	nop
+   1f004:	e0 c0       	rjmp	.+448    	; 0x1f1c6 <__bad_interrupt>
+   1f006:	00 00       	nop
+   1f008:	de c0       	rjmp	.+444    	; 0x1f1c6 <__bad_interrupt>
+   1f00a:	00 00       	nop
+   1f00c:	dc c0       	rjmp	.+440    	; 0x1f1c6 <__bad_interrupt>
+   1f00e:	00 00       	nop
+   1f010:	da c0       	rjmp	.+436    	; 0x1f1c6 <__bad_interrupt>
+   1f012:	00 00       	nop
+   1f014:	d8 c0       	rjmp	.+432    	; 0x1f1c6 <__bad_interrupt>
+   1f016:	00 00       	nop
+   1f018:	d6 c0       	rjmp	.+428    	; 0x1f1c6 <__bad_interrupt>
+   1f01a:	00 00       	nop
+   1f01c:	d4 c0       	rjmp	.+424    	; 0x1f1c6 <__bad_interrupt>
+   1f01e:	00 00       	nop
+   1f020:	d2 c0       	rjmp	.+420    	; 0x1f1c6 <__bad_interrupt>
+   1f022:	00 00       	nop
+   1f024:	d0 c0       	rjmp	.+416    	; 0x1f1c6 <__bad_interrupt>
+   1f026:	00 00       	nop
+   1f028:	ce c0       	rjmp	.+412    	; 0x1f1c6 <__bad_interrupt>
+   1f02a:	00 00       	nop
+   1f02c:	cc c0       	rjmp	.+408    	; 0x1f1c6 <__bad_interrupt>
+   1f02e:	00 00       	nop
+   1f030:	ca c0       	rjmp	.+404    	; 0x1f1c6 <__bad_interrupt>
+   1f032:	00 00       	nop
+   1f034:	c8 c0       	rjmp	.+400    	; 0x1f1c6 <__bad_interrupt>
+   1f036:	00 00       	nop
+   1f038:	c6 c0       	rjmp	.+396    	; 0x1f1c6 <__bad_interrupt>
+   1f03a:	00 00       	nop
+   1f03c:	c4 c0       	rjmp	.+392    	; 0x1f1c6 <__bad_interrupt>
+   1f03e:	00 00       	nop
+   1f040:	c2 c0       	rjmp	.+388    	; 0x1f1c6 <__bad_interrupt>
+   1f042:	00 00       	nop
+   1f044:	c0 c0       	rjmp	.+384    	; 0x1f1c6 <__bad_interrupt>
+   1f046:	00 00       	nop
+   1f048:	be c0       	rjmp	.+380    	; 0x1f1c6 <__bad_interrupt>
+   1f04a:	00 00       	nop
+   1f04c:	bc c0       	rjmp	.+376    	; 0x1f1c6 <__bad_interrupt>
+   1f04e:	00 00       	nop
+   1f050:	ba c0       	rjmp	.+372    	; 0x1f1c6 <__bad_interrupt>
+   1f052:	00 00       	nop
+   1f054:	b8 c0       	rjmp	.+368    	; 0x1f1c6 <__bad_interrupt>
+   1f056:	00 00       	nop
+   1f058:	b6 c0       	rjmp	.+364    	; 0x1f1c6 <__bad_interrupt>
+   1f05a:	00 00       	nop
+   1f05c:	b4 c0       	rjmp	.+360    	; 0x1f1c6 <__bad_interrupt>
+   1f05e:	00 00       	nop
+   1f060:	b2 c0       	rjmp	.+356    	; 0x1f1c6 <__bad_interrupt>
+   1f062:	00 00       	nop
+   1f064:	b0 c0       	rjmp	.+352    	; 0x1f1c6 <__bad_interrupt>
+   1f066:	00 00       	nop
+   1f068:	ae c0       	rjmp	.+348    	; 0x1f1c6 <__bad_interrupt>
+   1f06a:	00 00       	nop
+   1f06c:	ac c0       	rjmp	.+344    	; 0x1f1c6 <__bad_interrupt>
+   1f06e:	00 00       	nop
+   1f070:	aa c0       	rjmp	.+340    	; 0x1f1c6 <__bad_interrupt>
+   1f072:	00 00       	nop
+   1f074:	a8 c0       	rjmp	.+336    	; 0x1f1c6 <__bad_interrupt>
+   1f076:	00 00       	nop
+   1f078:	a6 c0       	rjmp	.+332    	; 0x1f1c6 <__bad_interrupt>
+   1f07a:	00 00       	nop
+   1f07c:	a4 c0       	rjmp	.+328    	; 0x1f1c6 <__bad_interrupt>
+   1f07e:	00 00       	nop
+   1f080:	a2 c0       	rjmp	.+324    	; 0x1f1c6 <__bad_interrupt>
+   1f082:	00 00       	nop
+   1f084:	a0 c0       	rjmp	.+320    	; 0x1f1c6 <__bad_interrupt>
+   1f086:	00 00       	nop
+   1f088:	9e c0       	rjmp	.+316    	; 0x1f1c6 <__bad_interrupt>
+	...
+
+0001f08c <__trampolines_end>:
+   1f08c:	13 00       	.word	0x0013	; ????
+   1f08e:	05 00       	.word	0x0005	; ????
+   1f090:	00 49       	sbci	r16, 0x90	; 144
+   1f092:	6e 76       	andi	r22, 0x6E	; 110
+   1f094:	61 6c       	ori	r22, 0xC1	; 193
+   1f096:	69 64       	ori	r22, 0x49	; 73
+   1f098:	20 69       	ori	r18, 0x90	; 144
+   1f09a:	6d 61       	ori	r22, 0x1D	; 29
+   1f09c:	67 65       	ori	r22, 0x57	; 87
+   1f09e:	20 66       	ori	r18, 0x60	; 96
+   1f0a0:	69 6c       	ori	r22, 0xC9	; 201
+   1f0a2:	65 00       	.word	0x0065	; ????
+
+0001f0a4 <tftp_unknown_error_packet>:
+   1f0a4:	08 00 05 00 00 45 72 72 6f 72 00                    .....Error.
+
+0001f0af <tftp_full_error_packet>:
+   1f0af:	09 00 05 00 03 46 75 6c 6c 00                       .....Full.
+
+0001f0b9 <tftp_opcode_error_packet>:
+   1f0b9:	0a 00 05 00 00 4f 70 63 6f 64 65 3f 00              .....Opcode?.
+
+0001f0c6 <__ctors_end>:
+   1f0c6:	11 24       	eor	r1, r1
+   1f0c8:	1f be       	out	0x3f, r1	; 63
+   1f0ca:	cf ef       	ldi	r28, 0xFF	; 255
+   1f0cc:	d0 e4       	ldi	r29, 0x40	; 64
+   1f0ce:	de bf       	out	0x3e, r29	; 62
+   1f0d0:	cd bf       	out	0x3d, r28	; 61
+
+0001f0d2 <__do_copy_data>:
+   1f0d2:	11 e0       	ldi	r17, 0x01	; 1
+   1f0d4:	a0 e0       	ldi	r26, 0x00	; 0
+   1f0d6:	b1 e0       	ldi	r27, 0x01	; 1
+   1f0d8:	e6 e5       	ldi	r30, 0x56	; 86
+   1f0da:	fb ef       	ldi	r31, 0xFB	; 251
+   1f0dc:	01 e0       	ldi	r16, 0x01	; 1
+   1f0de:	0b bf       	out	0x3b, r16	; 59
+   1f0e0:	02 c0       	rjmp	.+4      	; 0x1f0e6 <__do_copy_data+0x14>
+   1f0e2:	07 90       	elpm	r0, Z+
+   1f0e4:	0d 92       	st	X+, r0
+   1f0e6:	ac 31       	cpi	r26, 0x1C	; 28
+   1f0e8:	b1 07       	cpc	r27, r17
+   1f0ea:	d9 f7       	brne	.-10     	; 0x1f0e2 <__do_copy_data+0x10>
+
+0001f0ec <__do_clear_bss>:
+   1f0ec:	21 e0       	ldi	r18, 0x01	; 1
+   1f0ee:	ac e1       	ldi	r26, 0x1C	; 28
+   1f0f0:	b1 e0       	ldi	r27, 0x01	; 1
+   1f0f2:	01 c0       	rjmp	.+2      	; 0x1f0f6 <.do_clear_bss_start>
+
+0001f0f4 <.do_clear_bss_loop>:
+   1f0f4:	1d 92       	st	X+, r1
+
+0001f0f6 <.do_clear_bss_start>:
+   1f0f6:	ab 32       	cpi	r26, 0x2B	; 43
+   1f0f8:	b2 07       	cpc	r27, r18
+   1f0fa:	e1 f7       	brne	.-8      	; 0x1f0f4 <.do_clear_bss_loop>
+   1f0fc:	01 d0       	rcall	.+2      	; 0x1f100 <main>
+   1f0fe:	29 c5       	rjmp	.+2642   	; 0x1fb52 <_exit>
+
+0001f100 <main>:
+
+int main(void)
+{
+	/* Disable the watchdog timer to prevent
+	 * eternal reset loop of doom and despair */
+	MCUSR = 0;
+   1f100:	14 be       	out	0x34, r1	; 52
+	wdt_disable();
+   1f102:	88 e1       	ldi	r24, 0x18	; 24
+   1f104:	0f b6       	in	r0, 0x3f	; 63
+   1f106:	f8 94       	cli
+   1f108:	80 93 60 00 	sts	0x0060, r24
+   1f10c:	10 92 60 00 	sts	0x0060, r1
+   1f110:	0f be       	out	0x3f, r0	; 63
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1f112:	2f ef       	ldi	r18, 0xFF	; 255
+   1f114:	81 ee       	ldi	r24, 0xE1	; 225
+   1f116:	94 e0       	ldi	r25, 0x04	; 4
+   1f118:	21 50       	subi	r18, 0x01	; 1
+   1f11a:	80 40       	sbci	r24, 0x00	; 0
+   1f11c:	90 40       	sbci	r25, 0x00	; 0
+   1f11e:	e1 f7       	brne	.-8      	; 0x1f118 <main+0x18>
+   1f120:	00 c0       	rjmp	.+0      	; 0x1f122 <main+0x22>
+   1f122:	00 00       	nop
+	/* This code makes the following assumptions:
+	 * No interrupts will execute
+	 * SP points to RAMEND
+	 * r1 contains zero */
+	//cli();
+	asm volatile("clr __zero_reg__");
+   1f124:	11 24       	eor	r1, r1
+	// 0x02 -> ClkIO/8 -> 500ns period, 32ms max
+	// 0X03 -> ClkIO/64 -> 4us period, 256ms max
+	// 0x04 -> ClkIO/256 -> 16us period, 1024ms max
+	// 0x05 -> ClkIO/1024 -> 64us period, 4096ms max
+	// Set up Timer 1 as timekeeper for LED flashing
+	TCCR1B = _BV(CS12) | _BV(CS10); // Same thing as TCCR1B = 0x05;
+   1f126:	85 e0       	ldi	r24, 0x05	; 5
+   1f128:	80 93 81 00 	sts	0x0081, r24
+
+	/* Write version information in the EEPROM */
+	if(eeprom_read_byte(EEPROM_MAJVER) != ARIADNE_MAJVER)
+   1f12c:	80 e0       	ldi	r24, 0x00	; 0
+   1f12e:	90 e0       	ldi	r25, 0x00	; 0
+   1f130:	fa d4       	rcall	.+2548   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f132:	88 23       	and	r24, r24
+   1f134:	21 f0       	breq	.+8      	; 0x1f13e <main+0x3e>
+		eeprom_write_byte(EEPROM_MAJVER, ARIADNE_MAJVER);
+   1f136:	60 e0       	ldi	r22, 0x00	; 0
+   1f138:	80 e0       	ldi	r24, 0x00	; 0
+   1f13a:	90 e0       	ldi	r25, 0x00	; 0
+   1f13c:	fc d4       	rcall	.+2552   	; 0x1fb36 <__eewr_byte_m1284p>
+	if(eeprom_read_byte(EEPROM_MINVER) != ARIADNE_MINVER)
+   1f13e:	81 e0       	ldi	r24, 0x01	; 1
+   1f140:	90 e0       	ldi	r25, 0x00	; 0
+   1f142:	f1 d4       	rcall	.+2530   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f144:	84 30       	cpi	r24, 0x04	; 4
+   1f146:	21 f0       	breq	.+8      	; 0x1f150 <main+0x50>
+		eeprom_write_byte(EEPROM_MINVER, ARIADNE_MINVER);
+   1f148:	64 e0       	ldi	r22, 0x04	; 4
+   1f14a:	81 e0       	ldi	r24, 0x01	; 1
+   1f14c:	90 e0       	ldi	r25, 0x00	; 0
+   1f14e:	f3 d4       	rcall	.+2534   	; 0x1fb36 <__eewr_byte_m1284p>
+
+	/* Initialize UART communication */
+	serialInit();
+   1f150:	5f d3       	rcall	.+1726   	; 0x1f810 <serialInit>
+		buttonInit();
+	)
+
+	/* Initalize SPI communication */
+	DBG_MAIN_EX(tracePGMlnMain(mDebugMain_SPI);)
+	spiInit();
+   1f152:	92 d0       	rcall	.+292    	; 0x1f278 <spiInit>
+	/* Initialize networking */
+	DBG_MAIN_EX(tracePGMlnMain(mDebugMain_NET);)
+	netInit();
+   1f154:	9a d0       	rcall	.+308    	; 0x1f28a <netInit>
+
+	/* Initialize the UDP socket for tftp */
+	DBG_MAIN_EX(tracePGMlnMain(mDebugMain_TFTP);)
+	tftpInit();
+   1f156:	64 d2       	rcall	.+1224   	; 0x1f620 <tftpInit>
+#if defined(ANNOUNCE)
+	DBG_MAIN_EX(tracePGMlnMain(mDebugMain_ANN);)
+	announceInit();
+#endif
+
+	serialFlashing = FALSE;
+   1f158:	10 92 29 01 	sts	0x0129, r1
+	tftpFlashing = FALSE;
+   1f15c:	10 92 2a 01 	sts	0x012A, r1
+			if(eeprom_read_byte(EEPROM_IMG_STAT) == EEPROM_IMG_OK_VALUE) break;
+
+			//TODO: determine the conditions for reseting server OR reseting socket
+			if(tftpFlashing == TRUE) {
+				// Delete first page of flash memory
+				boot_page_erase(0);
+   1f160:	c3 e0       	ldi	r28, 0x03	; 3
+   1f162:	c1 2c       	mov	r12, r1
+   1f164:	d1 2c       	mov	r13, r1
+   1f166:	76 01       	movw	r14, r12
+	serialFlashing = FALSE;
+	tftpFlashing = FALSE;
+
+	for(;;) {
+		// If there is no serial flashing under way, poll tftp
+		if(!serialFlashing)
+   1f168:	80 91 29 01 	lds	r24, 0x0129
+   1f16c:	88 23       	and	r24, r24
+   1f16e:	29 f0       	breq	.+10     	; 0x1f17a <main+0x7a>
+			// If tftp recieved a FINAL_ACK, break
+			if(tftpPoll() == 0)
+				break;
+
+		// If there is no tftp flashing, poll serial
+		if(!tftpFlashing)
+   1f170:	80 91 2a 01 	lds	r24, 0x012A
+   1f174:	88 23       	and	r24, r24
+   1f176:	49 f0       	breq	.+18     	; 0x1f18a <main+0x8a>
+   1f178:	04 c0       	rjmp	.+8      	; 0x1f182 <main+0x82>
+
+	for(;;) {
+		// If there is no serial flashing under way, poll tftp
+		if(!serialFlashing)
+			// If tftp recieved a FINAL_ACK, break
+			if(tftpPoll() == 0)
+   1f17a:	75 d2       	rcall	.+1258   	; 0x1f666 <tftpPoll>
+   1f17c:	81 11       	cpse	r24, r1
+   1f17e:	f8 cf       	rjmp	.-16     	; 0x1f170 <main+0x70>
+   1f180:	1d c0       	rjmp	.+58     	; 0x1f1bc <main+0xbc>
+		/* As explained above this goes out */
+#if defined(ANNOUNCE)
+		announcePoll();
+#endif
+
+		if(timedOut()) {
+   1f182:	a1 d3       	rcall	.+1858   	; 0x1f8c6 <timedOut>
+   1f184:	81 11       	cpse	r24, r1
+   1f186:	05 c0       	rjmp	.+10     	; 0x1f192 <main+0x92>
+   1f188:	17 c0       	rjmp	.+46     	; 0x1f1b8 <main+0xb8>
+				break;
+
+		// If there is no tftp flashing, poll serial
+		if(!tftpFlashing)
+			// If flashing is done exit
+			if(serialPoll() == 0)
+   1f18a:	68 d3       	rcall	.+1744   	; 0x1f85c <serialPoll>
+   1f18c:	81 11       	cpse	r24, r1
+   1f18e:	f9 cf       	rjmp	.-14     	; 0x1f182 <main+0x82>
+   1f190:	15 c0       	rjmp	.+42     	; 0x1f1bc <main+0xbc>
+#if defined(ANNOUNCE)
+		announcePoll();
+#endif
+
+		if(timedOut()) {
+			if(eeprom_read_byte(EEPROM_IMG_STAT) == EEPROM_IMG_OK_VALUE) break;
+   1f192:	82 e0       	ldi	r24, 0x02	; 2
+   1f194:	90 e0       	ldi	r25, 0x00	; 0
+   1f196:	c7 d4       	rcall	.+2446   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f198:	8e 3e       	cpi	r24, 0xEE	; 238
+   1f19a:	81 f0       	breq	.+32     	; 0x1f1bc <main+0xbc>
+
+			//TODO: determine the conditions for reseting server OR reseting socket
+			if(tftpFlashing == TRUE) {
+   1f19c:	80 91 2a 01 	lds	r24, 0x012A
+   1f1a0:	81 30       	cpi	r24, 0x01	; 1
+   1f1a2:	51 f4       	brne	.+20     	; 0x1f1b8 <main+0xb8>
+				// Delete first page of flash memory
+				boot_page_erase(0);
+   1f1a4:	f6 01       	movw	r30, r12
+   1f1a6:	e0 92 5b 00 	sts	0x005B, r14
+   1f1aa:	c0 93 57 00 	sts	0x0057, r28
+   1f1ae:	e8 95       	spm
+				// Reinitialize TFTP
+				tftpInit();
+   1f1b0:	37 d2       	rcall	.+1134   	; 0x1f620 <tftpInit>
+				// Reset the timeout counter
+				resetTick();
+   1f1b2:	80 d3       	rcall	.+1792   	; 0x1f8b4 <resetTick>
+				// Unset tftp flag
+				tftpFlashing = FALSE;
+   1f1b4:	10 92 2a 01 	sts	0x012A, r1
+			}
+		}
+		/* Blink the notification led */
+#ifndef DISABLE_BLINK
+		updateLed();
+   1f1b8:	5c d3       	rcall	.+1720   	; 0x1f872 <updateLed>
+#endif  //DISABLE_BLINK
+	}
+   1f1ba:	d6 cf       	rjmp	.-84     	; 0x1f168 <main+0x68>
+
+	/* Exit to user application */
+	DBG_MAIN(tracePGMlnMain(mDebugMain_EXIT);)
+	asm volatile(
+   1f1bc:	ee 27       	eor	r30, r30
+   1f1be:	ff 27       	eor	r31, r31
+   1f1c0:	09 94       	ijmp
+		"clr	r31		\n\t"
+		"ijmp	\n\t"
+	);
+	//appStart();
+	//return(0); /* never reached */
+}
+   1f1c2:	80 e0       	ldi	r24, 0x00	; 0
+   1f1c4:	90 e0       	ldi	r25, 0x00	; 0
+
+0001f1c6 <__bad_interrupt>:
+   1f1c6:	1c cf       	rjmp	.-456    	; 0x1f000 <__vectors>
+
+0001f1c8 <spiWriteReg>:
+		tracenum(address);
+		tracePGM(mDebugSpi_COMMA);
+		tracenum(value);
+	)
+
+	SPCR = _BV(SPE) | _BV(MSTR); // Set SPI as master
+   1f1c8:	20 e5       	ldi	r18, 0x50	; 80
+   1f1ca:	2c bd       	out	0x2c, r18	; 44
+	SS_LOW();
+   1f1cc:	2c 98       	cbi	0x05, 4	; 5
+
+	SPDR = SPI_WRITE;
+   1f1ce:	20 ef       	ldi	r18, 0xF0	; 240
+   1f1d0:	2e bd       	out	0x2e, r18	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f1d2:	0d b4       	in	r0, 0x2d	; 45
+   1f1d4:	07 fe       	sbrs	r0, 7
+   1f1d6:	fd cf       	rjmp	.-6      	; 0x1f1d2 <spiWriteReg+0xa>
+
+	SPDR = address >> 8;
+   1f1d8:	29 2f       	mov	r18, r25
+   1f1da:	33 27       	eor	r19, r19
+   1f1dc:	2e bd       	out	0x2e, r18	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f1de:	0d b4       	in	r0, 0x2d	; 45
+   1f1e0:	07 fe       	sbrs	r0, 7
+   1f1e2:	fd cf       	rjmp	.-6      	; 0x1f1de <spiWriteReg+0x16>
+
+	SPDR = address & 0xff;
+   1f1e4:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f1e6:	0d b4       	in	r0, 0x2d	; 45
+   1f1e8:	07 fe       	sbrs	r0, 7
+   1f1ea:	fd cf       	rjmp	.-6      	; 0x1f1e6 <spiWriteReg+0x1e>
+
+	SPDR = value;
+   1f1ec:	6e bd       	out	0x2e, r22	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f1ee:	0d b4       	in	r0, 0x2d	; 45
+   1f1f0:	07 fe       	sbrs	r0, 7
+   1f1f2:	fd cf       	rjmp	.-6      	; 0x1f1ee <spiWriteReg+0x26>
+
+	SS_HIGH();
+   1f1f4:	2c 9a       	sbi	0x05, 4	; 5
+	SPCR = 0; // Turn off SPI
+   1f1f6:	1c bc       	out	0x2c, r1	; 44
+   1f1f8:	08 95       	ret
+
+0001f1fa <spiWriteWord>:
+}
+
+void spiWriteWord(uint16_t address, uint16_t value)
+{
+   1f1fa:	0f 93       	push	r16
+   1f1fc:	1f 93       	push	r17
+   1f1fe:	cf 93       	push	r28
+   1f200:	df 93       	push	r29
+   1f202:	8c 01       	movw	r16, r24
+   1f204:	eb 01       	movw	r28, r22
+	// Write uint16_t to Ethernet controller
+	spiWriteReg(address++, value >> 8);
+   1f206:	67 2f       	mov	r22, r23
+   1f208:	77 27       	eor	r23, r23
+   1f20a:	de df       	rcall	.-68     	; 0x1f1c8 <spiWriteReg>
+	spiWriteReg(address, value & 0xff);
+   1f20c:	6c 2f       	mov	r22, r28
+   1f20e:	c8 01       	movw	r24, r16
+   1f210:	01 96       	adiw	r24, 0x01	; 1
+}
+   1f212:	df 91       	pop	r29
+   1f214:	cf 91       	pop	r28
+   1f216:	1f 91       	pop	r17
+   1f218:	0f 91       	pop	r16
+
+void spiWriteWord(uint16_t address, uint16_t value)
+{
+	// Write uint16_t to Ethernet controller
+	spiWriteReg(address++, value >> 8);
+	spiWriteReg(address, value & 0xff);
+   1f21a:	d6 cf       	rjmp	.-84     	; 0x1f1c8 <spiWriteReg>
+
+0001f21c <spiReadReg>:
+	)
+	#endif
+
+	uint8_t returnValue;
+
+	SPCR = _BV(SPE) | _BV(MSTR);
+   1f21c:	20 e5       	ldi	r18, 0x50	; 80
+   1f21e:	2c bd       	out	0x2c, r18	; 44
+	SS_LOW();
+   1f220:	2c 98       	cbi	0x05, 4	; 5
+
+	SPDR = SPI_READ;
+   1f222:	2f e0       	ldi	r18, 0x0F	; 15
+   1f224:	2e bd       	out	0x2e, r18	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f226:	0d b4       	in	r0, 0x2d	; 45
+   1f228:	07 fe       	sbrs	r0, 7
+   1f22a:	fd cf       	rjmp	.-6      	; 0x1f226 <spiReadReg+0xa>
+
+	SPDR = address >> 8;
+   1f22c:	29 2f       	mov	r18, r25
+   1f22e:	33 27       	eor	r19, r19
+   1f230:	2e bd       	out	0x2e, r18	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f232:	0d b4       	in	r0, 0x2d	; 45
+   1f234:	07 fe       	sbrs	r0, 7
+   1f236:	fd cf       	rjmp	.-6      	; 0x1f232 <spiReadReg+0x16>
+
+	SPDR = address & 0xff;
+   1f238:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f23a:	0d b4       	in	r0, 0x2d	; 45
+   1f23c:	07 fe       	sbrs	r0, 7
+   1f23e:	fd cf       	rjmp	.-6      	; 0x1f23a <spiReadReg+0x1e>
+
+	SPDR = 0;
+   1f240:	1e bc       	out	0x2e, r1	; 46
+	while(!(SPSR & _BV(SPIF)));
+   1f242:	0d b4       	in	r0, 0x2d	; 45
+   1f244:	07 fe       	sbrs	r0, 7
+   1f246:	fd cf       	rjmp	.-6      	; 0x1f242 <spiReadReg+0x26>
+
+	SS_HIGH();
+   1f248:	2c 9a       	sbi	0x05, 4	; 5
+	returnValue = SPDR;
+   1f24a:	8e b5       	in	r24, 0x2e	; 46
+	SPCR = 0;
+   1f24c:	1c bc       	out	0x2c, r1	; 44
+
+	return(returnValue);
+}
+   1f24e:	08 95       	ret
+
+0001f250 <spiReadWord>:
+
+uint16_t spiReadWord(uint16_t address)
+{
+   1f250:	1f 93       	push	r17
+   1f252:	cf 93       	push	r28
+   1f254:	df 93       	push	r29
+   1f256:	ec 01       	movw	r28, r24
+	// Read uint16_t from Ethernet controller
+	return((spiReadReg(address) << 8) | spiReadReg(address + 1));
+   1f258:	e1 df       	rcall	.-62     	; 0x1f21c <spiReadReg>
+   1f25a:	18 2f       	mov	r17, r24
+   1f25c:	ce 01       	movw	r24, r28
+   1f25e:	01 96       	adiw	r24, 0x01	; 1
+   1f260:	dd df       	rcall	.-70     	; 0x1f21c <spiReadReg>
+   1f262:	21 2f       	mov	r18, r17
+   1f264:	30 e0       	ldi	r19, 0x00	; 0
+   1f266:	32 2f       	mov	r19, r18
+   1f268:	22 27       	eor	r18, r18
+}
+   1f26a:	a9 01       	movw	r20, r18
+   1f26c:	48 2b       	or	r20, r24
+   1f26e:	ca 01       	movw	r24, r20
+   1f270:	df 91       	pop	r29
+   1f272:	cf 91       	pop	r28
+   1f274:	1f 91       	pop	r17
+   1f276:	08 95       	ret
+
+0001f278 <spiInit>:
+	 * At this stage all pins are set to HIGH. This in fact DISABLES SPI for both Ethernet and SD.
+	 * SS pin for ethernet is pulled low just in time for reading or writing data inside those
+	 * functions. */
+
+	/** Set SPI pins high */
+	SPI_PORT = _BV(SCK) | _BV(MISO) | _BV(MOSI) | _BV(SS);
+   1f278:	80 ef       	ldi	r24, 0xF0	; 240
+   1f27a:	85 b9       	out	0x05, r24	; 5
+	/** Set SPI pins as output */
+	SPI_DDR = _BV(SCK) | _BV(MOSI) | _BV(SS);
+   1f27c:	80 eb       	ldi	r24, 0xB0	; 176
+   1f27e:	84 b9       	out	0x04, r24	; 4
+	#endif
+
+	/** Disable SD card */
+	/** Set SD SS pin high */
+	#ifndef NOT_SHIELD  //don't do anything to the pin if the SD hardware is not installed
+	SD_PORT |= _BV(SD_SS);
+   1f280:	28 9a       	sbi	0x05, 0	; 5
+	/** Set SD SS pin as output */
+	SD_DDR |= _BV(SD_SS);
+   1f282:	20 9a       	sbi	0x04, 0	; 4
+	#endif  //LED != SCK
+	#endif  //DISABLE_BLINK
+
+	/** Set up SPI
+	 ** Set the Double SPI Speed Bit */
+	SPSR = (1 << SPI2X);
+   1f284:	81 e0       	ldi	r24, 0x01	; 1
+   1f286:	8d bd       	out	0x2d, r24	; 45
+   1f288:	08 95       	ret
+
+0001f28a <netInit>:
+	0x55          // TMSR Tx Memory Size Register, 2K per socket
+};
+
+
+void netInit(void)
+{
+   1f28a:	0f 93       	push	r16
+   1f28c:	1f 93       	push	r17
+   1f28e:	cf 93       	push	r28
+   1f290:	df 93       	push	r29
+	uint8_t i;
+
+	/* Pull in altered network settings, if available,
+	 * from AVR EEPROM (if signature bytes are set) */
+	if((eeprom_read_byte(EEPROM_SIG_1) == EEPROM_SIG_1_VALUE)
+   1f292:	83 e0       	ldi	r24, 0x03	; 3
+   1f294:	90 e0       	ldi	r25, 0x00	; 0
+   1f296:	47 d4       	rcall	.+2190   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f298:	85 35       	cpi	r24, 0x55	; 85
+   1f29a:	29 f0       	breq	.+10     	; 0x1f2a6 <netInit+0x1c>
+   1f29c:	00 e0       	ldi	r16, 0x00	; 0
+   1f29e:	11 e0       	ldi	r17, 0x01	; 1
+		&& (eeprom_read_byte(EEPROM_SIG_2) == EEPROM_SIG_2_VALUE)) {
+   1f2a0:	c0 e0       	ldi	r28, 0x00	; 0
+   1f2a2:	d0 e0       	ldi	r29, 0x00	; 0
+   1f2a4:	13 c0       	rjmp	.+38     	; 0x1f2cc <netInit+0x42>
+   1f2a6:	84 e0       	ldi	r24, 0x04	; 4
+   1f2a8:	90 e0       	ldi	r25, 0x00	; 0
+   1f2aa:	3d d4       	rcall	.+2170   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f2ac:	8a 3a       	cpi	r24, 0xAA	; 170
+   1f2ae:	b1 f7       	brne	.-20     	; 0x1f29c <netInit+0x12>
+   1f2b0:	01 e0       	ldi	r16, 0x01	; 1
+   1f2b2:	11 e0       	ldi	r17, 0x01	; 1
+   1f2b4:	c5 e0       	ldi	r28, 0x05	; 5
+   1f2b6:	d0 e0       	ldi	r29, 0x00	; 0
+
+		for(i = 0; i < EEPROM_SETTINGS_SIZE; i++)
+			registerBuffer[i + 1] = eeprom_read_byte(EEPROM_DATA + i);
+   1f2b8:	ce 01       	movw	r24, r28
+   1f2ba:	35 d4       	rcall	.+2154   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f2bc:	f8 01       	movw	r30, r16
+   1f2be:	81 93       	st	Z+, r24
+   1f2c0:	8f 01       	movw	r16, r30
+   1f2c2:	21 96       	adiw	r28, 0x01	; 1
+	/* Pull in altered network settings, if available,
+	 * from AVR EEPROM (if signature bytes are set) */
+	if((eeprom_read_byte(EEPROM_SIG_1) == EEPROM_SIG_1_VALUE)
+		&& (eeprom_read_byte(EEPROM_SIG_2) == EEPROM_SIG_2_VALUE)) {
+
+		for(i = 0; i < EEPROM_SETTINGS_SIZE; i++)
+   1f2c4:	c7 31       	cpi	r28, 0x17	; 23
+   1f2c6:	d1 05       	cpc	r29, r1
+   1f2c8:	b9 f7       	brne	.-18     	; 0x1f2b8 <netInit+0x2e>
+   1f2ca:	e8 cf       	rjmp	.-48     	; 0x1f29c <netInit+0x12>
+		}
+	)
+
+	/** Configure Wiznet chip. Network settings */
+	for(i = 0; i < REGISTER_BLOCK_SIZE; i++)
+		spiWriteReg(i, registerBuffer[i]);
+   1f2cc:	f8 01       	movw	r30, r16
+   1f2ce:	61 91       	ld	r22, Z+
+   1f2d0:	8f 01       	movw	r16, r30
+   1f2d2:	ce 01       	movw	r24, r28
+   1f2d4:	79 df       	rcall	.-270    	; 0x1f1c8 <spiWriteReg>
+   1f2d6:	21 96       	adiw	r28, 0x01	; 1
+			if(i != 14) putch(0x2E);
+		}
+	)
+
+	/** Configure Wiznet chip. Network settings */
+	for(i = 0; i < REGISTER_BLOCK_SIZE; i++)
+   1f2d8:	cc 31       	cpi	r28, 0x1C	; 28
+   1f2da:	d1 05       	cpc	r29, r1
+   1f2dc:	b9 f7       	brne	.-18     	; 0x1f2cc <netInit+0x42>
+		spiWriteReg(i, registerBuffer[i]);
+
+	DBG_NET(tracePGMlnNet(mDebugNet_DONE);)
+}
+   1f2de:	df 91       	pop	r29
+   1f2e0:	cf 91       	pop	r28
+   1f2e2:	1f 91       	pop	r17
+   1f2e4:	0f 91       	pop	r16
+   1f2e6:	08 95       	ret
+
+0001f2e8 <sockInit>:
+
+uint16_t lastPacket = 0, highPacket = 0;
+
+
+static void sockInit(uint16_t port)
+{
+   1f2e8:	cf 93       	push	r28
+   1f2ea:	df 93       	push	r29
+   1f2ec:	ec 01       	movw	r28, r24
+	DBG_TFTP(
+		tracePGMlnTftp(mDebugTftp_SOCK);
+		tracenum(port);
+	)
+
+	spiWriteReg(REG_S3_CR, CR_CLOSE);
+   1f2ee:	60 e1       	ldi	r22, 0x10	; 16
+   1f2f0:	81 e0       	ldi	r24, 0x01	; 1
+   1f2f2:	97 e0       	ldi	r25, 0x07	; 7
+   1f2f4:	69 df       	rcall	.-302    	; 0x1f1c8 <spiWriteReg>
+
+	do {
+		// Write TFTP Port
+		spiWriteWord(REG_S3_PORT0, port);
+   1f2f6:	be 01       	movw	r22, r28
+   1f2f8:	84 e0       	ldi	r24, 0x04	; 4
+   1f2fa:	97 e0       	ldi	r25, 0x07	; 7
+   1f2fc:	7e df       	rcall	.-260    	; 0x1f1fa <spiWriteWord>
+		// Write mode
+		spiWriteReg(REG_S3_MR, MR_UDP);
+   1f2fe:	62 e0       	ldi	r22, 0x02	; 2
+   1f300:	80 e0       	ldi	r24, 0x00	; 0
+   1f302:	97 e0       	ldi	r25, 0x07	; 7
+   1f304:	61 df       	rcall	.-318    	; 0x1f1c8 <spiWriteReg>
+		// Open Socket
+		spiWriteReg(REG_S3_CR, CR_OPEN);
+   1f306:	61 e0       	ldi	r22, 0x01	; 1
+   1f308:	81 e0       	ldi	r24, 0x01	; 1
+   1f30a:	97 e0       	ldi	r25, 0x07	; 7
+   1f30c:	5d df       	rcall	.-326    	; 0x1f1c8 <spiWriteReg>
+
+		// Read Status
+		if(spiReadReg(REG_S3_SR) != SOCK_UDP)
+   1f30e:	83 e0       	ldi	r24, 0x03	; 3
+   1f310:	97 e0       	ldi	r25, 0x07	; 7
+   1f312:	84 df       	rcall	.-248    	; 0x1f21c <spiReadReg>
+   1f314:	82 32       	cpi	r24, 0x22	; 34
+   1f316:	21 f0       	breq	.+8      	; 0x1f320 <sockInit+0x38>
+			// Close Socket if it wasn't initialized correctly
+			spiWriteReg(REG_S3_CR, CR_CLOSE);
+   1f318:	60 e1       	ldi	r22, 0x10	; 16
+   1f31a:	81 e0       	ldi	r24, 0x01	; 1
+   1f31c:	97 e0       	ldi	r25, 0x07	; 7
+   1f31e:	54 df       	rcall	.-344    	; 0x1f1c8 <spiWriteReg>
+
+		// If socket correctly opened continue
+	} while(spiReadReg(REG_S3_SR) != SOCK_UDP);
+   1f320:	83 e0       	ldi	r24, 0x03	; 3
+   1f322:	97 e0       	ldi	r25, 0x07	; 7
+   1f324:	7b df       	rcall	.-266    	; 0x1f21c <spiReadReg>
+   1f326:	82 32       	cpi	r24, 0x22	; 34
+   1f328:	31 f7       	brne	.-52     	; 0x1f2f6 <sockInit+0xe>
+}
+   1f32a:	df 91       	pop	r29
+   1f32c:	cf 91       	pop	r28
+   1f32e:	08 95       	ret
+
+0001f330 <processPacket>:
+#if (DEBUG_TFTP > 0)
+static uint8_t processPacket(uint16_t packetSize)
+#else
+static uint8_t processPacket(void)
+#endif
+{
+   1f330:	2f 92       	push	r2
+   1f332:	3f 92       	push	r3
+   1f334:	4f 92       	push	r4
+   1f336:	5f 92       	push	r5
+   1f338:	6f 92       	push	r6
+   1f33a:	7f 92       	push	r7
+   1f33c:	8f 92       	push	r8
+   1f33e:	9f 92       	push	r9
+   1f340:	af 92       	push	r10
+   1f342:	bf 92       	push	r11
+   1f344:	cf 92       	push	r12
+   1f346:	df 92       	push	r13
+   1f348:	ef 92       	push	r14
+   1f34a:	ff 92       	push	r15
+   1f34c:	0f 93       	push	r16
+   1f34e:	1f 93       	push	r17
+   1f350:	cf 93       	push	r28
+   1f352:	df 93       	push	r29
+   1f354:	cd b7       	in	r28, 0x3d	; 61
+   1f356:	de b7       	in	r29, 0x3e	; 62
+   1f358:	cd 50       	subi	r28, 0x0D	; 13
+   1f35a:	d2 40       	sbci	r29, 0x02	; 2
+   1f35c:	de bf       	out	0x3e, r29	; 62
+   1f35e:	cd bf       	out	0x3d, r28	; 61
+
+		DBG_BTN(button();)
+	)
+
+	// Read data from chip to buffer
+	readPointer = spiReadWord(REG_S3_RX_RD0);
+   1f360:	88 e2       	ldi	r24, 0x28	; 40
+   1f362:	97 e0       	ldi	r25, 0x07	; 7
+   1f364:	75 df       	rcall	.-278    	; 0x1f250 <spiReadWord>
+	DBG_TFTP_EX(
+		tracePGMlnTftp(mDebugTftp_RPTR);
+		tracenum(readPointer);
+	)
+
+	if(readPointer == 0) readPointer += S3_RX_START;
+   1f366:	00 97       	sbiw	r24, 0x00	; 0
+   1f368:	11 f4       	brne	.+4      	; 0x1f36e <processPacket+0x3e>
+   1f36a:	80 e0       	ldi	r24, 0x00	; 0
+   1f36c:	98 e7       	ldi	r25, 0x78	; 120
+   1f36e:	8e 01       	movw	r16, r28
+   1f370:	0f 5f       	subi	r16, 0xFF	; 255
+   1f372:	1f 4f       	sbci	r17, 0xFF	; 255
+   1f374:	6e 01       	movw	r12, r28
+   1f376:	23 ef       	ldi	r18, 0xF3	; 243
+   1f378:	c2 1a       	sub	r12, r18
+   1f37a:	2d ef       	ldi	r18, 0xFD	; 253
+   1f37c:	d2 0a       	sbc	r13, r18
+   1f37e:	58 01       	movw	r10, r16
+
+	for(count = TFTP_PACKET_MAX_SIZE; count--;) {
+   1f380:	0c 15       	cp	r16, r12
+   1f382:	1d 05       	cpc	r17, r13
+   1f384:	89 f0       	breq	.+34     	; 0x1f3a8 <processPacket+0x78>
+				tracePGMlnTftp(mDebugTftp_RPOS);
+				tracenum(readPointer);
+			}
+		)
+
+		*bufPtr++ = spiReadReg(readPointer++);
+   1f386:	7c 01       	movw	r14, r24
+   1f388:	ef ef       	ldi	r30, 0xFF	; 255
+   1f38a:	ee 1a       	sub	r14, r30
+   1f38c:	fe 0a       	sbc	r15, r30
+   1f38e:	46 df       	rcall	.-372    	; 0x1f21c <spiReadReg>
+   1f390:	f8 01       	movw	r30, r16
+   1f392:	81 93       	st	Z+, r24
+   1f394:	8f 01       	movw	r16, r30
+
+		if(readPointer == S3_RX_END) readPointer = S3_RX_START;
+   1f396:	e1 14       	cp	r14, r1
+   1f398:	f0 e8       	ldi	r31, 0x80	; 128
+   1f39a:	ff 06       	cpc	r15, r31
+   1f39c:	19 f4       	brne	.+6      	; 0x1f3a4 <processPacket+0x74>
+   1f39e:	e1 2c       	mov	r14, r1
+   1f3a0:	e8 e7       	ldi	r30, 0x78	; 120
+   1f3a2:	fe 2e       	mov	r15, r30
+   1f3a4:	c7 01       	movw	r24, r14
+   1f3a6:	ec cf       	rjmp	.-40     	; 0x1f380 <processPacket+0x50>
+	}
+
+	spiWriteWord(REG_S3_RX_RD0, readPointer);     // Write back new pointer
+   1f3a8:	bc 01       	movw	r22, r24
+   1f3aa:	88 e2       	ldi	r24, 0x28	; 40
+   1f3ac:	97 e0       	ldi	r25, 0x07	; 7
+   1f3ae:	25 df       	rcall	.-438    	; 0x1f1fa <spiWriteWord>
+	spiWriteReg(REG_S3_CR, CR_RECV);
+   1f3b0:	60 e4       	ldi	r22, 0x40	; 64
+   1f3b2:	81 e0       	ldi	r24, 0x01	; 1
+   1f3b4:	97 e0       	ldi	r25, 0x07	; 7
+   1f3b6:	08 df       	rcall	.-496    	; 0x1f1c8 <spiWriteReg>
+
+	while(spiReadReg(REG_S3_CR));
+   1f3b8:	81 e0       	ldi	r24, 0x01	; 1
+   1f3ba:	97 e0       	ldi	r25, 0x07	; 7
+   1f3bc:	2f df       	rcall	.-418    	; 0x1f21c <spiReadReg>
+   1f3be:	81 11       	cpse	r24, r1
+   1f3c0:	fb cf       	rjmp	.-10     	; 0x1f3b8 <processPacket+0x88>
+   1f3c2:	75 01       	movw	r14, r10
+   1f3c4:	0c e0       	ldi	r16, 0x0C	; 12
+   1f3c6:	17 e0       	ldi	r17, 0x07	; 7
+	)
+
+	// Set up return IP address and port
+	uint8_t i;
+
+	for(i = 0; i < 6; i++) spiWriteReg(REG_S3_DIPR0 + i, buffer[i]);
+   1f3c8:	f7 01       	movw	r30, r14
+   1f3ca:	61 91       	ld	r22, Z+
+   1f3cc:	7f 01       	movw	r14, r30
+   1f3ce:	c8 01       	movw	r24, r16
+   1f3d0:	fb de       	rcall	.-522    	; 0x1f1c8 <spiWriteReg>
+   1f3d2:	0f 5f       	subi	r16, 0xFF	; 255
+   1f3d4:	1f 4f       	sbci	r17, 0xFF	; 255
+   1f3d6:	02 31       	cpi	r16, 0x12	; 18
+   1f3d8:	f7 e0       	ldi	r31, 0x07	; 7
+   1f3da:	1f 07       	cpc	r17, r31
+   1f3dc:	a9 f7       	brne	.-22     	; 0x1f3c8 <processPacket+0x98>
+
+	DBG_TFTP(tracePGMlnTftp(mDebugTftp_RADDR);)
+
+	// Parse packet
+	uint16_t tftpDataLen = (buffer[6] << 8) + buffer[7];
+   1f3de:	0f 81       	ldd	r16, Y+7	; 0x07
+   1f3e0:	10 e0       	ldi	r17, 0x00	; 0
+   1f3e2:	10 2f       	mov	r17, r16
+   1f3e4:	00 27       	eor	r16, r16
+   1f3e6:	88 85       	ldd	r24, Y+8	; 0x08
+   1f3e8:	08 0f       	add	r16, r24
+   1f3ea:	11 1d       	adc	r17, r1
+	uint16_t tftpOpcode  = (buffer[8] << 8) + buffer[9];
+   1f3ec:	29 85       	ldd	r18, Y+9	; 0x09
+   1f3ee:	30 e0       	ldi	r19, 0x00	; 0
+   1f3f0:	32 2f       	mov	r19, r18
+   1f3f2:	22 27       	eor	r18, r18
+   1f3f4:	8a 85       	ldd	r24, Y+10	; 0x0a
+   1f3f6:	28 0f       	add	r18, r24
+   1f3f8:	31 1d       	adc	r19, r1
+	uint16_t tftpBlock   = (buffer[10] << 8) + buffer[11];
+   1f3fa:	8b 85       	ldd	r24, Y+11	; 0x0b
+   1f3fc:	90 e0       	ldi	r25, 0x00	; 0
+   1f3fe:	f8 2e       	mov	r15, r24
+   1f400:	ee 24       	eor	r14, r14
+   1f402:	4c 85       	ldd	r20, Y+12	; 0x0c
+   1f404:	e4 0e       	add	r14, r20
+   1f406:	f1 1c       	adc	r15, r1
+		tracenum(tftpOpcode);
+		tracePGM(mDebugTftp_DLEN);
+		tracenum(tftpDataLen - (TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE));
+	)
+
+	if((tftpOpcode == TFTP_OPCODE_DATA)
+   1f408:	23 30       	cpi	r18, 0x03	; 3
+   1f40a:	31 05       	cpc	r19, r1
+   1f40c:	89 f4       	brne	.+34     	; 0x1f430 <processPacket+0x100>
+		&& ((tftpBlock > MAX_ADDR / 0x200) || (tftpBlock < highPacket) || (tftpBlock > highPacket + 1)))
+   1f40e:	29 ef       	ldi	r18, 0xF9	; 249
+   1f410:	e2 16       	cp	r14, r18
+   1f412:	f1 04       	cpc	r15, r1
+   1f414:	a8 f5       	brcc	.+106    	; 0x1f480 <processPacket+0x150>
+   1f416:	20 91 1c 01 	lds	r18, 0x011C
+   1f41a:	30 91 1d 01 	lds	r19, 0x011D
+   1f41e:	e2 16       	cp	r14, r18
+   1f420:	f3 06       	cpc	r15, r19
+   1f422:	70 f1       	brcs	.+92     	; 0x1f480 <processPacket+0x150>
+   1f424:	2f 5f       	subi	r18, 0xFF	; 255
+   1f426:	3f 4f       	sbci	r19, 0xFF	; 255
+   1f428:	2e 15       	cp	r18, r14
+   1f42a:	3f 05       	cpc	r19, r15
+   1f42c:	48 f1       	brcs	.+82     	; 0x1f480 <processPacket+0x150>
+   1f42e:	24 c0       	rjmp	.+72     	; 0x1f478 <processPacket+0x148>
+		tftpOpcode = TFTP_OPCODE_UKN;
+
+	if(tftpDataLen > (0x200 + TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE))
+   1f430:	05 30       	cpi	r16, 0x05	; 5
+   1f432:	12 40       	sbci	r17, 0x02	; 2
+   1f434:	28 f5       	brcc	.+74     	; 0x1f480 <processPacket+0x150>
+
+	uint8_t returnCode = ERROR_UNKNOWN;
+	uint16_t packetLength;
+
+
+	switch(tftpOpcode) {
+   1f436:	24 30       	cpi	r18, 0x04	; 4
+   1f438:	31 05       	cpc	r19, r1
+   1f43a:	d0 f4       	brcc	.+52     	; 0x1f470 <processPacket+0x140>
+   1f43c:	21 30       	cpi	r18, 0x01	; 1
+   1f43e:	31 05       	cpc	r19, r1
+   1f440:	31 f1       	breq	.+76     	; 0x1f48e <processPacket+0x15e>
+   1f442:	22 30       	cpi	r18, 0x02	; 2
+   1f444:	31 05       	cpc	r19, r1
+   1f446:	e1 f4       	brne	.+56     	; 0x1f480 <processPacket+0x150>
+			DBG_TFTP(tracePGMlnTftp(mDebugTftp_OPRRQ);)
+			break;
+
+		case TFTP_OPCODE_WRQ: // Write request
+			// Valid WRQ -> reset timer
+			resetTick();
+   1f448:	35 d2       	rcall	.+1130   	; 0x1f8b4 <resetTick>
+
+			DBG_TFTP(tracePGMlnTftp(mDebugTftp_OPWRQ);)
+
+			// Flagging image as invalid since the flashing process has started
+			eeprom_write_byte(EEPROM_IMG_STAT, EEPROM_IMG_BAD_VALUE);
+   1f44a:	6f ef       	ldi	r22, 0xFF	; 255
+   1f44c:	82 e0       	ldi	r24, 0x02	; 2
+   1f44e:	90 e0       	ldi	r25, 0x00	; 0
+   1f450:	72 d3       	rcall	.+1764   	; 0x1fb36 <__eewr_byte_m1284p>
+
+#if defined(RANDOM_TFTP_DATA_PORT)
+			sockInit((buffer[4] << 8) | ~buffer[5]); // Generate a 'random' TID (RFC1350)
+#else
+			sockInit(tftpTransferPort);
+   1f452:	80 91 27 01 	lds	r24, 0x0127
+   1f456:	90 91 28 01 	lds	r25, 0x0128
+   1f45a:	46 df       	rcall	.-372    	; 0x1f2e8 <sockInit>
+#else
+				tracenum(tftpTransferPort);
+#endif
+			)
+
+			lastPacket = highPacket = 0;
+   1f45c:	10 92 1d 01 	sts	0x011D, r1
+   1f460:	10 92 1c 01 	sts	0x011C, r1
+   1f464:	10 92 1f 01 	sts	0x011F, r1
+   1f468:	10 92 1e 01 	sts	0x011E, r1
+			returnCode = ACK; // Send back acknowledge for packet 0
+   1f46c:	22 e0       	ldi	r18, 0x02	; 2
+   1f46e:	44 c0       	rjmp	.+136    	; 0x1f4f8 <processPacket+0x1c8>
+
+	uint8_t returnCode = ERROR_UNKNOWN;
+	uint16_t packetLength;
+
+
+	switch(tftpOpcode) {
+   1f470:	26 30       	cpi	r18, 0x06	; 6
+   1f472:	31 05       	cpc	r19, r1
+   1f474:	60 f0       	brcs	.+24     	; 0x1f48e <processPacket+0x15e>
+   1f476:	04 c0       	rjmp	.+8      	; 0x1f480 <processPacket+0x150>
+
+	if((tftpOpcode == TFTP_OPCODE_DATA)
+		&& ((tftpBlock > MAX_ADDR / 0x200) || (tftpBlock < highPacket) || (tftpBlock > highPacket + 1)))
+		tftpOpcode = TFTP_OPCODE_UKN;
+
+	if(tftpDataLen > (0x200 + TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE))
+   1f478:	05 30       	cpi	r16, 0x05	; 5
+   1f47a:	82 e0       	ldi	r24, 0x02	; 2
+   1f47c:	18 07       	cpc	r17, r24
+   1f47e:	68 f0       	brcs	.+26     	; 0x1f49a <processPacket+0x16a>
+			)
+
+#if defined(RANDOM_TFTP_DATA_PORT)
+			sockInit((buffer[4] << 8) | ~buffer[5]); // Generate a 'random' TID (RFC1350)
+#else
+			sockInit(tftpTransferPort);
+   1f480:	80 91 27 01 	lds	r24, 0x0127
+   1f484:	90 91 28 01 	lds	r25, 0x0128
+   1f488:	2f df       	rcall	.-418    	; 0x1f2e8 <sockInit>
+			 * It can be done by reinitializig the tftpd or
+			 * by resetting the device. I should find out which is best...
+			 * Right now it is being done by resetting the timer if we have a
+			 * data packet. */
+			// Invalid - return error
+			returnCode = ERROR_INVALID;
+   1f48a:	21 e0       	ldi	r18, 0x01	; 1
+   1f48c:	35 c0       	rjmp	.+106    	; 0x1f4f8 <processPacket+0x1c8>
+		tftpOpcode = TFTP_OPCODE_UKN;
+
+	if(tftpDataLen > (0x200 + TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE))
+		tftpOpcode = TFTP_OPCODE_UKN;
+
+	uint8_t returnCode = ERROR_UNKNOWN;
+   1f48e:	c3 5f       	subi	r28, 0xF3	; 243
+   1f490:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f492:	18 82       	st	Y, r1
+   1f494:	cd 50       	subi	r28, 0x0D	; 13
+   1f496:	d2 40       	sbci	r29, 0x02	; 2
+   1f498:	a7 c0       	rjmp	.+334    	; 0x1f5e8 <processPacket+0x2b8>
+			returnCode = ACK; // Send back acknowledge for packet 0
+			break;
+
+		case TFTP_OPCODE_DATA:
+			// Valid Data Packet -> reset timer
+			resetTick();
+   1f49a:	0c d2       	rcall	.+1048   	; 0x1f8b4 <resetTick>
+
+			DBG_TFTP(tracePGMlnTftp(mDebugTftp_OPDATA);)
+
+			packetLength = tftpDataLen - (TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE);
+   1f49c:	04 50       	subi	r16, 0x04	; 4
+   1f49e:	11 09       	sbc	r17, r1
+			lastPacket = tftpBlock;
+   1f4a0:	f0 92 1f 01 	sts	0x011F, r15
+   1f4a4:	e0 92 1e 01 	sts	0x011E, r14
+#if defined(RAMPZ)
+			writeAddr = (((address_t)((tftpBlock - 1)/0x80) << 16) | ((address_t)((tftpBlock - 1)%0x80) << 9));
+   1f4a8:	c7 01       	movw	r24, r14
+   1f4aa:	01 97       	sbiw	r24, 0x01	; 1
+   1f4ac:	6c 01       	movw	r12, r24
+   1f4ae:	e1 2c       	mov	r14, r1
+   1f4b0:	f1 2c       	mov	r15, r1
+   1f4b2:	29 e0       	ldi	r18, 0x09	; 9
+   1f4b4:	cc 0c       	add	r12, r12
+   1f4b6:	dd 1c       	adc	r13, r13
+   1f4b8:	ee 1c       	adc	r14, r14
+   1f4ba:	ff 1c       	adc	r15, r15
+   1f4bc:	2a 95       	dec	r18
+   1f4be:	d1 f7       	brne	.-12     	; 0x1f4b4 <processPacket+0x184>
+   1f4c0:	ee 24       	eor	r14, r14
+   1f4c2:	ff 24       	eor	r15, r15
+   1f4c4:	88 0f       	add	r24, r24
+   1f4c6:	89 2f       	mov	r24, r25
+   1f4c8:	88 1f       	adc	r24, r24
+   1f4ca:	99 0b       	sbc	r25, r25
+   1f4cc:	91 95       	neg	r25
+   1f4ce:	a0 e0       	ldi	r26, 0x00	; 0
+   1f4d0:	b0 e0       	ldi	r27, 0x00	; 0
+   1f4d2:	dc 01       	movw	r26, r24
+   1f4d4:	99 27       	eor	r25, r25
+   1f4d6:	88 27       	eor	r24, r24
+   1f4d8:	c8 2a       	or	r12, r24
+   1f4da:	d9 2a       	or	r13, r25
+   1f4dc:	ea 2a       	or	r14, r26
+   1f4de:	fb 2a       	or	r15, r27
+#else
+			writeAddr = (address_t)((address_t)(tftpBlock - 1) << 9); // Flash write address for this block
+#endif
+
+			if((writeAddr + packetLength) > MAX_ADDR) {
+   1f4e0:	d7 01       	movw	r26, r14
+   1f4e2:	c6 01       	movw	r24, r12
+   1f4e4:	80 0f       	add	r24, r16
+   1f4e6:	91 1f       	adc	r25, r17
+   1f4e8:	a1 1d       	adc	r26, r1
+   1f4ea:	b1 1d       	adc	r27, r1
+   1f4ec:	81 30       	cpi	r24, 0x01	; 1
+   1f4ee:	90 4f       	sbci	r25, 0xF0	; 240
+   1f4f0:	a1 40       	sbci	r26, 0x01	; 1
+   1f4f2:	b1 05       	cpc	r27, r1
+   1f4f4:	38 f0       	brcs	.+14     	; 0x1f504 <processPacket+0x1d4>
+				// Flash is full - abort with an error before a bootloader overwrite occurs
+				// Application is now corrupt, so do not hand over.
+
+				DBG_TFTP(tracePGMlnTftp(mDebugTftp_FULL);)
+
+				returnCode = ERROR_FULL;
+   1f4f6:	23 e0       	ldi	r18, 0x03	; 3
+   1f4f8:	c3 5f       	subi	r28, 0xF3	; 243
+   1f4fa:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f4fc:	28 83       	st	Y, r18
+   1f4fe:	cd 50       	subi	r28, 0x0D	; 13
+   1f500:	d2 40       	sbci	r29, 0x02	; 2
+   1f502:	72 c0       	rjmp	.+228    	; 0x1f5e8 <processPacket+0x2b8>
+				uint8_t* pageBase = buffer + (UDP_HEADER_SIZE + TFTP_OPCODE_SIZE + TFTP_BLOCKNO_SIZE); // Start of block data
+				uint16_t offset = 0; // Block offset
+
+
+				// Set the return code before packetLength gets rounded up
+				if(packetLength < TFTP_DATA_SIZE) returnCode = FINAL_ACK;
+   1f504:	01 15       	cp	r16, r1
+   1f506:	f2 e0       	ldi	r31, 0x02	; 2
+   1f508:	1f 07       	cpc	r17, r31
+   1f50a:	10 f4       	brcc	.+4      	; 0x1f510 <processPacket+0x1e0>
+   1f50c:	24 e0       	ldi	r18, 0x04	; 4
+   1f50e:	01 c0       	rjmp	.+2      	; 0x1f512 <processPacket+0x1e2>
+				else returnCode = ACK;
+   1f510:	22 e0       	ldi	r18, 0x02	; 2
+   1f512:	c3 5f       	subi	r28, 0xF3	; 243
+   1f514:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f516:	28 83       	st	Y, r18
+   1f518:	cd 50       	subi	r28, 0x0D	; 13
+   1f51a:	d2 40       	sbci	r29, 0x02	; 2
+
+				// Round up packet length to a full flash sector size
+				while(packetLength % SPM_PAGESIZE) packetLength++;
+   1f51c:	00 23       	and	r16, r16
+   1f51e:	19 f0       	breq	.+6      	; 0x1f526 <processPacket+0x1f6>
+   1f520:	0f 5f       	subi	r16, 0xFF	; 255
+   1f522:	1f 4f       	sbci	r17, 0xFF	; 255
+   1f524:	fb cf       	rjmp	.-10     	; 0x1f51c <processPacket+0x1ec>
+				DBG_TFTP(
+					tracePGMlnTftp(mDebugTftp_PLEN);
+					tracenum(packetLength);
+				)
+
+				if(writeAddr == 0) {
+   1f526:	c1 14       	cp	r12, r1
+   1f528:	d1 04       	cpc	r13, r1
+   1f52a:	e1 04       	cpc	r14, r1
+   1f52c:	f1 04       	cpc	r15, r1
+   1f52e:	19 f4       	brne	.+6      	; 0x1f536 <processPacket+0x206>
+					// First sector - validate
+					if(!validImage(pageBase)) {
+   1f530:	ce 01       	movw	r24, r28
+   1f532:	0d 96       	adiw	r24, 0x0d	; 13
+   1f534:	59 d1       	rcall	.+690    	; 0x1f7e8 <validImage>
+   1f536:	de 01       	movw	r26, r28
+   1f538:	1d 96       	adiw	r26, 0x0d	; 13
+					}
+				}
+
+				// Flash packets
+				uint16_t writeValue;
+				for(offset = 0; offset < packetLength;) {
+   1f53a:	20 e0       	ldi	r18, 0x00	; 0
+   1f53c:	30 e0       	ldi	r19, 0x00	; 0
+					writeValue = (pageBase[offset]) | (pageBase[offset + 1] << 8);
+					boot_page_fill(writeAddr + offset, writeValue);
+   1f53e:	99 24       	eor	r9, r9
+   1f540:	93 94       	inc	r9
+					)
+
+					offset += 2;
+
+					if(offset % SPM_PAGESIZE == 0) {
+						boot_page_erase(writeAddr + offset - SPM_PAGESIZE);
+   1f542:	26 01       	movw	r4, r12
+   1f544:	37 01       	movw	r6, r14
+   1f546:	81 e0       	ldi	r24, 0x01	; 1
+   1f548:	58 1a       	sub	r5, r24
+   1f54a:	61 08       	sbc	r6, r1
+   1f54c:	71 08       	sbc	r7, r1
+   1f54e:	f3 e0       	ldi	r31, 0x03	; 3
+   1f550:	8f 2e       	mov	r8, r31
+						boot_spm_busy_wait();
+						boot_page_write(writeAddr + offset - SPM_PAGESIZE);
+   1f552:	85 e0       	ldi	r24, 0x05	; 5
+   1f554:	38 2e       	mov	r3, r24
+						boot_spm_busy_wait();
+#if defined(RWWSRE)
+						// Reenable read access to flash
+						boot_rww_enable();
+   1f556:	91 e1       	ldi	r25, 0x11	; 17
+   1f558:	29 2e       	mov	r2, r25
+					}
+				}
+
+				// Flash packets
+				uint16_t writeValue;
+				for(offset = 0; offset < packetLength;) {
+   1f55a:	20 17       	cp	r18, r16
+   1f55c:	31 07       	cpc	r19, r17
+   1f55e:	08 f0       	brcs	.+2      	; 0x1f562 <processPacket+0x232>
+   1f560:	38 c0       	rjmp	.+112    	; 0x1f5d2 <processPacket+0x2a2>
+					writeValue = (pageBase[offset]) | (pageBase[offset + 1] << 8);
+					boot_page_fill(writeAddr + offset, writeValue);
+   1f562:	c7 01       	movw	r24, r14
+   1f564:	b6 01       	movw	r22, r12
+   1f566:	62 0f       	add	r22, r18
+   1f568:	73 1f       	adc	r23, r19
+   1f56a:	81 1d       	adc	r24, r1
+   1f56c:	91 1d       	adc	r25, r1
+   1f56e:	f5 01       	movw	r30, r10
+   1f570:	e2 0f       	add	r30, r18
+   1f572:	f3 1f       	adc	r31, r19
+				}
+
+				// Flash packets
+				uint16_t writeValue;
+				for(offset = 0; offset < packetLength;) {
+					writeValue = (pageBase[offset]) | (pageBase[offset + 1] << 8);
+   1f574:	45 85       	ldd	r20, Z+13	; 0x0d
+   1f576:	50 e0       	ldi	r21, 0x00	; 0
+   1f578:	54 2f       	mov	r21, r20
+   1f57a:	44 27       	eor	r20, r20
+   1f57c:	ec 91       	ld	r30, X
+   1f57e:	4e 2b       	or	r20, r30
+					boot_page_fill(writeAddr + offset, writeValue);
+   1f580:	0a 01       	movw	r0, r20
+   1f582:	fb 01       	movw	r30, r22
+   1f584:	80 93 5b 00 	sts	0x005B, r24
+   1f588:	90 92 57 00 	sts	0x0057, r9
+   1f58c:	e8 95       	spm
+   1f58e:	11 24       	eor	r1, r1
+							tracePGM(mDebugTftp_OFFSET);
+							tracenum(writeAddr + offset);
+						}
+					)
+
+					offset += 2;
+   1f590:	2e 5f       	subi	r18, 0xFE	; 254
+   1f592:	3f 4f       	sbci	r19, 0xFF	; 255
+
+					if(offset % SPM_PAGESIZE == 0) {
+   1f594:	21 11       	cpse	r18, r1
+   1f596:	1b c0       	rjmp	.+54     	; 0x1f5ce <processPacket+0x29e>
+						boot_page_erase(writeAddr + offset - SPM_PAGESIZE);
+   1f598:	b3 01       	movw	r22, r6
+   1f59a:	a2 01       	movw	r20, r4
+   1f59c:	42 0f       	add	r20, r18
+   1f59e:	53 1f       	adc	r21, r19
+   1f5a0:	61 1d       	adc	r22, r1
+   1f5a2:	71 1d       	adc	r23, r1
+   1f5a4:	fa 01       	movw	r30, r20
+   1f5a6:	60 93 5b 00 	sts	0x005B, r22
+   1f5aa:	80 92 57 00 	sts	0x0057, r8
+   1f5ae:	e8 95       	spm
+						boot_spm_busy_wait();
+   1f5b0:	07 b6       	in	r0, 0x37	; 55
+   1f5b2:	00 fc       	sbrc	r0, 0
+   1f5b4:	fd cf       	rjmp	.-6      	; 0x1f5b0 <processPacket+0x280>
+						boot_page_write(writeAddr + offset - SPM_PAGESIZE);
+   1f5b6:	fa 01       	movw	r30, r20
+   1f5b8:	60 93 5b 00 	sts	0x005B, r22
+   1f5bc:	30 92 57 00 	sts	0x0057, r3
+   1f5c0:	e8 95       	spm
+						boot_spm_busy_wait();
+   1f5c2:	07 b6       	in	r0, 0x37	; 55
+   1f5c4:	00 fc       	sbrc	r0, 0
+   1f5c6:	fd cf       	rjmp	.-6      	; 0x1f5c2 <processPacket+0x292>
+#if defined(RWWSRE)
+						// Reenable read access to flash
+						boot_rww_enable();
+   1f5c8:	20 92 57 00 	sts	0x0057, r2
+   1f5cc:	e8 95       	spm
+   1f5ce:	12 96       	adiw	r26, 0x02	; 2
+   1f5d0:	c4 cf       	rjmp	.-120    	; 0x1f55a <processPacket+0x22a>
+#endif
+					}
+				}
+
+				if(returnCode == FINAL_ACK) {
+   1f5d2:	c3 5f       	subi	r28, 0xF3	; 243
+   1f5d4:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f5d6:	28 81       	ld	r18, Y
+   1f5d8:	cd 50       	subi	r28, 0x0D	; 13
+   1f5da:	d2 40       	sbci	r29, 0x02	; 2
+   1f5dc:	24 30       	cpi	r18, 0x04	; 4
+   1f5de:	21 f4       	brne	.+8      	; 0x1f5e8 <processPacket+0x2b8>
+					// Hand over to application
+
+					DBG_TFTP(tracePGMlnTftp(mDebugTftp_DONE);)
+
+					// Flag the image as valid since we received the last packet
+					eeprom_write_byte(EEPROM_IMG_STAT, EEPROM_IMG_OK_VALUE);
+   1f5e0:	6e ee       	ldi	r22, 0xEE	; 238
+   1f5e2:	82 e0       	ldi	r24, 0x02	; 2
+   1f5e4:	90 e0       	ldi	r25, 0x00	; 0
+   1f5e6:	a7 d2       	rcall	.+1358   	; 0x1fb36 <__eewr_byte_m1284p>
+			break;
+
+	}
+
+	return(returnCode);
+}
+   1f5e8:	c3 5f       	subi	r28, 0xF3	; 243
+   1f5ea:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f5ec:	88 81       	ld	r24, Y
+   1f5ee:	cd 50       	subi	r28, 0x0D	; 13
+   1f5f0:	d2 40       	sbci	r29, 0x02	; 2
+   1f5f2:	c3 5f       	subi	r28, 0xF3	; 243
+   1f5f4:	dd 4f       	sbci	r29, 0xFD	; 253
+   1f5f6:	de bf       	out	0x3e, r29	; 62
+   1f5f8:	cd bf       	out	0x3d, r28	; 61
+   1f5fa:	df 91       	pop	r29
+   1f5fc:	cf 91       	pop	r28
+   1f5fe:	1f 91       	pop	r17
+   1f600:	0f 91       	pop	r16
+   1f602:	ff 90       	pop	r15
+   1f604:	ef 90       	pop	r14
+   1f606:	df 90       	pop	r13
+   1f608:	cf 90       	pop	r12
+   1f60a:	bf 90       	pop	r11
+   1f60c:	af 90       	pop	r10
+   1f60e:	9f 90       	pop	r9
+   1f610:	8f 90       	pop	r8
+   1f612:	7f 90       	pop	r7
+   1f614:	6f 90       	pop	r6
+   1f616:	5f 90       	pop	r5
+   1f618:	4f 90       	pop	r4
+   1f61a:	3f 90       	pop	r3
+   1f61c:	2f 90       	pop	r2
+   1f61e:	08 95       	ret
+
+0001f620 <tftpInit>:
+
+/**
+ * Initializes the network controller
+ */
+void tftpInit(void)
+{
+   1f620:	cf 93       	push	r28
+	// Open socket
+	sockInit(TFTP_PORT);
+   1f622:	85 e4       	ldi	r24, 0x45	; 69
+   1f624:	90 e0       	ldi	r25, 0x00	; 0
+   1f626:	60 de       	rcall	.-832    	; 0x1f2e8 <sockInit>
+
+#if defined(RANDOM_TFTP_DATA_PORT)
+#else
+	if(eeprom_read_byte(EEPROM_SIG_3) == EEPROM_SIG_3_VALUE)
+   1f628:	87 e1       	ldi	r24, 0x17	; 23
+   1f62a:	90 e0       	ldi	r25, 0x00	; 0
+   1f62c:	7c d2       	rcall	.+1272   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f62e:	8b 3b       	cpi	r24, 0xBB	; 187
+   1f630:	91 f4       	brne	.+36     	; 0x1f656 <tftpInit+0x36>
+		tftpTransferPort = ((eeprom_read_byte(EEPROM_PORT + 1) << 8) + eeprom_read_byte(EEPROM_PORT));
+   1f632:	89 e1       	ldi	r24, 0x19	; 25
+   1f634:	90 e0       	ldi	r25, 0x00	; 0
+   1f636:	77 d2       	rcall	.+1262   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f638:	c8 2f       	mov	r28, r24
+   1f63a:	88 e1       	ldi	r24, 0x18	; 24
+   1f63c:	90 e0       	ldi	r25, 0x00	; 0
+   1f63e:	73 d2       	rcall	.+1254   	; 0x1fb26 <__eerd_byte_m1284p>
+   1f640:	2c 2f       	mov	r18, r28
+   1f642:	30 e0       	ldi	r19, 0x00	; 0
+   1f644:	32 2f       	mov	r19, r18
+   1f646:	22 27       	eor	r18, r18
+   1f648:	28 0f       	add	r18, r24
+   1f64a:	31 1d       	adc	r19, r1
+   1f64c:	30 93 28 01 	sts	0x0128, r19
+   1f650:	20 93 27 01 	sts	0x0127, r18
+   1f654:	06 c0       	rjmp	.+12     	; 0x1f662 <tftpInit+0x42>
+	else
+		tftpTransferPort = TFTP_DATA_PORT;
+   1f656:	89 e7       	ldi	r24, 0x79	; 121
+   1f658:	97 eb       	ldi	r25, 0xB7	; 183
+   1f65a:	90 93 28 01 	sts	0x0128, r25
+   1f65e:	80 93 27 01 	sts	0x0127, r24
+#else
+		tracePGMlnTftp(mDebugTftp_PORT);
+		tracenum(tftpTransferPort);
+#endif
+	)
+}
+   1f662:	cf 91       	pop	r28
+   1f664:	08 95       	ret
+
+0001f666 <tftpPoll>:
+
+/**
+ * Looks for a connection
+ */
+uint8_t tftpPoll(void)
+{
+   1f666:	af 92       	push	r10
+   1f668:	bf 92       	push	r11
+   1f66a:	cf 92       	push	r12
+   1f66c:	df 92       	push	r13
+   1f66e:	ef 92       	push	r14
+   1f670:	ff 92       	push	r15
+   1f672:	0f 93       	push	r16
+   1f674:	1f 93       	push	r17
+   1f676:	cf 93       	push	r28
+   1f678:	df 93       	push	r29
+   1f67a:	cd b7       	in	r28, 0x3d	; 61
+   1f67c:	de b7       	in	r29, 0x3e	; 62
+   1f67e:	c4 56       	subi	r28, 0x64	; 100
+   1f680:	d1 09       	sbc	r29, r1
+   1f682:	de bf       	out	0x3e, r29	; 62
+   1f684:	cd bf       	out	0x3d, r28	; 61
+	uint8_t response = ACK;
+	// Get the size of the recieved data
+	uint16_t packetSize = spiReadWord(REG_S3_RX_RSR0);
+   1f686:	86 e2       	ldi	r24, 0x26	; 38
+   1f688:	97 e0       	ldi	r25, 0x07	; 7
+   1f68a:	e2 dd       	rcall	.-1084   	; 0x1f250 <spiReadWord>
+// 			_delay_ms(400);
+// 			packetSize = spiReadWord(REG_S3_RX_RSR0);
+// 		}
+// 	} while (packetSize != incSize);
+
+	if(packetSize) {
+   1f68c:	89 2b       	or	r24, r25
+   1f68e:	11 f4       	brne	.+4      	; 0x1f694 <tftpPoll+0x2e>
+		// Complete
+		return(0);
+	}
+
+	// Tftp continues
+	return(1);
+   1f690:	81 e0       	ldi	r24, 0x01	; 1
+   1f692:	9b c0       	rjmp	.+310    	; 0x1f7ca <tftpPoll+0x164>
+// 			packetSize = spiReadWord(REG_S3_RX_RSR0);
+// 		}
+// 	} while (packetSize != incSize);
+
+	if(packetSize) {
+		tftpFlashing = TRUE;
+   1f694:	81 e0       	ldi	r24, 0x01	; 1
+   1f696:	80 93 2a 01 	sts	0x012A, r24
+
+		while((spiReadReg(REG_S3_IR) & IR_RECV)) {
+   1f69a:	82 e0       	ldi	r24, 0x02	; 2
+   1f69c:	97 e0       	ldi	r25, 0x07	; 7
+   1f69e:	be dd       	rcall	.-1156   	; 0x1f21c <spiReadReg>
+   1f6a0:	82 ff       	sbrs	r24, 2
+   1f6a2:	0e c0       	rjmp	.+28     	; 0x1f6c0 <tftpPoll+0x5a>
+			spiWriteReg(REG_S3_IR, IR_RECV);
+   1f6a4:	64 e0       	ldi	r22, 0x04	; 4
+   1f6a6:	82 e0       	ldi	r24, 0x02	; 2
+   1f6a8:	97 e0       	ldi	r25, 0x07	; 7
+   1f6aa:	8e dd       	rcall	.-1252   	; 0x1f1c8 <spiWriteReg>
+   1f6ac:	2f ef       	ldi	r18, 0xFF	; 255
+   1f6ae:	33 ec       	ldi	r19, 0xC3	; 195
+   1f6b0:	89 e0       	ldi	r24, 0x09	; 9
+   1f6b2:	21 50       	subi	r18, 0x01	; 1
+   1f6b4:	30 40       	sbci	r19, 0x00	; 0
+   1f6b6:	80 40       	sbci	r24, 0x00	; 0
+   1f6b8:	e1 f7       	brne	.-8      	; 0x1f6b2 <tftpPoll+0x4c>
+   1f6ba:	00 c0       	rjmp	.+0      	; 0x1f6bc <tftpPoll+0x56>
+   1f6bc:	00 00       	nop
+   1f6be:	ed cf       	rjmp	.-38     	; 0x1f69a <tftpPoll+0x34>
+		// Process Packet and get TFTP response code
+#if (DEBUG_TFTP > 0)
+		packetSize = spiReadWord(REG_S3_RX_RSR0);
+		response = processPacket(packetSize);
+#else
+		response = processPacket();
+   1f6c0:	37 de       	rcall	.-914    	; 0x1f330 <processPacket>
+   1f6c2:	f8 2e       	mov	r15, r24
+	uint8_t txBuffer[100];
+	uint8_t* txPtr = txBuffer;
+	uint8_t packetLength;
+	uint16_t writePointer;
+
+	writePointer = spiReadWord(REG_S3_TX_WR0) + S3_TX_START;
+   1f6c4:	84 e2       	ldi	r24, 0x24	; 36
+   1f6c6:	97 e0       	ldi	r25, 0x07	; 7
+   1f6c8:	c3 dd       	rcall	.-1146   	; 0x1f250 <spiReadWord>
+   1f6ca:	8c 01       	movw	r16, r24
+   1f6cc:	18 5a       	subi	r17, 0xA8	; 168
+
+	switch(response) {
+   1f6ce:	92 e0       	ldi	r25, 0x02	; 2
+   1f6d0:	f9 16       	cp	r15, r25
+   1f6d2:	c1 f1       	breq	.+112    	; 0x1f744 <tftpPoll+0xde>
+   1f6d4:	9f 15       	cp	r25, r15
+   1f6d6:	20 f0       	brcs	.+8      	; 0x1f6e0 <tftpPoll+0x7a>
+   1f6d8:	e1 e0       	ldi	r30, 0x01	; 1
+   1f6da:	fe 16       	cp	r15, r30
+   1f6dc:	c9 f0       	breq	.+50     	; 0x1f710 <tftpPoll+0xaa>
+   1f6de:	06 c0       	rjmp	.+12     	; 0x1f6ec <tftpPoll+0x86>
+   1f6e0:	f3 e0       	ldi	r31, 0x03	; 3
+   1f6e2:	ff 16       	cp	r15, r31
+   1f6e4:	11 f1       	breq	.+68     	; 0x1f72a <tftpPoll+0xc4>
+   1f6e6:	24 e0       	ldi	r18, 0x04	; 4
+   1f6e8:	f2 16       	cp	r15, r18
+   1f6ea:	d9 f1       	breq	.+118    	; 0x1f762 <tftpPoll+0xfc>
+
+		case ERROR_UNKNOWN:
+			// Send unknown error packet
+			packetLength = TFTP_UNKNOWN_ERROR_LEN;
+#if (FLASHEND > 0x10000)
+			memcpy_PF(txBuffer, PROGMEM_OFFSET + (uint32_t)(uint16_t)tftp_unknown_error_packet, packetLength);
+   1f6ec:	44 ea       	ldi	r20, 0xA4	; 164
+   1f6ee:	50 ef       	ldi	r21, 0xF0	; 240
+   1f6f0:	60 e0       	ldi	r22, 0x00	; 0
+   1f6f2:	70 e0       	ldi	r23, 0x00	; 0
+   1f6f4:	6f 5f       	subi	r22, 0xFF	; 255
+   1f6f6:	7f 4f       	sbci	r23, 0xFF	; 255
+   1f6f8:	2a e0       	ldi	r18, 0x0A	; 10
+   1f6fa:	30 e0       	ldi	r19, 0x00	; 0
+   1f6fc:	ce 01       	movw	r24, r28
+   1f6fe:	01 96       	adiw	r24, 0x01	; 1
+   1f700:	08 d2       	rcall	.+1040   	; 0x1fb12 <memcpy_PF>
+	switch(response) {
+		default:
+
+		case ERROR_UNKNOWN:
+			// Send unknown error packet
+			packetLength = TFTP_UNKNOWN_ERROR_LEN;
+   1f702:	8a e0       	ldi	r24, 0x0A	; 10
+	txPtr = txBuffer;
+
+	while(packetLength--) {
+		spiWriteReg(writePointer++, *txPtr++);
+
+		if(writePointer == S3_TX_END) writePointer = S3_TX_START;
+   1f704:	fe 01       	movw	r30, r28
+   1f706:	31 96       	adiw	r30, 0x01	; 1
+   1f708:	6f 01       	movw	r12, r30
+   1f70a:	e8 2e       	mov	r14, r24
+   1f70c:	ee 0e       	add	r14, r30
+   1f70e:	45 c0       	rjmp	.+138    	; 0x1f79a <tftpPoll+0x134>
+
+		case ERROR_INVALID:
+			// Send invalid opcode packet
+			packetLength = TFTP_OPCODE_ERROR_LEN;
+#if (FLASHEND > 0x10000)
+			memcpy_PF(txBuffer, PROGMEM_OFFSET + (uint32_t)(uint16_t)tftp_opcode_error_packet, packetLength);
+   1f710:	49 eb       	ldi	r20, 0xB9	; 185
+   1f712:	50 ef       	ldi	r21, 0xF0	; 240
+   1f714:	60 e0       	ldi	r22, 0x00	; 0
+   1f716:	70 e0       	ldi	r23, 0x00	; 0
+   1f718:	6f 5f       	subi	r22, 0xFF	; 255
+   1f71a:	7f 4f       	sbci	r23, 0xFF	; 255
+   1f71c:	2c e0       	ldi	r18, 0x0C	; 12
+   1f71e:	30 e0       	ldi	r19, 0x00	; 0
+   1f720:	ce 01       	movw	r24, r28
+   1f722:	01 96       	adiw	r24, 0x01	; 1
+   1f724:	f6 d1       	rcall	.+1004   	; 0x1fb12 <memcpy_PF>
+#endif
+			break;
+
+		case ERROR_INVALID:
+			// Send invalid opcode packet
+			packetLength = TFTP_OPCODE_ERROR_LEN;
+   1f726:	8c e0       	ldi	r24, 0x0C	; 12
+   1f728:	ed cf       	rjmp	.-38     	; 0x1f704 <tftpPoll+0x9e>
+
+		case ERROR_FULL:
+			// Send unknown error packet
+			packetLength = TFTP_FULL_ERROR_LEN;
+#if (FLASHEND > 0x10000)
+			memcpy_PF(txBuffer, PROGMEM_OFFSET + (uint32_t)(uint16_t)tftp_full_error_packet, packetLength);
+   1f72a:	4f ea       	ldi	r20, 0xAF	; 175
+   1f72c:	50 ef       	ldi	r21, 0xF0	; 240
+   1f72e:	60 e0       	ldi	r22, 0x00	; 0
+   1f730:	70 e0       	ldi	r23, 0x00	; 0
+   1f732:	6f 5f       	subi	r22, 0xFF	; 255
+   1f734:	7f 4f       	sbci	r23, 0xFF	; 255
+   1f736:	29 e0       	ldi	r18, 0x09	; 9
+   1f738:	30 e0       	ldi	r19, 0x00	; 0
+   1f73a:	ce 01       	movw	r24, r28
+   1f73c:	01 96       	adiw	r24, 0x01	; 1
+   1f73e:	e9 d1       	rcall	.+978    	; 0x1fb12 <memcpy_PF>
+#endif
+			break;
+
+		case ERROR_FULL:
+			// Send unknown error packet
+			packetLength = TFTP_FULL_ERROR_LEN;
+   1f740:	89 e0       	ldi	r24, 0x09	; 9
+   1f742:	e0 cf       	rjmp	.-64     	; 0x1f704 <tftpPoll+0x9e>
+			memcpy_P(txBuffer, tftp_full_error_packet, packetLength);
+#endif
+			break;
+
+		case ACK:
+			if(lastPacket > highPacket) highPacket = lastPacket;
+   1f744:	80 91 1e 01 	lds	r24, 0x011E
+   1f748:	90 91 1f 01 	lds	r25, 0x011F
+   1f74c:	20 91 1c 01 	lds	r18, 0x011C
+   1f750:	30 91 1d 01 	lds	r19, 0x011D
+   1f754:	28 17       	cp	r18, r24
+   1f756:	39 07       	cpc	r19, r25
+   1f758:	20 f4       	brcc	.+8      	; 0x1f762 <tftpPoll+0xfc>
+   1f75a:	90 93 1d 01 	sts	0x011D, r25
+   1f75e:	80 93 1c 01 	sts	0x011C, r24
+				if(response == FINAL_ACK)
+					tracePGMlnTftp(mDebugTftp_SFACK);
+			)
+
+			packetLength = 4;
+			*txPtr++ = TFTP_OPCODE_ACK >> 8;
+   1f762:	19 82       	std	Y+1, r1	; 0x01
+			*txPtr++ = TFTP_OPCODE_ACK & 0xff;
+   1f764:	84 e0       	ldi	r24, 0x04	; 4
+   1f766:	8a 83       	std	Y+2, r24	; 0x02
+			// lastPacket is block code
+			*txPtr++ = lastPacket >> 8;
+   1f768:	80 91 1e 01 	lds	r24, 0x011E
+   1f76c:	90 91 1f 01 	lds	r25, 0x011F
+   1f770:	9b 83       	std	Y+3, r25	; 0x03
+			*txPtr = lastPacket & 0xff;
+   1f772:	8c 83       	std	Y+4, r24	; 0x04
+			DBG_TFTP(
+				if(response == FINAL_ACK)
+					tracePGMlnTftp(mDebugTftp_SFACK);
+			)
+
+			packetLength = 4;
+   1f774:	84 e0       	ldi	r24, 0x04	; 4
+   1f776:	c6 cf       	rjmp	.-116    	; 0x1f704 <tftpPoll+0x9e>
+	}
+
+	txPtr = txBuffer;
+
+	while(packetLength--) {
+		spiWriteReg(writePointer++, *txPtr++);
+   1f778:	f6 01       	movw	r30, r12
+   1f77a:	61 91       	ld	r22, Z+
+   1f77c:	6f 01       	movw	r12, r30
+   1f77e:	58 01       	movw	r10, r16
+   1f780:	ff ef       	ldi	r31, 0xFF	; 255
+   1f782:	af 1a       	sub	r10, r31
+   1f784:	bf 0a       	sbc	r11, r31
+   1f786:	c8 01       	movw	r24, r16
+   1f788:	1f dd       	rcall	.-1474   	; 0x1f1c8 <spiWriteReg>
+
+		if(writePointer == S3_TX_END) writePointer = S3_TX_START;
+   1f78a:	a1 14       	cp	r10, r1
+   1f78c:	20 e6       	ldi	r18, 0x60	; 96
+   1f78e:	b2 06       	cpc	r11, r18
+   1f790:	19 f4       	brne	.+6      	; 0x1f798 <tftpPoll+0x132>
+   1f792:	a1 2c       	mov	r10, r1
+   1f794:	a8 e5       	ldi	r26, 0x58	; 88
+   1f796:	ba 2e       	mov	r11, r26
+   1f798:	85 01       	movw	r16, r10
+			break;
+	}
+
+	txPtr = txBuffer;
+
+	while(packetLength--) {
+   1f79a:	ec 10       	cpse	r14, r12
+   1f79c:	ed cf       	rjmp	.-38     	; 0x1f778 <tftpPoll+0x112>
+		spiWriteReg(writePointer++, *txPtr++);
+
+		if(writePointer == S3_TX_END) writePointer = S3_TX_START;
+	}
+
+	spiWriteWord(REG_S3_TX_WR0, writePointer - S3_TX_START);
+   1f79e:	b8 01       	movw	r22, r16
+   1f7a0:	78 55       	subi	r23, 0x58	; 88
+   1f7a2:	84 e2       	ldi	r24, 0x24	; 36
+   1f7a4:	97 e0       	ldi	r25, 0x07	; 7
+   1f7a6:	29 dd       	rcall	.-1454   	; 0x1f1fa <spiWriteWord>
+	spiWriteReg(REG_S3_CR, CR_SEND);
+   1f7a8:	60 e2       	ldi	r22, 0x20	; 32
+   1f7aa:	81 e0       	ldi	r24, 0x01	; 1
+   1f7ac:	97 e0       	ldi	r25, 0x07	; 7
+   1f7ae:	0c dd       	rcall	.-1512   	; 0x1f1c8 <spiWriteReg>
+
+	while(spiReadReg(REG_S3_CR));
+   1f7b0:	81 e0       	ldi	r24, 0x01	; 1
+   1f7b2:	97 e0       	ldi	r25, 0x07	; 7
+   1f7b4:	33 dd       	rcall	.-1434   	; 0x1f21c <spiReadReg>
+   1f7b6:	81 11       	cpse	r24, r1
+   1f7b8:	fb cf       	rjmp	.-10     	; 0x1f7b0 <tftpPoll+0x14a>
+#endif
+		// Send the response
+		sendResponse(response);
+	}
+
+	if(response == FINAL_ACK) {
+   1f7ba:	34 e0       	ldi	r19, 0x04	; 4
+   1f7bc:	f3 12       	cpse	r15, r19
+   1f7be:	68 cf       	rjmp	.-304    	; 0x1f690 <tftpPoll+0x2a>
+		spiWriteReg(REG_S3_CR, CR_CLOSE);
+   1f7c0:	60 e1       	ldi	r22, 0x10	; 16
+   1f7c2:	81 e0       	ldi	r24, 0x01	; 1
+   1f7c4:	97 e0       	ldi	r25, 0x07	; 7
+   1f7c6:	00 dd       	rcall	.-1536   	; 0x1f1c8 <spiWriteReg>
+		// Complete
+		return(0);
+   1f7c8:	80 e0       	ldi	r24, 0x00	; 0
+	}
+
+	// Tftp continues
+	return(1);
+}
+   1f7ca:	cc 59       	subi	r28, 0x9C	; 156
+   1f7cc:	df 4f       	sbci	r29, 0xFF	; 255
+   1f7ce:	de bf       	out	0x3e, r29	; 62
+   1f7d0:	cd bf       	out	0x3d, r28	; 61
+   1f7d2:	df 91       	pop	r29
+   1f7d4:	cf 91       	pop	r28
+   1f7d6:	1f 91       	pop	r17
+   1f7d8:	0f 91       	pop	r16
+   1f7da:	ff 90       	pop	r15
+   1f7dc:	ef 90       	pop	r14
+   1f7de:	df 90       	pop	r13
+   1f7e0:	cf 90       	pop	r12
+   1f7e2:	bf 90       	pop	r11
+   1f7e4:	af 90       	pop	r10
+   1f7e6:	08 95       	ret
+
+0001f7e8 <validImage>:
+#include "serial.h"
+#include "debug.h"
+#include "debug_vald.h"
+
+uint8_t validImage(uint8_t* base)
+{
+   1f7e8:	20 e0       	ldi	r18, 0x00	; 0
+   1f7ea:	30 e0       	ldi	r19, 0x00	; 0
+   1f7ec:	fc 01       	movw	r30, r24
+   1f7ee:	e2 0f       	add	r30, r18
+   1f7f0:	f3 1f       	adc	r31, r19
+	uint8_t i;
+	for(i = 0; i < 0x34; i += 4) {
+
+		// For each vector, check it is of the form:
+		// 0x0C 0x94 0xWX 0xYZ  ; JMP 0xWXYZ
+		if(base[i] != 0x0c) {
+   1f7f2:	40 81       	ld	r20, Z
+   1f7f4:	4c 30       	cpi	r20, 0x0C	; 12
+   1f7f6:	51 f4       	brne	.+20     	; 0x1f80c <validImage+0x24>
+				tracePGM(mDebugVald_0x0C);
+			)
+			return(0);
+		}
+		
+		if(base[i + 1] != 0x94) {
+   1f7f8:	41 81       	ldd	r20, Z+1	; 0x01
+   1f7fa:	44 39       	cpi	r20, 0x94	; 148
+   1f7fc:	39 f4       	brne	.+14     	; 0x1f80c <validImage+0x24>
+   1f7fe:	2c 5f       	subi	r18, 0xFC	; 252
+   1f800:	3f 4f       	sbci	r19, 0xFF	; 255
+
+uint8_t validImage(uint8_t* base)
+{
+	/* Check that a jump table is present in the first flash sector */
+	uint8_t i;
+	for(i = 0; i < 0x34; i += 4) {
+   1f802:	24 33       	cpi	r18, 0x34	; 52
+   1f804:	31 05       	cpc	r19, r1
+   1f806:	91 f7       	brne	.-28     	; 0x1f7ec <validImage+0x4>
+		}
+	}
+
+	DBG_VALD(tracePGMlnVald(mDebugVald_VALID);)
+
+	return(1);
+   1f808:	81 e0       	ldi	r24, 0x01	; 1
+}
+   1f80a:	08 95       	ret
+				tracenum(i);
+				tracePGM(mDebugVald_WITH);
+				tracenum(base[i]);
+				tracePGM(mDebugVald_0x0C);
+			)
+			return(0);
+   1f80c:	80 e0       	ldi	r24, 0x00	; 0
+   1f80e:	08 95       	ret
+
+0001f810 <serialInit>:
+
+
+void serialInit(void)
+{
+	// Double speed mode USART0
+	UART_STATUS_REG		= _BV(UART_DOUBLE_SPEED);
+   1f810:	82 e0       	ldi	r24, 0x02	; 2
+   1f812:	80 93 c0 00 	sts	0x00C0, r24
+	// Enable receiver and transiter on USART0
+	UART_CONTROL_REG	= _BV(UART_ENABLE_RECEIVER) | _BV(UART_ENABLE_TRANSMITTER);
+   1f816:	88 e1       	ldi	r24, 0x18	; 24
+   1f818:	80 93 c1 00 	sts	0x00C1, r24
+	// Set 8bit character length on USART0
+	UART_MODE_REG		= _BV(UART_CHAR_SIZE_LOW) | _BV(UART_CHAR_SIZE_MID);
+   1f81c:	86 e0       	ldi	r24, 0x06	; 6
+   1f81e:	80 93 c2 00 	sts	0x00C2, r24
+	// Set USART0 baud rate
+	UART_BAUD_RATE_LOW	= (uint8_t)((F_CPU + BAUD_RATE * 4L) / (BAUD_RATE * 8L) - 1);
+   1f822:	88 e0       	ldi	r24, 0x08	; 8
+   1f824:	80 93 c4 00 	sts	0x00C4, r24
+   1f828:	08 95       	ret
+
+0001f82a <putch>:
+}
+
+
+void putch(uint8_t c)
+{
+	while(!(UART_STATUS_REG & _BV(UART_DATA_REG_EMPTY)));
+   1f82a:	90 91 c0 00 	lds	r25, 0x00C0
+   1f82e:	95 ff       	sbrs	r25, 5
+   1f830:	fc cf       	rjmp	.-8      	; 0x1f82a <putch>
+	UART_DATA_REG = c;
+   1f832:	80 93 c6 00 	sts	0x00C6, r24
+   1f836:	08 95       	ret
+
+0001f838 <puthex>:
+}
+
+
+void puthex(uint8_t c)
+{
+	c &= 0xf;
+   1f838:	8f 70       	andi	r24, 0x0F	; 15
+	if(c > 9) c += 7;
+   1f83a:	8a 30       	cpi	r24, 0x0A	; 10
+   1f83c:	08 f0       	brcs	.+2      	; 0x1f840 <puthex+0x8>
+   1f83e:	89 5f       	subi	r24, 0xF9	; 249
+	//while(!(UART_STATUS_REG & _BV(UART_DATA_REG_EMPTY)));
+	//UART_DATA_REG = c + '0';
+	putch(c + '0');
+   1f840:	80 5d       	subi	r24, 0xD0	; 208
+   1f842:	f3 cf       	rjmp	.-26     	; 0x1f82a <putch>
+
+0001f844 <getch>:
+
+uint8_t getch(void)
+{
+	//uint8_t ch;
+
+	while(!(UART_STATUS_REG & _BV(UART_RECEIVE_COMPLETE)));
+   1f844:	80 91 c0 00 	lds	r24, 0x00C0
+   1f848:	87 ff       	sbrs	r24, 7
+   1f84a:	fc cf       	rjmp	.-8      	; 0x1f844 <getch>
+	if(!(UART_STATUS_REG & _BV(UART_FRAME_ERROR))) {
+   1f84c:	80 91 c0 00 	lds	r24, 0x00C0
+   1f850:	84 fd       	sbrc	r24, 4
+   1f852:	01 c0       	rjmp	.+2      	; 0x1f856 <getch+0x12>
+		 * expects to be talking to the application, and DON'T reset the
+		 * watchdog.  This should cause the bootloader to abort and run
+		 * the application "soon", if it keeps happening.  (Note that we
+		 * don't care that an invalid char is returned...)
+		 */
+		wdt_reset();
+   1f854:	a8 95       	wdr
+	}
+
+	//ch = UART_DATA_REG;
+	//return ch;
+
+	return(UART_DATA_REG);
+   1f856:	80 91 c6 00 	lds	r24, 0x00C6
+}
+   1f85a:	08 95       	ret
+
+0001f85c <serialPoll>:
+
+
+uint8_t serialPoll(void)
+{
+	if(UART_STATUS_REG & _BV(UART_RECEIVE_COMPLETE)) {
+   1f85c:	80 91 c0 00 	lds	r24, 0x00C0
+   1f860:	87 ff       	sbrs	r24, 7
+   1f862:	05 c0       	rjmp	.+10     	; 0x1f86e <serialPoll+0x12>
+		resetTick();
+   1f864:	27 d0       	rcall	.+78     	; 0x1f8b4 <resetTick>
+		serialFlashing = TRUE;
+   1f866:	81 e0       	ldi	r24, 0x01	; 1
+   1f868:	80 93 29 01 	sts	0x0129, r24
+#if defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega1284P__)
+		return(processOptiboot());
+   1f86c:	52 c0       	rjmp	.+164    	; 0x1f912 <processOptiboot>
+#elif defined(__AVR_ATmega2560__)
+		return(processStk500boot());
+#endif
+	}
+	return(1);
+}
+   1f86e:	81 e0       	ldi	r24, 0x01	; 1
+   1f870:	08 95       	ret
+
+0001f872 <updateLed>:
+static uint16_t tick = 0;
+
+
+void updateLed(void)
+{
+	uint16_t next_timer_1 = TCNT1;
+   1f872:	80 91 84 00 	lds	r24, 0x0084
+   1f876:	90 91 85 00 	lds	r25, 0x0085
+
+	if(next_timer_1 & 0x400) LED_PORT ^= _BV(LED); // Led pin high
+   1f87a:	92 ff       	sbrs	r25, 2
+   1f87c:	04 c0       	rjmp	.+8      	; 0x1f886 <updateLed+0x14>
+   1f87e:	25 b1       	in	r18, 0x05	; 5
+   1f880:	20 58       	subi	r18, 0x80	; 128
+   1f882:	25 b9       	out	0x05, r18	; 5
+   1f884:	01 c0       	rjmp	.+2      	; 0x1f888 <updateLed+0x16>
+	else LED_PORT &= ~_BV(LED); // Led pin low
+   1f886:	2f 98       	cbi	0x05, 7	; 5
+
+	if(next_timer_1 < last_timer_1) {
+   1f888:	20 91 22 01 	lds	r18, 0x0122
+   1f88c:	30 91 23 01 	lds	r19, 0x0123
+   1f890:	82 17       	cp	r24, r18
+   1f892:	93 07       	cpc	r25, r19
+   1f894:	50 f4       	brcc	.+20     	; 0x1f8aa <updateLed+0x38>
+		tick++;
+   1f896:	20 91 20 01 	lds	r18, 0x0120
+   1f89a:	30 91 21 01 	lds	r19, 0x0121
+   1f89e:	2f 5f       	subi	r18, 0xFF	; 255
+   1f8a0:	3f 4f       	sbci	r19, 0xFF	; 255
+   1f8a2:	30 93 21 01 	sts	0x0121, r19
+   1f8a6:	20 93 20 01 	sts	0x0120, r18
+		    tracePGMlnUtil(mDebugUtil_LAST);
+		    tracenum(last_timer_1);
+		)
+	}
+
+	last_timer_1 = next_timer_1;
+   1f8aa:	90 93 23 01 	sts	0x0123, r25
+   1f8ae:	80 93 22 01 	sts	0x0122, r24
+   1f8b2:	08 95       	ret
+
+0001f8b4 <resetTick>:
+}
+
+void resetTick(void)
+{
+	TCNT1 = 0;
+   1f8b4:	10 92 85 00 	sts	0x0085, r1
+   1f8b8:	10 92 84 00 	sts	0x0084, r1
+	tick = 0;
+   1f8bc:	10 92 21 01 	sts	0x0121, r1
+   1f8c0:	10 92 20 01 	sts	0x0120, r1
+   1f8c4:	08 95       	ret
+
+0001f8c6 <timedOut>:
+
+uint8_t timedOut(void)
+{
+	// Never timeout if there is no code in Flash
+#if (FLASHEND > 0x10000)
+	if(pgm_read_word_far(0x0000) == 0xFFFF) return(0);
+   1f8c6:	80 e0       	ldi	r24, 0x00	; 0
+   1f8c8:	90 e0       	ldi	r25, 0x00	; 0
+   1f8ca:	dc 01       	movw	r26, r24
+   1f8cc:	ab bf       	out	0x3b, r26	; 59
+   1f8ce:	fc 01       	movw	r30, r24
+   1f8d0:	87 91       	elpm	r24, Z+
+   1f8d2:	96 91       	elpm	r25, Z
+   1f8d4:	01 96       	adiw	r24, 0x01	; 1
+   1f8d6:	41 f0       	breq	.+16     	; 0x1f8e8 <timedOut+0x22>
+#else
+	if(pgm_read_word_near(0x0000) == 0xFFFF) return(0);
+#endif
+
+	if(tick > TIMEOUT) return(1);
+   1f8d8:	81 e0       	ldi	r24, 0x01	; 1
+   1f8da:	20 91 20 01 	lds	r18, 0x0120
+   1f8de:	30 91 21 01 	lds	r19, 0x0121
+   1f8e2:	25 30       	cpi	r18, 0x05	; 5
+   1f8e4:	31 05       	cpc	r19, r1
+   1f8e6:	08 f4       	brcc	.+2      	; 0x1f8ea <timedOut+0x24>
+
+uint8_t timedOut(void)
+{
+	// Never timeout if there is no code in Flash
+#if (FLASHEND > 0x10000)
+	if(pgm_read_word_far(0x0000) == 0xFFFF) return(0);
+   1f8e8:	80 e0       	ldi	r24, 0x00	; 0
+	if(pgm_read_word_near(0x0000) == 0xFFFF) return(0);
+#endif
+
+	if(tick > TIMEOUT) return(1);
+	else return(0);
+}
+   1f8ea:	08 95       	ret
+
+0001f8ec <verifySpace>:
+static uint16_t address = 0;
+static uint8_t  length;
+
+static void verifySpace(void)
+{
+	if(getch() != CRC_EOP) {
+   1f8ec:	ab df       	rcall	.-170    	; 0x1f844 <getch>
+   1f8ee:	80 32       	cpi	r24, 0x20	; 32
+   1f8f0:	39 f0       	breq	.+14     	; 0x1f900 <verifySpace+0x14>
+		WDTCSR = _BV(WDCE) | _BV(WDE);
+   1f8f2:	88 e1       	ldi	r24, 0x18	; 24
+   1f8f4:	80 93 60 00 	sts	0x0060, r24
+		WDTCSR = WATCHDOG_16MS;	// shorten WD timeout
+   1f8f8:	88 e0       	ldi	r24, 0x08	; 8
+   1f8fa:	80 93 60 00 	sts	0x0060, r24
+   1f8fe:	ff cf       	rjmp	.-2      	; 0x1f8fe <verifySpace+0x12>
+		while(1)				// and busy-loop so that WD causes
+			;					// a reset and app start.
+	}
+	putch(STK_INSYNC);
+   1f900:	84 e1       	ldi	r24, 0x14	; 20
+   1f902:	93 cf       	rjmp	.-218    	; 0x1f82a <putch>
+
+0001f904 <getNch>:
+}
+
+
+static void getNch(uint8_t count)
+{
+   1f904:	cf 93       	push	r28
+   1f906:	c8 2f       	mov	r28, r24
+	do getch();
+   1f908:	9d df       	rcall	.-198    	; 0x1f844 <getch>
+	while(--count);
+   1f90a:	c1 50       	subi	r28, 0x01	; 1
+   1f90c:	e9 f7       	brne	.-6      	; 0x1f908 <getNch+0x4>
+	verifySpace();
+}
+   1f90e:	cf 91       	pop	r28
+
+static void getNch(uint8_t count)
+{
+	do getch();
+	while(--count);
+	verifySpace();
+   1f910:	ed cf       	rjmp	.-38     	; 0x1f8ec <verifySpace>
+
+0001f912 <processOptiboot>:
+}
+
+
+uint8_t processOptiboot(void)
+{
+   1f912:	cf 92       	push	r12
+   1f914:	df 92       	push	r13
+   1f916:	ef 92       	push	r14
+   1f918:	ff 92       	push	r15
+   1f91a:	0f 93       	push	r16
+   1f91c:	1f 93       	push	r17
+   1f91e:	cf 93       	push	r28
+   1f920:	df 93       	push	r29
+   1f922:	cd b7       	in	r28, 0x3d	; 61
+   1f924:	de b7       	in	r29, 0x3e	; 62
+   1f926:	c1 50       	subi	r28, 0x01	; 1
+   1f928:	d1 40       	sbci	r29, 0x01	; 1
+   1f92a:	de bf       	out	0x3e, r29	; 62
+   1f92c:	cd bf       	out	0x3d, r28	; 61
+	uint8_t ch;
+
+	ch = getch();
+   1f92e:	8a df       	rcall	.-236    	; 0x1f844 <getch>
+
+	if(ch == STK_GET_PARAMETER) {
+   1f930:	81 34       	cpi	r24, 0x41	; 65
+   1f932:	a9 f4       	brne	.+42     	; 0x1f95e <processOptiboot+0x4c>
+		unsigned char which = getch();
+   1f934:	87 df       	rcall	.-242    	; 0x1f844 <getch>
+		verifySpace();
+   1f936:	cf 5f       	subi	r28, 0xFF	; 255
+   1f938:	de 4f       	sbci	r29, 0xFE	; 254
+   1f93a:	88 83       	st	Y, r24
+   1f93c:	c1 50       	subi	r28, 0x01	; 1
+   1f93e:	d1 40       	sbci	r29, 0x01	; 1
+   1f940:	d5 df       	rcall	.-86     	; 0x1f8ec <verifySpace>
+		if(which == 0x82) {
+   1f942:	cf 5f       	subi	r28, 0xFF	; 255
+   1f944:	de 4f       	sbci	r29, 0xFE	; 254
+   1f946:	88 81       	ld	r24, Y
+   1f948:	c1 50       	subi	r28, 0x01	; 1
+   1f94a:	d1 40       	sbci	r29, 0x01	; 1
+   1f94c:	82 38       	cpi	r24, 0x82	; 130
+   1f94e:	11 f4       	brne	.+4      	; 0x1f954 <processOptiboot+0x42>
+			/*
+			 * Send tftpboot version as "minor SW version"
+			 */
+			putch(ARIADNE_MINVER);
+   1f950:	84 e0       	ldi	r24, 0x04	; 4
+   1f952:	03 c0       	rjmp	.+6      	; 0x1f95a <processOptiboot+0x48>
+		} else if(which == 0x81) {
+   1f954:	81 38       	cpi	r24, 0x81	; 129
+   1f956:	21 f1       	breq	.+72     	; 0x1f9a0 <processOptiboot+0x8e>
+		} else {
+			/*
+			 * GET PARAMETER returns a generic 0x03 reply for
+			 * other parameters - enough to keep Avrdude happy
+			 */
+			putch(0x03);
+   1f958:	83 e0       	ldi	r24, 0x03	; 3
+   1f95a:	67 df       	rcall	.-306    	; 0x1f82a <putch>
+   1f95c:	ca c0       	rjmp	.+404    	; 0x1faf2 <processOptiboot+0x1e0>
+		}
+	} else if(ch == STK_SET_DEVICE) {
+   1f95e:	82 34       	cpi	r24, 0x42	; 66
+   1f960:	11 f4       	brne	.+4      	; 0x1f966 <processOptiboot+0x54>
+		// SET DEVICE is ignored
+		getNch(20);
+   1f962:	84 e1       	ldi	r24, 0x14	; 20
+   1f964:	03 c0       	rjmp	.+6      	; 0x1f96c <processOptiboot+0x5a>
+	} else if(ch == STK_SET_DEVICE_EXT) {
+   1f966:	85 34       	cpi	r24, 0x45	; 69
+   1f968:	19 f4       	brne	.+6      	; 0x1f970 <processOptiboot+0x5e>
+		// SET DEVICE EXT is ignored
+		getNch(4);
+   1f96a:	84 e0       	ldi	r24, 0x04	; 4
+   1f96c:	cb df       	rcall	.-106    	; 0x1f904 <getNch>
+   1f96e:	c1 c0       	rjmp	.+386    	; 0x1faf2 <processOptiboot+0x1e0>
+	} else if(ch == STK_LOAD_ADDRESS) {
+   1f970:	85 35       	cpi	r24, 0x55	; 85
+   1f972:	91 f4       	brne	.+36     	; 0x1f998 <processOptiboot+0x86>
+		// LOAD ADDRESS
+		uint16_t newAddress;
+		newAddress = getch();
+   1f974:	67 df       	rcall	.-306    	; 0x1f844 <getch>
+   1f976:	18 2f       	mov	r17, r24
+		newAddress = (newAddress & 0xff) | (getch() << 8);
+   1f978:	65 df       	rcall	.-310    	; 0x1f844 <getch>
+   1f97a:	21 2f       	mov	r18, r17
+   1f97c:	30 e0       	ldi	r19, 0x00	; 0
+   1f97e:	38 2b       	or	r19, r24
+
+#ifdef RAMPZ
+		// Transfer top bit to RAMPZ
+		RAMPZ = (newAddress & 0x8000) ? 1 : 0;
+   1f980:	83 2f       	mov	r24, r19
+   1f982:	88 1f       	adc	r24, r24
+   1f984:	88 27       	eor	r24, r24
+   1f986:	88 1f       	adc	r24, r24
+   1f988:	8b bf       	out	0x3b, r24	; 59
+#endif
+
+		newAddress += newAddress; // Convert from word address to byte address
+   1f98a:	22 0f       	add	r18, r18
+   1f98c:	33 1f       	adc	r19, r19
+		address = newAddress;
+   1f98e:	30 93 26 01 	sts	0x0126, r19
+   1f992:	20 93 25 01 	sts	0x0125, r18
+   1f996:	ac c0       	rjmp	.+344    	; 0x1faf0 <processOptiboot+0x1de>
+		verifySpace();
+	} else if(ch == STK_UNIVERSAL) {
+   1f998:	86 35       	cpi	r24, 0x56	; 86
+   1f99a:	21 f4       	brne	.+8      	; 0x1f9a4 <processOptiboot+0x92>
+		// UNIVERSAL command is ignored
+		getNch(4);
+   1f99c:	84 e0       	ldi	r24, 0x04	; 4
+   1f99e:	b2 df       	rcall	.-156    	; 0x1f904 <getNch>
+		putch(0x00);
+   1f9a0:	80 e0       	ldi	r24, 0x00	; 0
+   1f9a2:	db cf       	rjmp	.-74     	; 0x1f95a <processOptiboot+0x48>
+	}
+	/* Write memory, length is big endian and is in bytes */
+	else if(ch == STK_PROG_PAGE) {
+   1f9a4:	84 36       	cpi	r24, 0x64	; 100
+   1f9a6:	09 f0       	breq	.+2      	; 0x1f9aa <processOptiboot+0x98>
+   1f9a8:	70 c0       	rjmp	.+224    	; 0x1fa8a <processOptiboot+0x178>
+		// PROGRAM PAGE - we support flash programming only, not EEPROM
+		uint8_t  buff[256];
+		uint8_t* bufPtr;
+		uint16_t addrPtr;
+
+		getch();			/* getlen() */
+   1f9aa:	4c df       	rcall	.-360    	; 0x1f844 <getch>
+		length = getch();
+   1f9ac:	4b df       	rcall	.-362    	; 0x1f844 <getch>
+   1f9ae:	80 93 24 01 	sts	0x0124, r24
+		getch();
+   1f9b2:	48 df       	rcall	.-368    	; 0x1f844 <getch>
+
+		// If we are in RWW section, immediately start page erase
+		if(address < NRWWSTART) boot_page_erase((uint16_t)(void*)address);
+   1f9b4:	80 91 25 01 	lds	r24, 0x0125
+   1f9b8:	90 91 26 01 	lds	r25, 0x0126
+   1f9bc:	81 15       	cp	r24, r1
+   1f9be:	20 ee       	ldi	r18, 0xE0	; 224
+   1f9c0:	92 07       	cpc	r25, r18
+   1f9c2:	48 f4       	brcc	.+18     	; 0x1f9d6 <processOptiboot+0xc4>
+   1f9c4:	a0 e0       	ldi	r26, 0x00	; 0
+   1f9c6:	b0 e0       	ldi	r27, 0x00	; 0
+   1f9c8:	23 e0       	ldi	r18, 0x03	; 3
+   1f9ca:	fc 01       	movw	r30, r24
+   1f9cc:	a0 93 5b 00 	sts	0x005B, r26
+   1f9d0:	20 93 57 00 	sts	0x0057, r18
+   1f9d4:	e8 95       	spm
+   1f9d6:	ce 01       	movw	r24, r28
+   1f9d8:	01 96       	adiw	r24, 0x01	; 1
+   1f9da:	7c 01       	movw	r14, r24
+   1f9dc:	8c 01       	movw	r16, r24
+
+		// While that is going on, read in page contents
+		bufPtr = buff;
+		do* bufPtr++ = getch();
+   1f9de:	32 df       	rcall	.-412    	; 0x1f844 <getch>
+   1f9e0:	f7 01       	movw	r30, r14
+   1f9e2:	81 93       	st	Z+, r24
+   1f9e4:	7f 01       	movw	r14, r30
+		while(--length);
+   1f9e6:	80 91 24 01 	lds	r24, 0x0124
+   1f9ea:	81 50       	subi	r24, 0x01	; 1
+   1f9ec:	80 93 24 01 	sts	0x0124, r24
+   1f9f0:	81 11       	cpse	r24, r1
+   1f9f2:	f5 cf       	rjmp	.-22     	; 0x1f9de <processOptiboot+0xcc>
+
+		// If we are in NRWW section, page erase has to be delayed until now.
+		// Todo: Take RAMPZ into account
+		if(address >= NRWWSTART) boot_page_erase((uint16_t)(void*)address);
+   1f9f4:	80 91 25 01 	lds	r24, 0x0125
+   1f9f8:	90 91 26 01 	lds	r25, 0x0126
+   1f9fc:	81 15       	cp	r24, r1
+   1f9fe:	f0 ee       	ldi	r31, 0xE0	; 224
+   1fa00:	9f 07       	cpc	r25, r31
+   1fa02:	48 f0       	brcs	.+18     	; 0x1fa16 <processOptiboot+0x104>
+   1fa04:	a0 e0       	ldi	r26, 0x00	; 0
+   1fa06:	b0 e0       	ldi	r27, 0x00	; 0
+   1fa08:	23 e0       	ldi	r18, 0x03	; 3
+   1fa0a:	fc 01       	movw	r30, r24
+   1fa0c:	a0 93 5b 00 	sts	0x005B, r26
+   1fa10:	20 93 57 00 	sts	0x0057, r18
+   1fa14:	e8 95       	spm
+
+		// Read command terminator, start reply
+		verifySpace();
+   1fa16:	6a df       	rcall	.-300    	; 0x1f8ec <verifySpace>
+
+		// If only a partial page is to be programmed, the erase might not be complete.
+		// So check that here
+		boot_spm_busy_wait();
+   1fa18:	07 b6       	in	r0, 0x37	; 55
+   1fa1a:	00 fc       	sbrc	r0, 0
+   1fa1c:	fd cf       	rjmp	.-6      	; 0x1fa18 <processOptiboot+0x106>
+
+		// Copy buffer into programming buffer
+		bufPtr = buff;
+		addrPtr = (uint16_t)(void*)address;
+   1fa1e:	80 91 25 01 	lds	r24, 0x0125
+   1fa22:	90 91 26 01 	lds	r25, 0x0126
+		// If only a partial page is to be programmed, the erase might not be complete.
+		// So check that here
+		boot_spm_busy_wait();
+
+		// Copy buffer into programming buffer
+		bufPtr = buff;
+   1fa26:	a9 81       	ldd	r26, Y+1	; 0x01
+   1fa28:	20 e0       	ldi	r18, 0x00	; 0
+   1fa2a:	30 e0       	ldi	r19, 0x00	; 0
+		ch = SPM_PAGESIZE / 2;
+		do {
+			uint16_t a;
+			a = *bufPtr++;
+			a |= (*bufPtr++) << 8;
+			boot_page_fill((uint16_t)(void*)addrPtr, a);
+   1fa2c:	dd 24       	eor	r13, r13
+   1fa2e:	d3 94       	inc	r13
+   1fa30:	78 01       	movw	r14, r16
+   1fa32:	e2 0e       	add	r14, r18
+   1fa34:	f3 1e       	adc	r15, r19
+   1fa36:	a9 01       	movw	r20, r18
+   1fa38:	48 0f       	add	r20, r24
+   1fa3a:	59 1f       	adc	r21, r25
+   1fa3c:	60 e0       	ldi	r22, 0x00	; 0
+   1fa3e:	70 e0       	ldi	r23, 0x00	; 0
+		addrPtr = (uint16_t)(void*)address;
+		ch = SPM_PAGESIZE / 2;
+		do {
+			uint16_t a;
+			a = *bufPtr++;
+			a |= (*bufPtr++) << 8;
+   1fa40:	f7 01       	movw	r30, r14
+   1fa42:	c1 80       	ldd	r12, Z+1	; 0x01
+   1fa44:	b0 e0       	ldi	r27, 0x00	; 0
+   1fa46:	bc 29       	or	r27, r12
+			boot_page_fill((uint16_t)(void*)addrPtr, a);
+   1fa48:	0d 01       	movw	r0, r26
+   1fa4a:	fa 01       	movw	r30, r20
+   1fa4c:	60 93 5b 00 	sts	0x005B, r22
+   1fa50:	d0 92 57 00 	sts	0x0057, r13
+   1fa54:	e8 95       	spm
+   1fa56:	11 24       	eor	r1, r1
+			addrPtr += 2;
+		} while(--ch);
+   1fa58:	2e 3f       	cpi	r18, 0xFE	; 254
+   1fa5a:	31 05       	cpc	r19, r1
+   1fa5c:	29 f0       	breq	.+10     	; 0x1fa68 <processOptiboot+0x156>
+   1fa5e:	2e 5f       	subi	r18, 0xFE	; 254
+   1fa60:	3f 4f       	sbci	r19, 0xFF	; 255
+		addrPtr = (uint16_t)(void*)address;
+		ch = SPM_PAGESIZE / 2;
+		do {
+			uint16_t a;
+			a = *bufPtr++;
+			a |= (*bufPtr++) << 8;
+   1fa62:	f7 01       	movw	r30, r14
+   1fa64:	a2 81       	ldd	r26, Z+2	; 0x02
+   1fa66:	e4 cf       	rjmp	.-56     	; 0x1fa30 <processOptiboot+0x11e>
+			boot_page_fill((uint16_t)(void*)addrPtr, a);
+			addrPtr += 2;
+		} while(--ch);
+
+		// Write from programming buffer
+		boot_page_write((uint16_t)(void*)address);
+   1fa68:	a0 e0       	ldi	r26, 0x00	; 0
+   1fa6a:	b0 e0       	ldi	r27, 0x00	; 0
+   1fa6c:	25 e0       	ldi	r18, 0x05	; 5
+   1fa6e:	fc 01       	movw	r30, r24
+   1fa70:	a0 93 5b 00 	sts	0x005B, r26
+   1fa74:	20 93 57 00 	sts	0x0057, r18
+   1fa78:	e8 95       	spm
+		boot_spm_busy_wait();
+   1fa7a:	07 b6       	in	r0, 0x37	; 55
+   1fa7c:	00 fc       	sbrc	r0, 0
+   1fa7e:	fd cf       	rjmp	.-6      	; 0x1fa7a <processOptiboot+0x168>
+
+#if defined(RWWSRE)
+		// Reenable read access to flash
+		boot_rww_enable();
+   1fa80:	81 e1       	ldi	r24, 0x11	; 17
+   1fa82:	80 93 57 00 	sts	0x0057, r24
+   1fa86:	e8 95       	spm
+   1fa88:	34 c0       	rjmp	.+104    	; 0x1faf2 <processOptiboot+0x1e0>
+#endif
+	}
+	/* Read memory block mode, length is big endian.  */
+	else if(ch == STK_READ_PAGE) {
+   1fa8a:	84 37       	cpi	r24, 0x74	; 116
+   1fa8c:	e9 f4       	brne	.+58     	; 0x1fac8 <processOptiboot+0x1b6>
+		// READ PAGE - we only read flash
+		getch();			/* getlen() */
+   1fa8e:	da de       	rcall	.-588    	; 0x1f844 <getch>
+		length = getch();
+   1fa90:	d9 de       	rcall	.-590    	; 0x1f844 <getch>
+   1fa92:	80 93 24 01 	sts	0x0124, r24
+		getch();
+   1fa96:	d6 de       	rcall	.-596    	; 0x1f844 <getch>
+
+		verifySpace();
+   1fa98:	29 df       	rcall	.-430    	; 0x1f8ec <verifySpace>
+
+		//      do putch(pgm_read_byte_near(address++));
+		//      while (--length);
+		do {
+			uint8_t result;
+			__asm__("elpm %0,Z\n":"=r"(result):"z"(address));
+   1fa9a:	e0 91 25 01 	lds	r30, 0x0125
+   1fa9e:	f0 91 26 01 	lds	r31, 0x0126
+   1faa2:	86 91       	elpm	r24, Z
+			putch(result);
+   1faa4:	c2 de       	rcall	.-636    	; 0x1f82a <putch>
+			address++;
+   1faa6:	80 91 25 01 	lds	r24, 0x0125
+   1faaa:	90 91 26 01 	lds	r25, 0x0126
+   1faae:	01 96       	adiw	r24, 0x01	; 1
+   1fab0:	90 93 26 01 	sts	0x0126, r25
+   1fab4:	80 93 25 01 	sts	0x0125, r24
+		} while(--length);
+   1fab8:	80 91 24 01 	lds	r24, 0x0124
+   1fabc:	81 50       	subi	r24, 0x01	; 1
+   1fabe:	80 93 24 01 	sts	0x0124, r24
+   1fac2:	81 11       	cpse	r24, r1
+   1fac4:	ea cf       	rjmp	.-44     	; 0x1fa9a <processOptiboot+0x188>
+   1fac6:	15 c0       	rjmp	.+42     	; 0x1faf2 <processOptiboot+0x1e0>
+		do putch(pgm_read_byte_near(address++));
+		while(--length);
+#endif
+	}
+	/* Get device signature bytes  */
+	else if(ch == STK_READ_SIGN) {
+   1fac8:	85 37       	cpi	r24, 0x75	; 117
+   1faca:	39 f4       	brne	.+14     	; 0x1fada <processOptiboot+0x1c8>
+		// READ SIGN - return what Avrdude wants to hear
+		verifySpace();
+   1facc:	0f df       	rcall	.-482    	; 0x1f8ec <verifySpace>
+		putch(SIGNATURE_0);
+   1face:	8e e1       	ldi	r24, 0x1E	; 30
+   1fad0:	ac de       	rcall	.-680    	; 0x1f82a <putch>
+		putch(SIGNATURE_1);
+   1fad2:	87 e9       	ldi	r24, 0x97	; 151
+   1fad4:	aa de       	rcall	.-684    	; 0x1f82a <putch>
+		putch(SIGNATURE_2);
+   1fad6:	85 e0       	ldi	r24, 0x05	; 5
+   1fad8:	40 cf       	rjmp	.-384    	; 0x1f95a <processOptiboot+0x48>
+	} else if(ch == STK_LEAVE_PROGMODE) {
+   1fada:	81 35       	cpi	r24, 0x51	; 81
+   1fadc:	49 f4       	brne	.+18     	; 0x1faf0 <processOptiboot+0x1de>
+		// Adaboot no-wait mod
+		//watchdogConfig(WATCHDOG_16MS);
+		verifySpace();
+   1fade:	06 df       	rcall	.-500    	; 0x1f8ec <verifySpace>
+		eeprom_write_byte(EEPROM_IMG_STAT, EEPROM_IMG_OK_VALUE);
+   1fae0:	6e ee       	ldi	r22, 0xEE	; 238
+   1fae2:	82 e0       	ldi	r24, 0x02	; 2
+   1fae4:	90 e0       	ldi	r25, 0x00	; 0
+   1fae6:	27 d0       	rcall	.+78     	; 0x1fb36 <__eewr_byte_m1284p>
+		putch(STK_OK);
+   1fae8:	80 e1       	ldi	r24, 0x10	; 16
+   1faea:	9f de       	rcall	.-706    	; 0x1f82a <putch>
+		return(0);
+   1faec:	80 e0       	ldi	r24, 0x00	; 0
+   1faee:	04 c0       	rjmp	.+8      	; 0x1faf8 <processOptiboot+0x1e6>
+	} else {
+		// This covers the response to commands like STK_ENTER_PROGMODE
+		verifySpace();
+   1faf0:	fd de       	rcall	.-518    	; 0x1f8ec <verifySpace>
+	}
+	putch(STK_OK);
+   1faf2:	80 e1       	ldi	r24, 0x10	; 16
+   1faf4:	9a de       	rcall	.-716    	; 0x1f82a <putch>
+	return(1);
+   1faf6:	81 e0       	ldi	r24, 0x01	; 1
+}
+   1faf8:	cf 5f       	subi	r28, 0xFF	; 255
+   1fafa:	de 4f       	sbci	r29, 0xFE	; 254
+   1fafc:	de bf       	out	0x3e, r29	; 62
+   1fafe:	cd bf       	out	0x3d, r28	; 61
+   1fb00:	df 91       	pop	r29
+   1fb02:	cf 91       	pop	r28
+   1fb04:	1f 91       	pop	r17
+   1fb06:	0f 91       	pop	r16
+   1fb08:	ff 90       	pop	r15
+   1fb0a:	ef 90       	pop	r14
+   1fb0c:	df 90       	pop	r13
+   1fb0e:	cf 90       	pop	r12
+   1fb10:	08 95       	ret
+
+0001fb12 <memcpy_PF>:
+   1fb12:	6b bf       	out	0x3b, r22	; 59
+   1fb14:	fa 01       	movw	r30, r20
+   1fb16:	dc 01       	movw	r26, r24
+   1fb18:	02 c0       	rjmp	.+4      	; 0x1fb1e <memcpy_PF+0xc>
+   1fb1a:	07 90       	elpm	r0, Z+
+   1fb1c:	0d 92       	st	X+, r0
+   1fb1e:	21 50       	subi	r18, 0x01	; 1
+   1fb20:	30 40       	sbci	r19, 0x00	; 0
+   1fb22:	d8 f7       	brcc	.-10     	; 0x1fb1a <memcpy_PF+0x8>
+   1fb24:	08 95       	ret
+
+0001fb26 <__eerd_byte_m1284p>:
+   1fb26:	f9 99       	sbic	0x1f, 1	; 31
+   1fb28:	fe cf       	rjmp	.-4      	; 0x1fb26 <__eerd_byte_m1284p>
+   1fb2a:	92 bd       	out	0x22, r25	; 34
+   1fb2c:	81 bd       	out	0x21, r24	; 33
+   1fb2e:	f8 9a       	sbi	0x1f, 0	; 31
+   1fb30:	99 27       	eor	r25, r25
+   1fb32:	80 b5       	in	r24, 0x20	; 32
+   1fb34:	08 95       	ret
+
+0001fb36 <__eewr_byte_m1284p>:
+   1fb36:	26 2f       	mov	r18, r22
+
+0001fb38 <__eewr_r18_m1284p>:
+   1fb38:	f9 99       	sbic	0x1f, 1	; 31
+   1fb3a:	fe cf       	rjmp	.-4      	; 0x1fb38 <__eewr_r18_m1284p>
+   1fb3c:	1f ba       	out	0x1f, r1	; 31
+   1fb3e:	92 bd       	out	0x22, r25	; 34
+   1fb40:	81 bd       	out	0x21, r24	; 33
+   1fb42:	20 bd       	out	0x20, r18	; 32
+   1fb44:	0f b6       	in	r0, 0x3f	; 63
+   1fb46:	f8 94       	cli
+   1fb48:	fa 9a       	sbi	0x1f, 2	; 31
+   1fb4a:	f9 9a       	sbi	0x1f, 1	; 31
+   1fb4c:	0f be       	out	0x3f, r0	; 63
+   1fb4e:	01 96       	adiw	r24, 0x01	; 1
+   1fb50:	08 95       	ret
+
+0001fb52 <_exit>:
+   1fb52:	f8 94       	cli
+
+0001fb54 <__stop_program>:
+   1fb54:	ff cf       	rjmp	.-2      	; 0x1fb54 <__stop_program>
