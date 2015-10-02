@@ -87,12 +87,23 @@
           "checksum": "SHA-256:076af6127e0a2c80f583a4d214b941797dd68423afa1ea365afadfaafdbdd40b",
           "size": "972972",
           "boards": [
-            {"name": "Ariadne Bootloader"},
-            {"name": "Arduino Duemilanove w/ ATmega328"},
-            {"name": "Arduino Uno"},
+            {"name": "Uno"},
+            {"name": "Duemilanove"},
+            {"name": "Diecimila"},
+            {"name": "Nano"},
+            {"name": "Mini"},
+            {"name": "BT"},
+            {"name": "Pro"},
+            {"name": "Pro Mini"},
             {"name": "Arduino Ethernet"},
-            {"name": "Arduino Mega 2560"},
-            {"name": "ATmega1284P"}
+            {"name": "Mega 2560"},
+            {"name": "ATmega1284P"},
+            {"name": "Mighty 1284P"},
+            {"name": "Mighty Mini 1284P"},
+            {"name": "Goldilocks"},
+            {"name": "Bobuino"},
+            {"name": "Skinny Bob"}, 
+            {"name": "Sleeping Beauty"}
           ],
           "toolsDependencies": [
             {
