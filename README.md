@@ -10,8 +10,9 @@ There are two ways to install Ariadne:
 
 #### Manual Installation
 - Download the Ariadne files here: https://github.com/per1234/Ariadne-Bootloader/archive/ariadne.zip
-- Extract the .zip file
-- Copy the **hardware** and **libraries** folders inside your sketchbook folder. Take care during copying not to overwrite any other files.
+- Extract the .zip file.
+- Rename the extracted folder **Ariadne-Bootloader**.
+- Move the folder into the **hardware** folder in your sketchbook folder.
 - If the Arduino IDE is running then restart it.
 
 #### Boards Manager Installation
@@ -134,7 +135,7 @@ Another option if you have scons installed, is to use the modified `SConstruct` 
 - If you used the previous process to generate the HEX file you can just copy the `SConstruct` file inside the temporary *Arduino IDE* build directory (as mentioned above) and run `scons` in a terminal inside that directory.
 - The other way to use it is to copy the `SConstruct` script inside the sketch's directory and, as above, run `scons` in a terminal inside that directory. This way you will build your project outside *Arduino IDE* creating the `.bin` file in the process. Note that this way the sketch's folder will be polluted with Arduino's build files, much like the temporary directory *Arduino IDE* uses.
 
-For testing purposes you can find a **blink** sketch in binary form inside the `Ariadne-Bootloader/utilities/tests/blink` folder. The **fail** sketch in the `tests/fail` folder will give you a view of what a failed upload looks like. This sketch fails because it is written in plain **C** and not in **Arduino**. That way it lacks some "signatures" the bootloader uses to validate Arduino sketches.
+For testing purposes you can find a **blink** sketch in binary form inside the `Ariadne-Bootloader/extras/blink` folder. The **fail** sketch in the `Ariadne-Bootloader/extras/fail` folder will give you a view of what a failed upload looks like. This sketch fails because it is written in plain **C** and not in **Arduino**. That way it lacks some "signatures" the bootloader uses to validate Arduino sketches.
 
 ### Using a tftp client to upload the sketch
 Now that the binary is ready, you have to upload it. The upload procedure is as follows:
