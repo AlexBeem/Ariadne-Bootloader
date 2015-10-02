@@ -57,6 +57,7 @@ Displays a list of board models for your **Board** menu selection.
 ### Clock Menu
 - **Low Power** - This is usually the best setting to use for commercially produced boards that run at 16MHz.
 - **Full Swing** - This setting can be used for breadboard or homemade 16MHz boards where the low power setting is unreliable due to electrical interference.
+- **8MHz Internal** - For boards without an external 16MHz crystal or to reduce power consumption.
 
 ### Board Configuration Menu
 - **Ethernet Shield** - If an Ethernet Shield is connected to your board Ariadne sets Arduino pin 4 HIGH to disable the SD card reader. If your board doesn't have SD card hardware installed then chose a **No Ethernet Shield** option.
