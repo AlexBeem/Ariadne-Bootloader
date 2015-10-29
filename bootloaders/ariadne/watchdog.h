@@ -1,7 +1,7 @@
 #ifndef watchdog_h
 #define watchdog_h
 
-/* Watchdog settings */
+// Watchdog settings
 #define WATCHDOG_OFF    (0)
 #define WATCHDOG_16MS   (_BV(WDE))
 #define WATCHDOG_32MS   (_BV(WDP0) | _BV(WDE))

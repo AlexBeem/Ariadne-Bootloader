@@ -1,30 +1,30 @@
 Ariadne Bootloader for Arduino
 ==========
-Make a donation to the original Ariadne developer: [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Make a on-time donation to the original Ariadne bootloader developer using Paypal")
+Make a donation to the original Ariadne developer: [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Make a one-time donation to the original Ariadne bootloader developer using Paypal")
 
-This is a beta stage bootloader for Arduino Ethernet, Ethernet Shield, or any other W5100 Ethernet controller. The bootloader implements a TFTP server on the Arduino board to allow uploading sketches to the Arduino using any TFTP client. This bootloader also supports the standard serial upload method.
+Ariadne Bootloader implements a TFTP server on the Arduino board to allow uploading sketches to boards with a W5100 Ethernet controller attached using any TFTP client. This bootloader also supports the standard serial upload method.
 
 
 ## Downloading and Installing Files
 There are two ways to install Ariadne:
 
 #### Manual Installation
-- Download the Ariadne files here: https://github.com/per1234/Ariadne-Bootloader/archive/ariadne.zip
-- Extract the .zip file.
-- Rename the extracted folder **Ariadne-Bootloader**.
-- Move the folder into the **hardware** folder in your sketchbook folder.
-- If the Arduino IDE is running then restart it.
+* Download the Ariadne files here: https://github.com/per1234/Ariadne-Bootloader/archive/ariadne.zip
+* Extract the .zip file.
+* Rename the extracted folder **Ariadne-Bootloader**.
+* Move the folder into the **hardware** folder in your sketchbook folder.
+* If the Arduino IDE is running then restart it.
 
 #### Boards Manager Installation
 This installation method requires Arduino IDE version 1.6.4 or greater.
-- Open the Arduino IDE.
-- Open the **File > Preferences** menu item.
-- Enter the following URL in **Additional Boards Manager URLs**: https://per1234.github.io/Ariadne-Bootloader/package_codebendercc_ariadne-bootloader_index.json
-- Open the **Tools > Board > Boards Manager...** menu item.
-- Wait for the platform indexes to finish downloading.
-- Scroll down until you see the **Ariadne Bootloader** entry and click on it.
-- Click Install.
-- After installation is complete close the Boards Manager window.
+* Open the Arduino IDE.
+* Open the **File > Preferences** menu item.
+* Enter the following URL in **Additional Boards Manager URLs**: https://per1234.github.io/Ariadne-Bootloader/package_codebendercc_ariadne-bootloader_index.json
+* Open the **Tools > Board > Boards Manager...** menu item.
+* Wait for the platform indexes to finish downloading.
+* Scroll down until you see the **Ariadne Bootloader** entry and click on it.
+* Click **Install**.
+* After installation is complete close the Boards Manager window.
 
 ## Additional Boards
 The file **more-boards.txt** contains alternate boards.txt entries for different configurations. To add any of these entries to your **Board** menu copy the entry to **boards.txt** and restart the Arduino IDE if it is running.
@@ -34,14 +34,14 @@ Use these entries for boards without an external 16MHz crystal or to reduce powe
 
 ### Other ATmega1284P pinouts
 The default ATmega1284P Board uses the avr-developers.com pinout(ariadne/variants/avr_developers/pins_arduino.h) but there are entries for other ATmega1284P based boards including:
-- [Mighty 1284P](https://maniacbug.wordpress.com/2011/11/27/arduino-on-atmega1284p-4)
-- [Mighty Mini 1284P](https://github.com/JChristensen/mini1284)
-- [Bobuino](http://crossroadsfencing.com/BobuinoRev17/index.html)
-- [Skinny Bob](http://embeddedcoolness.com/shop/rfx-1284p-devdep-board-w-prototyping-area-nrf24l01-headers-kit)
-- [Sleeping Beauty](http://www.firebirduino.com/sleeping_beauty)
-- [Goldilocks](www.freetronics.com.au/products/goldilocks-arduino-compatible-with-atmega1284p-mcu)
+* [Mighty 1284P](https://maniacbug.wordpress.com/2011/11/27/arduino-on-atmega1284p-4)
+* [Mighty Mini 1284P](https://github.com/JChristensen/mini1284)
+* [Bobuino](http://crossroadsfencing.com/BobuinoRev17/index.html)
+* [Skinny Bob](http://embeddedcoolness.com/shop/rfx-1284p-devdep-board-w-prototyping-area-nrf24l01-headers-kit)
+* [Sleeping Beauty](http://www.firebirduino.com/sleeping_beauty)
+* [Goldilocks](www.freetronics.com.au/products/goldilocks-arduino-compatible-with-atmega1284p-mcu)
 
-These entries require the installation of the [Mighty 1284P core](https://github.com/JChristensen/mighty-1284p).
+These entries require the installation of the [Mighty 1284P core](https://github.com/JChristensen/mighty-1284p/tree/v1.6.3).
 
 
 ### Debug
@@ -56,29 +56,30 @@ Displays a list of board models for your **Board** menu selection.
 
 
 ### Clock Menu
-- **Low Power** - This is usually the best setting to use for commercially produced boards that run at 16MHz.
-- **Full Swing** - This setting can be used for breadboard or homemade 16MHz boards where the low power setting is unreliable due to electrical interference.
-- **8MHz Internal** - For boards without an external 16MHz crystal or to reduce power consumption.
+The bootloader must be reburned whenever the clock setting is changed.
+* **Low Power** - This is usually the best setting to use for commercially produced boards that run at 16MHz.
+* **Full Swing** - This setting can be used for breadboard or homemade 16MHz boards where the low power setting is unreliable due to electrical interference.
+* **8MHz Internal** - For boards without an external 16MHz crystal or to reduce power consumption.
 
 ### Board Configuration Menu
-- **Ethernet Shield** - If an Ethernet Shield is connected to your board Ariadne sets Arduino pin 4 HIGH to disable the SD card reader. If your board doesn't have SD card hardware installed then chose a **No Ethernet Shield** option.
-- **Blink** - Blink the LED connected to Arduino pin 13(pin 9 on Arduino Ethernet) to indicate bootloader operation. Select a **No Blink** option if there is something else connected to the LED pin and you don't want Ariadne to change the pin state.
+* **Ethernet Shield** - If an Ethernet Shield is connected to your board Ariadne sets Arduino pin 4 HIGH to disable the SD card reader. If your board doesn't have SD card hardware installed then chose a **No Ethernet Shield** option.
+* **Blink** - Blink the LED connected to Arduino pin 13(pin 9 on Arduino Ethernet) to indicate bootloader operation. Select a **No Blink** option if there is something else connected to the LED pin and you don't want Ariadne to change the pin state.
 
 
 ## Hardware
 Once the Ariadne bootloader is burned to your Arduino the W5100 Ethernet controller must be attached for your Arduino to work, even when using serial upload.
 Ariadne assumes:
-- W5100 SS pin is connected to Arduino pin 10
-- **Ethernet Shield** type **Board Configuration** menu entries: SD card SS is connected to pin 4
-- **Blink** type **Board Configuration** menu entries: LED connected on pin 13(pin 9 on Arduino Ethernet).
+* W5100 SS pin is connected to Arduino pin 10
+* **Ethernet Shield** type **Board Configuration** menu entries: SD card SS is connected to pin 4
+* **Blink** type **Board Configuration** menu entries: LED connected on pin 13(pin 9 on Arduino Ethernet).
 
 
 ## Burning the Bootloader
 To burn the bootloader, you will need an ISP(in-system programmer) such as:
-- [USBasp](http://www.ebay.com/sch/i.html?_nkw=usbasp&_sop=15)
-- [USBtinyISP](https://learn.adafruit.com/usbtinyisp)
-- [Arduino as ISP](http://arduino.cc/en/Tutorial/ArduinoISP)
-- [Atmega_Board_Programmer](http://www.gammon.com.au/forum/?id=11635)
+* [USBasp](http://www.ebay.com/sch/i.html?_nkw=usbasp&_sop=15)
+* [USBtinyISP](https://learn.adafruit.com/usbtinyisp)
+* [Arduino as ISP](http://arduino.cc/en/Tutorial/ArduinoISP)
+* [Atmega_Board_Programmer](http://www.gammon.com.au/forum/?id=11635)
 
 After you have connected the Arduino board and the programmer to your computer launch the Arduino IDE. Navigate to the **Tools** > **Board** menu and select the Ariadne version of your board. Then go to **Tools** > **Programmer** and select the programmer you are using. In case you are using **Arduino as ISP**, make sure that the selected port in the **Tools** > **Serial Port** menu refers to the **Arduino as ISP** and not the board that you want to burn the bootloader on. Now, just launch the **Tools** > **Burn Bootloader** command and wait for about 15 seconds for the operation to complete.
 
@@ -107,13 +108,13 @@ The default network settings of the bootloader are listed below:
 * TFTP Negotiation Port: 69
 * TFTP Data Port: 46969
 
-**NOTE:** The Arduino Ethernet that were sent as Indiegogo Perks were flashed with different network settings. Their bootloader still defaults to the previous settings **but** the current values are on the accompaning leaflet.
+**NOTE:** The Arduino Ethernet that were sent as Indiegogo Perks were flashed with different network settings. Their bootloader still defaults to the previous settings but the current values are on the accompaning leaflet.
 
 
 ## Configuring Network Settings
 These can be changed using our **NetEEPROM** library. Navigate to **File** > **Examples** > **NetEEPROM** and select one of the examples. You can write the network settings with the **WriteNetworkSettings** sketch or print them to the serial monitor with **ReadNetworkSettings**. Follow the instructions in the comments of the sketches.
 
-The network settings are saved to EEPROM so you need to make sure that you don't overwrite them in your program. Ariadne uses EEPROM addresses 0-26 for network settings and 27-63 for the password used in the **EthernetReset** library, if you're not using **EthernetReset** then you can use EEPROM addresses 27-63 for other purposes. The **NewEEPROM** library can be used instead of the EEPROM library to automatically avoid overwriting the Ariadne EEPROM section.
+The network settings are saved to EEPROM so you need to make sure that you don't overwrite them in your program. Ariadne uses EEPROM addresses 0-26 for network settings and 27-63 for the password used in the **EthernetReset** library. If you're not using **EthernetReset** then you can use EEPROM addresses 27-63 for other purposes. The **NewEEPROM** library can be used instead of the EEPROM library to automatically avoid overwriting the Ariadne EEPROM section.
 
 
 ## TFTP Flashing
@@ -148,6 +149,8 @@ Now that the binary is ready, you have to upload it. The upload procedure is as 
 All three major operating systems have their own clients that you can use through the command line.
 
 ##### Windows
+The **TFTP client** may not be enabled in Windows by default. To enable it check **Control Panel > Programs and Features > Turn Windows features on or off > TFTP Client(check) > OK**.
+
 `C:\>tftp -i 192.168.1.128 PUT sketch.bin`
 
 
@@ -222,6 +225,15 @@ An example is that you have 2 devices, one at `192.168.1.128` and one at `192.16
 Port Forward has [excellent guides](http://portforward.com/english/routers/port_forwarding) on how to enable port forwarding for a vast number of routers.
 
 
+## Troubleshooting
+* Serial uploading doesn't work.
+  * The W5100 must be connected even for serial uploading.
+* TFTP times out when I try to upload a file larger than 32KB but smaller files upload fine.
+  * Make sure the gateway value in your network settings is correct.
+* The timing of things like delay() are wrong.
+  * You must **Burn Bootloader** every time you change the **Clock** settings.
+
+
 ## Codebender
 One of the best and easiest ways to use this bootloader is along with [codebender.cc](http://codebender.cc). Just register, enter your Arduino's IP(external IP for those in corporate or home networks behind NAT) and flash.
 
@@ -239,11 +251,11 @@ Supported MCUs:
 * **ATmega1284P**
 
 Supported Ethernet controllers:
-* **WizNet W5100**
+* **WIZnet W5100**
 
 Tested Arduino Boards:
 * [Arduino Ethernet](http://www.arduino.cc/en/Main/ArduinoBoardEthernet)
-* [Arduino Uno](http://www.arduino.cc/en/Main/ArduinoBoardUno)
+* [Arduino UNO](http://www.arduino.cc/en/Main/ArduinoBoardUno)
 * [Arduino Duemilanove w/ ATmega328](http://www.arduino.cc/en/Main/ArduinoBoardDuemilanove)
 * [Arduino Mega 2560](http://arduino.cc/en/Main/arduinoBoardMega2560)
 
@@ -273,4 +285,3 @@ Credit should also go to [mharizanov](https://github.com/mharizanov) for comment
 
 ## License
 This is free software and it is released under the [GPLv2, GNU General Public License](https://www.gnu.org/licenses/gpl-2.0.html)
-

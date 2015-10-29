@@ -56,8 +56,8 @@ ariadne328p.menu.model.other8=Other(8 analog inputs)
 ariadne328p.menu.model.other8.build.variant=arduino:eightanaloginputs
 
 # Clock Menu
-ariadne328p.menu.clock.low_power.upload.speed=115200
 ariadne328p.menu.clock.low_power=16MHz Low Power
+ariadne328p.menu.clock.low_power.upload.speed=115200
 ariadne328p.menu.clock.low_power.bootloader.low_fuses=0xFF
 ariadne328p.menu.clock.low_power.build.f_cpu=16000000L
 

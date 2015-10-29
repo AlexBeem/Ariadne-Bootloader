@@ -2454,8 +2454,8 @@ uint8_t processStk500boot(void)
    3fae8:	98 2f       	mov	r25, r24
    3faea:	90 75       	andi	r25, 0x50	; 80
    3faec:	99 f0       	breq	.+38     	; 0x3fb14 <processStk500boot+0x1c6>
-					//*	Issue 544: 	stk500v2 bootloader doesn't support reading fuses
-					//*	I cant find the docs that say what these are supposed to be but this was figured out by trial and error
+					//	Issue 544: 	stk500v2 bootloader doesn't support reading fuses
+					//	I cant find the docs that say what these are supposed to be but this was figured out by trial and error
 					//	answerByte	=	boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS);
 					//	answerByte	=	boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS);
 					//	answerByte	=	boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS);
@@ -2558,7 +2558,7 @@ uint8_t processStk500boot(void)
 			case CMD_LEAVE_PROGMODE_ISP:
 				isLeave	=	1;
    3fb44:	21 e0       	ldi	r18, 0x01	; 1
-				//*	fall thru
+				//	fall thru
 
 			case CMD_SET_PARAMETER:
 			case CMD_ENTER_PROGMODE_ISP:
@@ -2715,7 +2715,7 @@ uint8_t processStk500boot(void)
 				eraseAddress	=	0;
 				msgLength		=	2;
 				//	msgBuffer[1]	=	STATUS_CMD_OK;
-				msgBuffer[1]	=	STATUS_CMD_FAILED;	//*	isue 543, return FAILED instead of OK
+				msgBuffer[1]	=	STATUS_CMD_FAILED;	//	isue 543, return FAILED instead of OK
    3fbca:	80 ec       	ldi	r24, 0xC0	; 192
    3fbcc:	8a 83       	std	Y+2, r24	; 0x02
 				break;
@@ -2739,7 +2739,7 @@ uint8_t processStk500boot(void)
    3fbd8:	32 01       	movw	r6, r4
 				msgLength		=	2;
 				//	msgBuffer[1]	=	STATUS_CMD_OK;
-				msgBuffer[1]	=	STATUS_CMD_FAILED;	//*	isue 543, return FAILED instead of OK
+				msgBuffer[1]	=	STATUS_CMD_FAILED;	//	isue 543, return FAILED instead of OK
 				break;
    3fbda:	da c0       	rjmp	.+436    	; 0x3fd90 <processStk500boot+0x442>
 
@@ -2898,7 +2898,7 @@ uint8_t processStk500boot(void)
    3fca0:	9c 01       	movw	r18, r24
    3fca2:	b7 01       	movw	r22, r14
    3fca4:	a6 01       	movw	r20, r12
-					//*	issue 543, this should work, It has not been tested.
+					//	issue 543, this should work, It has not been tested.
 					//	#if (!defined(__AVR_ATmega1280__) && !defined(__AVR_ATmega2560__)  && !defined(__AVR_ATmega2561__)  && !defined(__AVR_ATmega1284P__)  && !defined(__AVR_ATmega640__))
 #if (defined(EEARL) && defined(EEARH)  && defined(EEMWE)  && defined(EEWE)  && defined(EEDR))
 					/* write EEPROM */
