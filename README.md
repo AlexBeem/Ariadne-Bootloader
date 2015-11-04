@@ -23,6 +23,7 @@ This installation method requires Arduino IDE version 1.6.4 or greater.
 * Open the **Tools > Board > Boards Manager...** menu item.
 * Wait for the platform indexes to finish downloading.
 * Scroll down until you see the **Ariadne Bootloader** entry and click on it.
+* If you are using Arduino IDE 1.6.6 then you may need to close **Boards Manager** and then reopen it before the **Ariadne Bootloader** entry will appear.
 * Click **Install**.
 * After installation is complete close the Boards Manager window.
 
