@@ -2,7 +2,7 @@ Ariadne Bootloader for Arduino
 ==========
 Make a donation to the original Ariadne developer: [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6RBAQPJ77X9BG "Make a one-time donation to the original Ariadne bootloader developer using Paypal")
 
-Ariadne Bootloader implements a TFTP server on the Arduino board to allow uploading sketches to boards with a W5100 Ethernet controller attached using any TFTP client. This bootloader also supports the standard serial upload method.
+Ariadne Bootloader implements a TFTP server on the [Arduino](http://arduino.cc) board to allow uploading sketches to boards with a W5100 Ethernet controller attached using any TFTP client. This bootloader also supports the standard serial upload method.
 
 
 ## Downloading and Installing Files
