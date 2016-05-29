@@ -68,7 +68,9 @@ int main(void)
 		eeprom_write_byte(EEPROM_MINVER, ARIADNE_MINVER);
 
 	/* Initialize UART communication */
+#ifndef DISABLE_SERIAL
 	serialInit();
+#endif
 	DBG_MAIN(tracePGMlnMain(mDebugMain_TITLE);)
 
 	DBG_BTN(
@@ -99,17 +101,21 @@ int main(void)
 	tftpFlashing = FALSE;
 
 	for(;;) {
+#ifndef DISABLE_SERIAL
 		// If there is no serial flashing under way, poll tftp
 		if(!serialFlashing)
+#endif
 			// If tftp recieved a FINAL_ACK, break
 			if(tftpPoll() == 0)
 				break;
 
+#ifndef DISABLE_SERIAL
 		// If there is no tftp flashing, poll serial
 		if(!tftpFlashing)
 			// If flashing is done exit
 			if(serialPoll() == 0)
 				break;
+#endif
 
 		/* As explained above this goes out */
 #if defined(ANNOUNCE)
