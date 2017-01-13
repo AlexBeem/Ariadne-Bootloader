@@ -300,3 +300,7 @@ Credit should also go to [mharizanov](https://github.com/mharizanov) for comment
 <a id="license"></a>
 ## License
 This is free software and it is released under the [GPLv2, GNU General Public License](https://www.gnu.org/licenses/gpl-2.0.html)
+
+
+#### Contributing
+Pull requests or issue reports are welcome! Please see the [contribution rules](https://github.com/per1234/Ariadne-Bootloader/blob/ariadne/CONTRIBUTING.md) for instructions.
